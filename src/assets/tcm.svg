@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="292.683" height="538.812" viewBox="0 0 292.683 538.812">
+  <defs>
+    <filter id="Polígono_5" x="125.658" y="327.122" width="136.658" height="130.672" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Polígono_6" x="19.233" y="487.674" width="54.673" height="51.137" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_27" data-name="Grupo 27" transform="translate(-37.369 -70.467)">
+    <path id="Polígono_1" data-name="Polígono 1" d="M17,0,34,29H0Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 297.21, 70.467)" fill="#be75ff" opacity="0.5"/>
+    <path id="Polígono_7" data-name="Polígono 7" d="M19,0,38,32H0Z" transform="translate(37.369 349.39) rotate(-14)" fill="#be75ff" opacity="0.5"/>
+    <g transform="matrix(1, 0, 0, 1, 37.37, 70.47)" filter="url(#Polígono_5)">
+      <path id="Polígono_5-2" data-name="Polígono 5" d="M46.5,0,93,80H0Z" transform="matrix(0.9, 0.44, -0.44, 0.9, 169.73, 333.12)" fill="#be75ff" opacity="0.5"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 37.37, 70.47)" filter="url(#Polígono_6)">
+      <path id="Polígono_6-2" data-name="Polígono 6" d="M15.5,0,31,26H0Z" transform="matrix(0.97, 0.26, -0.26, 0.97, 34.96, 493.67)" fill="#be75ff" opacity="0.5"/>
+    </g>
+  </g>
+</svg>

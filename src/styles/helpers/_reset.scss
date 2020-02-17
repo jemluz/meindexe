@@ -1,0 +1,38 @@
+/* CSS RESET */
+//font-family: 'Exo', sans-serif;
+/*
+z-index list
+1000 - header
+900 - nav
+800 - .crednosso-section
+
+*/
+@import url("https://use.typekit.net/amo0ldj.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: t26-carbon, monospace;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
