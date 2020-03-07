@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="642" viewBox="0 0 360 642">
+  <defs>
+    <filter id="Polígono_5" x="163.027" y="397.589" width="136.657" height="130.672" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Polígono_6" x="56.602" y="558.142" width="54.673" height="51.137" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect width="64" height="642" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-cel_projs1_7">
+      <rect width="360" height="642"/>
+    </clipPath>
+  </defs>
+  <g id="cel_projs1_7" data-name="cel projs1 – 7" clip-path="url(#clip-cel_projs1_7)">
+    <g id="Grupo_27" data-name="Grupo 27">
+      <path id="Polígono_1" data-name="Polígono 1" d="M17,0,34,29H0Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 297.21, 70.467)" fill="#be75ff" opacity="0.5"/>
+      <path id="Polígono_7" data-name="Polígono 7" d="M19,0,38,32H0Z" transform="translate(37.369 349.39) rotate(-14)" fill="#be75ff" opacity="0.5"/>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Polígono_5)">
+        <path id="Polígono_5-2" data-name="Polígono 5" d="M46.5,0,93,80H0Z" transform="matrix(0.9, 0.44, -0.44, 0.9, 207.1, 403.59)" fill="#be75ff" opacity="0.5"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Polígono_6)">
+        <path id="Polígono_6-2" data-name="Polígono 6" d="M15.5,0,31,26H0Z" transform="matrix(0.97, 0.26, -0.26, 0.97, 72.33, 564.14)" fill="#be75ff" opacity="0.5"/>
+      </g>
+    </g>
+    <g id="Repetição_de_grade_1" data-name="Repetição de grade 1" transform="translate(-8 7)" opacity="0.22" clip-path="url(#clip-path)">
+      <g id="Retângulo_1458" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+        <rect width="64" height="64" stroke="none"/>
+        <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+      </g>
+      <g transform="translate(0 64)">
+        <g id="Retângulo_1458-2" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 128)">
+        <g id="Retângulo_1458-3" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 192)">
+        <g id="Retângulo_1458-4" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 256)">
+        <g id="Retângulo_1458-5" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 320)">
+        <g id="Retângulo_1458-6" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 384)">
+        <g id="Retângulo_1458-7" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 448)">
+        <g id="Retângulo_1458-8" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 512)">
+        <g id="Retângulo_1458-9" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 576)">
+        <g id="Retângulo_1458-10" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 640)">
+        <g id="Retângulo_1458-11" data-name="Retângulo 1458" fill="none" stroke="#be75ff" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

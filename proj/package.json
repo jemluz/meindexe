@@ -1,0 +1,62 @@
+{
+  "name": "meindexe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^0.19.2",
+    "core-js": "^3.4.4",
+    "cors": "^2.8.5",
+    "vue": "^2.6.10",
+    "vue-instagram-embed": "^1.0.0",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.1.5",
+    "vue-runtime-helpers": "^1.1.2",
+    "vue-toasted": "^1.1.27",
+    "vuetify": "^2.2.6",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.13.1",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-pug": "^1.0.7",
+    "vue-cli-plugin-vuetify": "^2.0.3",
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.10",
+    "vuetify-loader": "^1.4.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-unused-vars": "off",
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
