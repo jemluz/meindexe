@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="433" height="800" viewBox="0 0 433 800">
+  <defs>
+    <filter id="Polígono_6" x="192.384" y="124.927" width="54.673" height="51.137" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Web_1280_4">
+      <rect width="433" height="800"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1280_4" data-name="Web 1280 – 4" clip-path="url(#clip-Web_1280_4)">
+    <g id="Grupo_47" data-name="Grupo 47" transform="translate(612.515 777.708) rotate(180)">
+      <path id="Polígono_1" data-name="Polígono 1" d="M40.5,0,81,77H0Z" transform="matrix(0.799, 0.602, -0.602, 0.799, 321.256, 133.992)" fill="#482966" opacity="0.5"/>
+      <path id="Polígono_7" data-name="Polígono 7" d="M16,0,32,27H0Z" transform="translate(516.116 326.129) rotate(-14)" fill="#482966" opacity="0.5"/>
+      <g transform="matrix(-1, 0, 0, -1, 612.51, 777.71)" filter="url(#Polígono_6)">
+        <path id="Polígono_6-2" data-name="Polígono 6" d="M15.5,0,31,26H0Z" transform="matrix(-0.97, -0.26, 0.26, -0.97, 231.33, 164.06)" fill="#482966" opacity="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
