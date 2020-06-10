@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g id="dot" transform="translate(-72 -296)">
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(72 296)" fill="#fff" stroke="#482966" stroke-width="2">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="7.5" fill="none"/>
+    </g>
+    <g id="Elipse_2" data-name="Elipse 2" transform="translate(77 301)" fill="#fff" stroke="#482966" stroke-width="4">
+      <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+      <circle cx="3.5" cy="3.5" r="1.5" fill="none"/>
+    </g>
+  </g>
+</svg>

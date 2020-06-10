@@ -1,5 +1,9 @@
 <template lang="pug">
   div#home
+    vue-headful(
+      title="mindexe | Web & Sistemas"
+    )
+
     h1.logo #[p] m#[strong indexe] #[p]
 
     div.titulo
@@ -8,7 +12,7 @@
 
     nav.projs-navgation 
       div.row-1
-        router-link(to='') a
+        router-link(to='/exchange') e
         router-link(to='') b
         router-link(to='') c
       
@@ -345,7 +349,6 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        display: none;
         background: url("../assets/d-tcm.svg");
         width: 529px;
         height: 800px;

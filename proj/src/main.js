@@ -5,6 +5,9 @@ import store from './store'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Toasted from 'vue-toasted'
+import vueHeadful from 'vue-headful';
+
+Vue.component('vue-headful', vueHeadful);
 
 Vue.config.productionTip = false
 Vue.use(Toasted)

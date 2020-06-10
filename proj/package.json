@@ -13,6 +13,7 @@
     "core-js": "^3.4.4",
     "cors": "^2.8.5",
     "vue": "^2.6.10",
+    "vue-headful": "^2.1.0",
     "vue-instagram-embed": "^1.0.0",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.1.5",
