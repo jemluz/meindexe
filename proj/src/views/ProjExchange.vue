@@ -311,7 +311,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-          background: url("../assets/malha.svg");
+          background: url("../assets/malha.png");
           width: 1503px;
           height: 852px;
           transform: rotate(-30deg);
@@ -362,7 +362,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.svg");
+        background: url("../assets/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-20deg);
@@ -413,7 +413,7 @@ export default {
 
    .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.svg");
+        background: url("../assets/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-25deg);
