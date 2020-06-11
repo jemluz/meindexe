@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from './views/Home.vue'
-import ProjExchange from './views/ProjExchange.vue'
+import ProjExchange from './views/ProjExchange2.vue'
 
 Vue.use(Router)
 
