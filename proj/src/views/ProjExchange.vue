@@ -4,37 +4,36 @@
       title="mindexe | Projeto Exchange"
     )
 
-    div.data
+    div.data#data(data-aos="fade-down" data-aos-duration="1000")
       img(src="../assets/dot.svg")
       h3 mar/2018
 
-    div.name
+    div.name#name
       h2 #[span.first exchan]#[span.second ge_]
 
-    div.content-mob
-      div.inside
-        img(src="../assets/exchange-thumb.png")
+    div.content-mob#content-mob(@scroll="parallaxScroll" data-aos="fade-up" data-aos-duration="500")
+      img#exchange-img(src="../assets/exchange-thumb.png")
 
-        p.desc redesign de um #[a(href='https://cutt.ly/yyMjJUz' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
+      p.desc redesign de um #[a(href='https://cutt.ly/yyMjJUz' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
 
-        p.desc-2 o estudo incluiu 3 fases:
+      p.desc-2 o estudo incluiu 3 fases:
 
-        p.desc-3 1ª - Análise da Interface #[br] #[a(href='https://cutt.ly/EyMj8bz' target="_blank") https://cutt.ly/EyMj8bz]
-        p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://cutt.ly/KyMkdH6' target="_blank") https://cutt.ly/KyMkdH6]
-        p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://cutt.ly/hyMkhiE' target="_blank") https://cutt.ly/hyMkhiE]
+      p.desc-3 1ª - Análise da Interface #[br] #[a(href='https://cutt.ly/EyMj8bz' target="_blank") https://cutt.ly/EyMj8bz]
+      p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://cutt.ly/KyMkdH6' target="_blank") https://cutt.ly/KyMkdH6]
+      p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://cutt.ly/hyMkhiE' target="_blank") https://cutt.ly/hyMkhiE]
 
       div.result
         p apresentação final
         a(href="https://cutt.ly/kyMkkFO") https://cutt.ly/kyMkkFO
 
-      div.inside
-        p.video video mockup #[br] #[a(href='https://cutt.ly/0yMkxtl' target="_blank") https://cutt.ly/0yMkxtl]
 
-    div.line
+      p.video video mockup #[br] #[a(href='https://cutt.ly/0yMkxtl' target="_blank") https://cutt.ly/0yMkxtl]
 
-    router-link.back-btn(to='/') Voltar para o início
+    div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
-    div.parallax
+    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] Voltar para o início
+
+    div.parallax(data-aos="fade-down" data-aos-duration="500" )
       div(id="parallax-bg-3" class="parallax-bg")
         div(id="bg-3-1")
 
@@ -49,11 +48,34 @@ export default {
       var scrolled = window.scrollY;
       document.querySelector("#bg-3-1").style.top = 0 - scrolled * 0.25 + "px";
       // document.querySelector(".content-mob").style.top = 0 - scrolled * 1 + "px";
+    },
+    lineHeight() {
+      let backButtonTop = document.getElementById("back-btn").offsetTop;
+      let line = document.getElementById("line");
 
+      line.style.height = (backButtonTop - 30) + "px";
+    },
+    mobContentStart(){
+      let lineHeight = document.getElementById("line").offsetHeight;
+      let contentMob = document.getElementById("content-mob");
+
+      let dataTop = document.getElementById("data").offsetTop;
+      let dataheight = document.getElementById("data").offsetHeight;
+      let exchangeImage = document.getElementById("exchange-img");
+
+      contentMob.style.marginTop = 140 + "px";
+      contentMob.style.height = (lineHeight - 140)+"px";
+
+      // contentMob.scrollHeight = 635 + "px";
+      // exchangeImage.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 200) + "px";
     }
   },
   created() {
-    window.addEventListener("scroll", this.parallaxScroll);
+    // window.addEventListener("scroll", this.parallaxScroll);
+  },
+  mounted() {
+    this.lineHeight();
+    this.mobContentStart();
   }
 };
 </script>
@@ -62,6 +84,7 @@ export default {
 @import "../styles/helpers/variables";
 
 #exchange {
+  background: linear-gradient(to bottom, #f1f1f1, #fff);
   background-attachment: fixed;
 
   color: $branco;
@@ -99,8 +122,6 @@ export default {
   }
 
   .content-mob {
-    height: 480px;
-    // width: 250px;
 
     overflow-y: scroll;
     z-index: 2;
@@ -111,51 +132,42 @@ export default {
     flex-direction: column;
     position: fixed;
 
-    .inside {
-      padding: 0px 70px 0px 50px;
+    img {
+      box-shadow: 0px 0px 10px 0px #00000030;
+    }
 
-      img {
-        box-shadow: 0px 0px 10px 0px #00000030;
+    .desc,
+    .desc-2,
+    .desc-3,
+    .desc-4,
+    .desc-5,
+    .video {
+      font-family: t26-carbon, monospace;
+      font-size: 16px;
+      font-style: italic;
+
+      text-align: left;
+
+      color: #555;
+
+      a {
+        font-weight: 700;
       }
+    }
 
-      .desc,
-      .desc-2,
-      .desc-3,
-      .desc-4,
-      .desc-5,
-      .video {
-        font-family: t26-carbon, monospace;
-        font-size: 16px;
-        font-style: italic;
+    .desc a { border-bottom: 1px solid $roxo; }
 
-        text-align: left;
-
-        color: #555;
-
-        a {
-          font-weight: 700;
-        }
-      }
-
-      .desc a { border-bottom: 1px solid $roxo; }
-
-      .desc-3 a { 
-        color: #5570F9; 
-        border-bottom: 1px solid #5570F9;
-      }
-      .desc-4 a { 
-        color: #659DE8; 
-        border-bottom: 1px solid #659DE8;
-      }
-      .desc-5 a { 
-        color: #70BCDC; 
-        border-bottom: 1px solid #70BCDC;
-      }
-
-      .video a {
-        color: $roxo;
-        border-bottom: 1px solid $roxo;
-      }
+    .desc-3 a { 
+      color: #5570F9; 
+      border-bottom: 1px solid #5570F9;
+    }
+    .desc-4 a { 
+      color: #659DE8; 
+      border-bottom: 1px solid #659DE8;
+    }
+    .desc-5 a { 
+      color: #70BCDC; 
+      border-bottom: 1px solid #70BCDC;
     }
 
     .result {
@@ -179,6 +191,10 @@ export default {
       }
     }
 
+    .video a {
+      color: $roxo;
+      border-bottom: 1px solid $roxo;
+    }
   }
 
   .line {
@@ -200,9 +216,11 @@ export default {
 
     display: flex;
     justify-content: center;
+    align-items: center;
     position: fixed;
 
     bottom: 0px;
+    color: $roxo;
 
     &:hover {
       background-color: $roxo;
@@ -211,7 +229,7 @@ export default {
   }
 
   .parallax {
-    height: calc(100vh + 200px);
+    height: calc(100vh);
 
     /* background layer */
     div#parallax-bg-3 {
@@ -230,7 +248,7 @@ export default {
     }
     div#bg-3-1 {
       z-index: 1;
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 }
@@ -263,8 +281,8 @@ export default {
 
     .content-mob {
       margin-left: 40px;
-      margin-top: 60px;
-
+      padding: 0px 70px 0px 50px;
+      
       img {
         margin-top: 300px;
         width: 200px;
@@ -272,6 +290,7 @@ export default {
 
       .desc {
         margin-top: 20px;
+        a { color: $roxo; }
       }
 
       .desc-2 {
@@ -285,7 +304,7 @@ export default {
       }
       
       .result {
-        margin-top: 40px;
+        margin: 40px 0px 0px -40px;
         padding: 15px 40px;
 
         p { margin-bottom: 5px;}
@@ -306,7 +325,12 @@ export default {
     .back-btn {
       font-size: 20px;
       margin: 0px 0px 30px 30px;
-      padding: 5px 20px;
+      padding: 5px 20px 5px 20px;
+
+      .back-icon {
+        height: 15px;
+        margin-right: 10px;
+      }
     }
 
     .parallax {

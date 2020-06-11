@@ -4,31 +4,31 @@
       title="mindexe | Web & Sistemas"
     )
 
-    h1.logo #[p] m#[strong indexe] #[p]
+    h1.logo(data-aos="fade-down" data-aos-duration="500" ) #[p] m#[strong indexe] #[p]
 
-    div.titulo
+    div.titulo(data-aos="fade-right" data-aos-duration="1000" )
       h2 #[span.first aperte uma te]#[span.second cla_]
       p para ver um #[span projeto] 
 
     nav.projs-navgation 
-      div.row-1
+      div.row-1(data-aos="fade-right" data-aos-duration="2000" )
         router-link(to='/exchange') e
         router-link(to='') b
         router-link(to='') c
       
-      div.row-2
+      div.row-2(data-aos="fade-left" data-aos-duration="2000" )
         router-link(to='') a
         router-link(to='') b
         router-link(to='') c
 
-    div.about
+    div.about(data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom")
       router-link(to='') sobre
 
     div.parallax
       div(id="parallax-bg-3" class="parallax-bg")
-        div(id="bg-3-1")
-        div(id="bg-3-2")
-        div(id="bg-3-3")
+        div(id="bg-3-1" data-aos="fade-up" data-aos-duration="500")
+        div(id="bg-3-2" data-aos="fade-up" data-aos-duration="1000")
+        div(id="bg-3-3" data-aos="fade-up" data-aos-duration="2000")
         div(id="bg-3-4")
 
 </template>
