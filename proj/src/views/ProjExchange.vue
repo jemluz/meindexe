@@ -11,7 +11,7 @@
     div.name#name
       h2 #[span.first exchan]#[span.second ge_]
 
-    div.content-mob#content-mob(@scroll="parallaxScroll" data-aos="fade-up" data-aos-duration="500")
+    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500")
       img#exchange-img(src="../assets/exchange-thumb.png")
 
       p.desc redesign de um #[a(href='https://cutt.ly/yyMjJUz' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
@@ -44,6 +44,24 @@ export default {
   name: "ProjExchange",
   components: {},
   methods: {
+    getMobileOperatingSystem() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+      {
+        return 'iOS';
+
+      }
+      else if( userAgent.match( /Android/i ) )
+      {
+
+        return 'Android';
+      }
+      else
+      {
+        return 'unknown';
+      }
+    },
     lineHeight() {
       let backButtonTop = document.getElementById("back-btn").offsetTop;
       let line = document.getElementById("line");
@@ -60,9 +78,14 @@ export default {
 
       contentMob.style.marginTop = 140 + "px";
       contentMob.style.height = (lineHeight - 140)+"px";
+      
+      if (this.getMobileOperatingSystem() == 'iOS') {
+        exchangeImage.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 200) + "px";
+      } else if (this.getMobileOperatingSystem() == 'Android') {
+        exchangeImage.style.marginTop = (contentMob.offsetTop + 60) + "px";
+      }
 
-      // contentMob.scrollHeight = 635 + "px";
-      // exchangeImage.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 200) + "px";
+      console.log(exchangeImage.style.marginTop)
     }
   },
   mounted() {
@@ -276,7 +299,6 @@ export default {
       padding: 0px 70px 0px 50px;
       
       img {
-        margin-top: 20vh;
         width: 200px;
       }
 
