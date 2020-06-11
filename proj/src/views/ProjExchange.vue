@@ -44,11 +44,6 @@ export default {
   name: "ProjExchange",
   components: {},
   methods: {
-    parallaxScroll() {
-      var scrolled = window.scrollY;
-      document.querySelector("#bg-3-1").style.top = 0 - scrolled * 0.25 + "px";
-      // document.querySelector(".content-mob").style.top = 0 - scrolled * 1 + "px";
-    },
     lineHeight() {
       let backButtonTop = document.getElementById("back-btn").offsetTop;
       let line = document.getElementById("line");
@@ -69,9 +64,6 @@ export default {
       // contentMob.scrollHeight = 635 + "px";
       // exchangeImage.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 200) + "px";
     }
-  },
-  created() {
-    // window.addEventListener("scroll", this.parallaxScroll);
   },
   mounted() {
     this.lineHeight();
@@ -284,7 +276,7 @@ export default {
       padding: 0px 70px 0px 50px;
       
       img {
-        margin-top: 300px;
+        margin-top: 30vh;
         width: 200px;
       }
 
