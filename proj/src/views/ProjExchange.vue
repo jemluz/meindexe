@@ -276,7 +276,7 @@ export default {
       padding: 0px 70px 0px 50px;
       
       img {
-        margin-top: 30vh;
+        margin-top: 20vh;
         width: 200px;
       }
 
