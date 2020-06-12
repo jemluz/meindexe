@@ -29,9 +29,28 @@
 
       p.video video mockup #[br] #[a(href='https://cutt.ly/0yMkxtl' target="_blank") https://cutt.ly/0yMkxtl]
 
+    div.content-desk
+      div.col-1#col-1
+        img#exchange-img(src="../assets/exchange-thumb.png")
+        p.desc#desc redesign de um #[a(href='https://cutt.ly/yyMjJUz' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
+
+      div.col-2
+        p.desc-2 o estudo incluiu 3 fases:
+
+        p.desc-3 1ª - Análise da Interface #[br] #[a(href='https://cutt.ly/EyMj8bz' target="_blank") https://cutt.ly/EyMj8bz]
+        p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://cutt.ly/KyMkdH6' target="_blank") https://cutt.ly/KyMkdH6]
+        p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://cutt.ly/hyMkhiE' target="_blank") https://cutt.ly/hyMkhiE]
+
+      div.col-3
+        div.result
+          p apresentação final
+          a(href="https://cutt.ly/kyMkkFO") https://cutt.ly/kyMkkF
+
+        p.video video mockup #[br] #[a(href='https://cutt.ly/0yMkxtl' target="_blank") https://cutt.ly/0yMkxtl]
+
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
-    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] Voltar para o início
+    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] Voltar para o início (i)
 
     div.parallax(data-aos="fade-down" data-aos-duration="500" )
       div(id="parallax-bg-3" class="parallax-bg")
@@ -68,6 +87,12 @@ export default {
 
       line.style.height = (backButtonTop - 30) + "px";
     },
+    linePosition() {
+      let line = document.getElementById("line");
+      let col1 = document.getElementById("col-1");
+
+      col1.style.marginLeft = (line.offsetLeft + line.offsetWidth) + "px";
+    },
     mobContentStart(){
       let lineHeight = document.getElementById("line").offsetHeight;
       let contentMob = document.getElementById("content-mob");
@@ -86,11 +111,26 @@ export default {
       }
 
       console.log(exchangeImage.style.marginTop)
+    },
+    deskContentStart() {
+    },
+    listenKeyboard() {
+      let code = event.keyCode ? event.keyCode : event.which;
+
+      // 1 - ipress i: back to home
+      if (code == 73) {
+        this.$router.push(({ path: '/'}) )
+      }
     }
   },
   mounted() {
     this.lineHeight();
     this.mobContentStart();
+
+    this.linePosition();
+  },
+  created() {
+    document.addEventListener("keyup", this.listenKeyboard);
   }
 };
 </script>
@@ -212,6 +252,80 @@ export default {
     }
   }
 
+  .content-desk {
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+
+    img {
+      box-shadow: 0px 0px 10px 0px #00000030;
+    }
+
+    .desc,
+    .desc-2,
+    .desc-3,
+    .desc-4,
+    .desc-5,
+    .video {
+      font-family: t26-carbon, monospace;
+      font-size: 16px;
+      font-style: italic;
+
+      text-align: left;
+
+      color: #555;
+
+      a {
+        font-weight: 700;
+      }
+    }
+
+    .desc a { border-bottom: 1px solid $roxo; }
+
+    .desc-3 a { 
+      color: #5570F9; 
+      border-bottom: 1px solid #5570F9;
+    }
+    .desc-4 a { 
+      color: #659DE8; 
+      border-bottom: 1px solid #659DE8;
+    }
+    .desc-5 a { 
+      color: #70BCDC; 
+      border-bottom: 1px solid #70BCDC;
+    }
+
+    .result {
+      font-family: t26-carbon, monospace;
+      font-size: 16px;
+      font-style: italic;
+
+      text-align: left;
+
+      background-color: $roxo;
+      color: #fff;
+
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px 0px #00000020;
+
+      a {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        font-weight: 700;
+        opacity: .4;
+      }
+    }
+
+    .video a {
+      color: $roxo;
+      border-bottom: 1px solid $roxo;
+    }
+  }
+
   .line {
     position: fixed;
     background: url("../assets/line.svg");
@@ -227,7 +341,7 @@ export default {
     border: 2px solid $roxo;
     border-radius: 5px 10px 10px 5px;
 
-    transition: all 1s ease;
+    transition: all .5s ease;
 
     display: flex;
     justify-content: center;
@@ -265,6 +379,13 @@ export default {
       z-index: 1;
       opacity: 1;
     }
+  }
+}
+
+// mobile only
+@media only screen and (min-width: 901px) {
+  #exchange {
+    .content-mob { display: none; }
   }
 }
 
@@ -330,6 +451,8 @@ export default {
       
     }
 
+    .content-desk { display: none; }
+
     .line {
       width: 5px;
       height: 85vh;
@@ -365,7 +488,7 @@ export default {
  #exchange {
     .data {
       top: 30px;
-      left: 128px;
+      left: 75px;
       h3 { 
         margin-left: 20px;
       }
@@ -373,7 +496,7 @@ export default {
 
     .name {
       top: 80px;
-      left: 100px;
+      left: 60px;
       transform: rotate(-10deg);
 
       h2 {
@@ -386,16 +509,89 @@ export default {
       }
     }
 
+    .content-desk { 
+      margin-top: 160px;
+      padding: 0px 20px 0px 40px;
+
+      .col-1 {
+        text-align: left;
+
+        img { max-width: 30vw; }
+
+        .desc {
+          max-width: 30vw;
+          font-size: 1.1rem;
+          margin-top: 20px;
+          a { color: $roxo; }
+        }
+      }
+
+      .col-2 {
+        margin-left: 30px;
+
+        .desc-2 {
+          // font-weight: bold;
+          max-width: 200px;
+          font-size: 1rem;
+          margin-top: -60px;
+        }
+
+        .desc-3,
+        .desc-4,
+        .desc-5 {
+          font-size: 1rem;
+          margin-top: 20px;
+        }
+        .desc-3 { margin-top: 30px; }
+      }
+
+      .col-3 {
+        align-items: flex-end;
+        // position: fixed;
+        right: 0px;
+        margin: -20px 5vw 0px 0px;
+
+        .result{
+          text-align: right;
+          border-radius: 10px;
+          padding: 15px 40px;
+
+          p { 
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+          }
+
+          a { 
+            font-size: 1rem;
+            font-weight: 300;
+          }
+        }
+
+        .video {
+          font-size: 1.3rem;
+          text-align: right;
+          margin: 20px 40px 0px 0px;
+
+          a { font-size: 1rem;}
+        }
+      }
+    }
+
     .line {
       width: 5px;
       height: 85vh;
-      left: 134px;
+      left: 80px;
     }
 
     .back-btn {
       font-size: 20px;
-      margin: 0px 0px 50px 100px;
+      margin: 0px 0px 50px 50px;
       padding: 5px 20px;
+
+      .back-icon {
+        height: 15px;
+        margin-right: 10px;
+      }
     }
 
     .parallax {
@@ -404,8 +600,9 @@ export default {
         width: 1503px;
         height: 852px;
         transform: rotate(-20deg);
-        left: 150px;
+        left: 100px;
         margin-top: -50px;
+        opacity: .5;
       }
     }
   }

@@ -20,6 +20,7 @@ export default {
 
 
 <style lang="scss">
+
 @import "./styles/helpers/reset";
 @import "./styles/helpers/classes";
 

@@ -13,13 +13,13 @@
     nav.projs-navgation 
       div.row-1(data-aos="fade-right" data-aos-duration="2000" )
         router-link(to='/exchange') e
-        router-link(to='') b
-        router-link(to='') c
+        router-link.empty(to='') -
+        router-link.empty(to='') -
       
       div.row-2(data-aos="fade-left" data-aos-duration="2000" )
-        router-link(to='') a
-        router-link(to='') b
-        router-link(to='') c
+        router-link.empty(to='') -
+        router-link.empty(to='') -
+        router-link.empty(to='') -
 
     div.about(data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom")
       router-link(to='') sobre
@@ -43,10 +43,20 @@ export default {
       document.querySelector("#bg-3-1").style.top = 0 - scrolled * 0.25 + "px";
       document.querySelector("#bg-3-2").style.top = 0 - scrolled * 0.3 + "px";
       document.querySelector("#bg-3-3").style.top = 0 - scrolled * 0.1 + "px";
+    },
+    listenKeyboard() {
+      let code = event.keyCode ? event.keyCode : event.which;
+
+      console.log(code)
+      // 1 - if u press e: view exchange project
+      if (code == 69) {
+        this.$router.push(({ path: '/exchange'}) )
+      }
     }
   },
   created() {
     window.addEventListener("scroll", this.parallaxScroll);
+    document.addEventListener("keyup", this.listenKeyboard)
   }
 };
 </script>
@@ -125,6 +135,10 @@ export default {
     div {
       display: flex;
       justify-self: center;
+
+      .empty {
+        opacity: .2;
+      }
     }
 
     a {
