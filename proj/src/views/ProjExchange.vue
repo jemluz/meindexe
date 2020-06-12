@@ -29,7 +29,7 @@
 
       p.video video mockup #[br] #[a(href='https://cutt.ly/0yMkxtl' target="_blank") https://cutt.ly/0yMkxtl]
 
-    div.content-desk
+    div.content-desk#content-desk
       div.col-1#col-1
         img#exchange-img(src="../assets/exchange-thumb.png")
         p.desc#desc redesign de um #[a(href='https://cutt.ly/yyMjJUz' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
@@ -41,7 +41,6 @@
         p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://cutt.ly/KyMkdH6' target="_blank") https://cutt.ly/KyMkdH6]
         p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://cutt.ly/hyMkhiE' target="_blank") https://cutt.ly/hyMkhiE]
 
-      div.col-3
         div.result
           p apresentação final
           a(href="https://cutt.ly/kyMkkFO") https://cutt.ly/kyMkkF
@@ -113,6 +112,11 @@ export default {
       console.log(exchangeImage.style.marginTop)
     },
     deskContentStart() {
+      let contentDesk = document.getElementById("content-desk");
+      let lineHeight = document.getElementById("line").offsetHeight;
+
+      contentDesk.style.height = (lineHeight - 160)+"px";
+      console.log(lineHeight)
     },
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
@@ -128,6 +132,7 @@ export default {
     this.mobContentStart();
 
     this.linePosition();
+    this.deskContentStart();
   },
   created() {
     document.addEventListener("keyup", this.listenKeyboard);
@@ -256,8 +261,8 @@ export default {
     z-index: 2;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: row;
     position: fixed;
 
@@ -488,7 +493,7 @@ export default {
  #exchange {
     .data {
       top: 30px;
-      left: 75px;
+      left: 128px;
       h3 { 
         margin-left: 20px;
       }
@@ -496,7 +501,7 @@ export default {
 
     .name {
       top: 80px;
-      left: 60px;
+      left: 100px;
       transform: rotate(-10deg);
 
       h2 {
@@ -516,7 +521,7 @@ export default {
       .col-1 {
         text-align: left;
 
-        img { max-width: 30vw; }
+        img { max-width: 35vw; }
 
         .desc {
           max-width: 30vw;
@@ -527,12 +532,13 @@ export default {
       }
 
       .col-2 {
-        margin-left: 30px;
+        padding-top: 80px;
+        margin-left: 80px;
 
         .desc-2 {
-          // font-weight: bold;
-          max-width: 200px;
-          font-size: 1rem;
+          font-weight: bold;
+          // max-width: 200px;
+          font-size: 1.3rem;
           margin-top: -60px;
         }
 
@@ -543,33 +549,25 @@ export default {
           margin-top: 20px;
         }
         .desc-3 { margin-top: 30px; }
-      }
-
-      .col-3 {
-        align-items: flex-end;
-        // position: fixed;
-        right: 0px;
-        margin: -20px 5vw 0px 0px;
 
         .result{
-          text-align: right;
+          margin-top: 60px;
           border-radius: 10px;
           padding: 15px 40px;
 
           p { 
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             margin-bottom: 5px;
           }
 
           a { 
-            font-size: 1rem;
+            font-size: .9rem;
             font-weight: 300;
           }
         }
 
         .video {
-          font-size: 1.3rem;
-          text-align: right;
+          font-size: 1.1rem;
           margin: 20px 40px 0px 0px;
 
           a { font-size: 1rem;}
@@ -580,12 +578,12 @@ export default {
     .line {
       width: 5px;
       height: 85vh;
-      left: 80px;
+      left: 133px;
     }
 
     .back-btn {
       font-size: 20px;
-      margin: 0px 0px 50px 50px;
+      margin: 0px 0px 50px 100px;
       padding: 5px 20px;
 
       .back-icon {
@@ -613,7 +611,7 @@ export default {
   #exchange {
     .data {
       top: 30px;
-      left: 545px;
+      left: 789px;
       h3 { 
         margin-left: 20px;
       }
@@ -621,7 +619,7 @@ export default {
 
     .name {
       top: 80px;
-      left: 520px;
+      left: 760px;
       transform: rotate(-10deg);
 
       h2 {
@@ -634,16 +632,81 @@ export default {
       }
     }
 
+    .content-desk { 
+      margin-top: 250px;
+      padding: 0px 20px 0px 40px;
+
+      .col-1 {
+        text-align: left;
+
+        img { max-width: 19vw; }
+
+        .desc {
+          max-width: 19vw;
+          font-size: 1.3rem;
+          margin-top: 20px;
+          a { color: $roxo; }
+        }
+      }
+
+      .col-2 {
+        padding-top: 80px;
+        margin-left: 80px;
+
+        .desc-2 {
+          font-weight: bold;
+          font-size: 1.3rem;
+          margin-top: -60px;
+        }
+
+        .desc-3,
+        .desc-4,
+        .desc-5 {
+          font-size: 1.1rem;
+          margin-top: 20px;
+        }
+        .desc-3 { margin-top: 30px; }
+
+        .result{
+          margin-top: 60px;
+          border-radius: 10px;
+          padding: 20px 40px;
+
+          p { 
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+          }
+
+          a { 
+            font-size: 1.1rem;
+            font-weight: 300;
+          }
+        }
+
+        .video {
+          font-size: 1.2rem;
+          margin: 20px 40px 0px 40px;
+
+          a { font-size: 1.1rem;}
+        }
+      }
+    }
+
     .line {
       width: 5px;
       height: 85vh;
-      left: 550px;
+      left: 31vw;
     }
 
     .back-btn {
       font-size: 20px;
-      margin: 0px 0px 70px 500px;
+      margin: 0px 0px 70px 30vw;
       padding: 5px 20px;
+
+      .back-icon {
+        height: 15px;
+        margin-right: 10px;
+      }
     }
 
    .parallax {
@@ -652,7 +715,8 @@ export default {
         width: 1503px;
         height: 852px;
         transform: rotate(-25deg);
-        left: 600px;
+        scale: 3;
+        left: 700px;
         margin-top: -50px;
       }
     }
