@@ -29,7 +29,7 @@
 
       p.video video mockup #[br] #[a(href='https://cutt.ly/0yMkxtl' target="_blank") https://cutt.ly/0yMkxtl]
 
-    div.content-desk#content-desk
+    div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
         img#exchange-img(src="../assets/exchange-thumb.png")
         p.desc#desc redesign de um #[a(href='https://cutt.ly/yyMjJUz' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
