@@ -15,12 +15,16 @@ Vue.component('vue-headful', vueHeadful);
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { 
-  faArrowLeft
+  faArrowLeft,
+  faPlus,
+  faMinus
 } from '@fortawesome/free-solid-svg-icons'
 
 Vue.component('fa-icon', FontAwesomeIcon)
 library.add(
   faArrowLeft, 
+  faPlus,
+  faMinus
 )
 
 Vue.config.productionTip = false

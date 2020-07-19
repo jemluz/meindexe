@@ -13,7 +13,7 @@
     nav.projs-navgation 
       div.row-1(data-aos="fade-right" data-aos-duration="2000" )
         router-link(to='/exchange') e
-        router-link.empty(to='') -
+        router-link(to='/aurora-i') a
         router-link.empty(to='') -
       
       div.row-2(data-aos="fade-left" data-aos-duration="2000" )
@@ -51,6 +51,8 @@ export default {
       // 1 - if u press e: view exchange project
       if (code == 69) {
         this.$router.push(({ path: '/exchange'}) )
+      } else if (code == 65) {
+        this.$router.push(({ path: '/aurora'}) )
       }
     }
   },
