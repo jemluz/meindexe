@@ -135,7 +135,7 @@ export default {
         auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 1700) + "px";
       } else if (this.getMobileOperatingSystem() == 'Android') {
         // android
-        auroraI.style.marginTop = (contentMob.offsetTop  + 1500) + "px";
+        auroraI.style.marginTop = (contentMob.offsetTop  + 1700) + "px";
       }
 
       // console.log(auroraStart.style.marginTop)
@@ -438,7 +438,8 @@ export default {
       }
 
       #img-1,
-      #img-2 {
+      #img-2,
+      #img-3 {
         margin-top: 20px;
       }
 
