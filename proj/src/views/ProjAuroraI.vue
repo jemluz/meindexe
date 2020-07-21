@@ -21,7 +21,7 @@
       p.desc-4 A solução que encontrei foi criar um algorítimo de vídeo com suporte a interações simulando uma interface mobile.
       p.desc-5 Algorítimo rodando #[br] #[a(href='https://cutt.ly/naQ2LRN' target="_blank") https://cutt.ly/naQ2LRN]
 
-      p#contentdesk-col2-start Outra coisa que amei fazer foi os slide de apresentação da proposta do nosso trabalho. 
+      p.desc-2#contentdesk-col2-start Outra coisa que amei fazer foi os slide de apresentação da proposta do nosso trabalho. 
       p "O que é escrito sem esforço é lido sem prazer." descreve o oposto da que fiz nessa tarefa. 
 
       img#img-1(src="../assets/aurora/slide.png")
@@ -239,8 +239,7 @@ export default {
     position: fixed;
 
     #img-1,
-    #img-2,
-    #img-3 {
+    #img-2 {
       box-shadow: 0px 0px 10px 0px #00000030;
       border: 2px solid #fff;
     }
@@ -445,6 +444,7 @@ export default {
 
       #img-3 {
         box-shadow: none;
+        border: none;
       }
 
       p {
