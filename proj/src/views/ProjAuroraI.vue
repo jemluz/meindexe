@@ -1,40 +1,77 @@
 <template lang="pug">
-  div#aurora
+  div#auroraI
     vue-headful(
       title="mindexe | Projeto Aurora"
     )
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
-      img(src="../assets/dot.svg")
-      h3 jan/2017 #[router-link(to="/aurora-ii") #[fa-icon(style="margin-left: 20px;" class="back-icon" icon="plus")]]
+      img(src="../assets/proj-bg/dot.svg")
+      h3 jan/2017 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
 
     div.name#name
       h2 #[span.first auro]#[span.second ra_]
 
-    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" v-if="!show2018")
+    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
       p.desc#contentmob-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade, e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
 
-      img#img-1(src="../assets/aurora-thumb.png")
+      img#img-1(src="../assets/aurora/prototipo1.png")
 
       p.desc-2 Eu fiquei responsável pela programação, e a idéia da minha equipe era um protótipo de app mobile, então o problema era:  
       p.desc-3 #[strong Como eu vou imitar uma aplicação mobile em uma linguagem que  foi projetada para desenhos? ]
       p.desc-4 A solução que encontrei foi criar um algorítimo de vídeo com suporte a interações simulando uma interface mobile.
       p.desc-5 Algorítimo rodando #[br] #[a(href='https://cutt.ly/naQ2LRN' target="_blank") https://cutt.ly/naQ2LRN]
 
+      p#contentdesk-col2-start Outra coisa que amei fazer foi os slide de apresentação da proposta do nosso trabalho. 
+      p "O que é escrito sem esforço é lido sem prazer." descreve o oposto da que fiz nessa tarefa. 
+
+      img#img-1(src="../assets/aurora/slide.png")
+
+      p.desc-8 Apresentação #[br] #[a(href='https://cutt.ly/naQ2LRN' target="_blank") https://cutt.ly/naQ2LRN]
+
+
       p.desc-6 Um desafio que encontrei nessa etapa foi ensinar ao time o algoritimo do código para avaliação em uma das disciplinas. 
       p.desc-7 Então criei um infográfico, sistematizando o código e usei ele pra ensinar. Deu tão certo que conseguimos a nota máxima na disciplina :D 
-      img#img-2(src="../assets/aurora-thumb2.png")
+      img#img-2(src="../assets/aurora/info_codigo.png")
       p.desc-8 Infográfico #[br] #[a(href='https://cutt.ly/1aQ9bza' target="_blank") https://cutt.ly/1aQ9bza]
 
       p.desc-9 Também criei o layout para o site do projeto.
-      img#img-3(src="../assets/aurora-thumb3.png")
+      img#img-3(src="../assets/aurora/layout1.png")
       p.desc-10 como foi meu primeiro site, decidi fazer 100% na mão, antes de correr pra qualquer sistema de workflow, automação, e versionamento, como pré-processadores, git, gulp, npm, botstrap e tudo o mais.
       p.desc-11 Amostra do site 1.0 #[br] #[a(href='https://cutt.ly/haQ9Fab' target="_blank") https://cutt.ly/haQ9Fab]
 
-      p.desc-12.btn-next #[router-link(to="/aurora-ii") #[fa-icon(icon="plus")] Ver mais]      
+      p.desc-12.btn-next #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(icon="plus")] Ver mais]      
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
+        p.desc#contentdesk-col1-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade, e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
+
+        img#img-1(src="../assets/aurora/prototipo1.png")
+
+        p.desc-2 Eu fiquei responsável pela programação, e a idéia da minha equipe era um protótipo de app mobile, então o problema era:  
+        p.desc-3 #[strong Como eu vou imitar uma aplicação mobile em uma linguagem que  foi projetada para desenhos? ]
+        p.desc-4 A solução que encontrei foi criar um algorítimo de vídeo com suporte a interações simulando uma interface mobile.
+        p.desc-5 Algorítimo rodando #[br] #[a(href='https://cutt.ly/naQ2LRN' target="_blank") https://cutt.ly/naQ2LRN]
+
+      div.col-2#col-2
+        p.desc#contentdesk-col2-start Outra coisa que amei fazer foi os slide de apresentação da proposta do nosso trabalho. 
+        p.desc-2 "O que é escrito sem esforço é lido sem prazer." descreve o oposto da que fiz nessa tarefa. 
+
+        img#img-1(src="../assets/aurora/slide.png")
+
+        p.desc-3 Apresentação #[br] #[a(href='https://cutt.ly/naQ2LRN' target="_blank") https://cutt.ly/naQ2LRN]
+
+        p.desc-4 Um desafio que encontrei nessa etapa foi ensinar ao time o algoritimo do código para avaliação em uma das disciplinas. 
+        p.desc-5 Então criei um infográfico, sistematizando o código e usei ele pra ensinar. Deu tão certo que conseguimos a nota máxima na disciplina :D 
+        img#img-2(src="../assets/aurora/info_codigo.png")
+        p.desc-6 Infográfico #[br] #[a(href='https://cutt.ly/1aQ9bza' target="_blank") https://cutt.ly/1aQ9bza]
+
+      div.col-3#col-3
+        p.desc#contentdesk-col3-start Também criei o layout para o site do projeto.
+        img#img-3(src="../assets/aurora/layout1.png")
+        p.desc-2 como foi meu primeiro site, decidi fazer 100% na mão, antes de correr pra qualquer sistema de workflow, automação, e versionamento, como pré-processadores, git, gulp, npm, botstrap e tudo o mais.
+        p.desc-3 Amostra do site 1.0 #[br] #[a(href='https://cutt.ly/haQ9Fab' target="_blank") https://cutt.ly/haQ9Fab]
+
+        p.desc-4.btn-next #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(icon="plus")] Ver mais] 
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -107,8 +144,18 @@ export default {
       let contentDesk = document.getElementById("content-desk");
       let lineHeight = document.getElementById("line").offsetHeight;
 
-      contentDesk.style.height = (lineHeight - 160)+"px";
-      console.log(lineHeight)
+      let dataTop = document.getElementById("data").offsetTop;
+      let dataheight = document.getElementById("data").offsetHeight;
+
+      let colIStart = document.getElementById("contentdesk-col1-start");
+      let colIIStart = document.getElementById("contentdesk-col2-start");
+
+      contentDesk.style.marginTop = 140 + "px";
+      contentDesk.style.height = (lineHeight - 140)+"px";
+      
+      colIStart.style.marginTop = dataTop  + "px";
+      colIIStart.style.marginTop = dataTop  + "px";
+      
     },
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
@@ -138,8 +185,8 @@ export default {
 <style lang="scss">
 @import "../styles/helpers/variables";
 
-#aurora {
-  background: linear-gradient(to bottom, #f1f1f1, #fff);
+#auroraI {
+  background: linear-gradient(to bottom right, #eee, #fff);
   background-attachment: fixed;
 
   color: $branco;
@@ -154,6 +201,10 @@ export default {
 
     color: $roxo;
     z-index: 3;
+
+    .timeline-next {
+      color: $roxo;
+    }
   }
 
   .name {
@@ -188,13 +239,13 @@ export default {
     position: fixed;
 
     #img-1,
-    #img-2 {
+    #img-2,
+    #img-3 {
       box-shadow: 0px 0px 10px 0px #00000030;
       border: 2px solid #fff;
     }
 
-    p,
-    .video {
+    p {
       font-family: t26-carbon, monospace;
       font-size: 16px;
       font-style: italic;
@@ -223,34 +274,15 @@ export default {
       border-bottom: 1px solid #619AD1;
     }
 
-    .result {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      background-color: $roxo;
-      color: #fff;
-
-      border-radius: 5px;
-      box-shadow: 0px 0px 20px 0px #00000020;
-
-      a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-        opacity: .4;
-      }
-    }
-
-    .video a {
+    .timeline-next {
       color: $roxo;
-      border-bottom: 1px solid $roxo;
     }
   }
 
   .content-desk {
+    // direction: rtl;
+    overflow-y: scroll;
+    
     z-index: 2;
 
     display: flex;
@@ -263,12 +295,7 @@ export default {
       box-shadow: 0px 0px 10px 0px #00000030;
     }
 
-    .desc,
-    .desc-2,
-    .desc-3,
-    .desc-4,
-    .desc-5,
-    .video {
+    p {
       font-family: t26-carbon, monospace;
       font-size: 16px;
       font-style: italic;
@@ -282,51 +309,41 @@ export default {
       }
     }
 
-    .desc a { border-bottom: 1px solid $roxo; }
-
-    .desc-3 a { 
-      color: #5570F9; 
-      border-bottom: 1px solid #5570F9;
-    }
-    .desc-4 a { 
-      color: #659DE8; 
-      border-bottom: 1px solid #659DE8;
-    }
-    .desc-5 a { 
-      color: #70BCDC; 
-      border-bottom: 1px solid #70BCDC;
-    }
-
-    .result {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      background-color: $roxo;
-      color: #fff;
-
-      border-radius: 5px;
-      box-shadow: 0px 0px 20px 0px #00000020;
-
-      a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-        opacity: .4;
+    .col-1 {
+      .desc-5 a { 
+        color: #CF93B1; 
+        border-bottom: 1px solid #CF93B1;
       }
     }
 
-    .video a {
+    .col-2 {
+      .desc-3 a { 
+        color: #619AD1; 
+        border-bottom: 1px solid #619AD1;
+      }
+      .desc-6 a { 
+        color: #619AD1; 
+        border-bottom: 1px solid #619AD1;
+      }
+    }
+
+    .col-3 {
+      .desc-3 a { 
+        color: #CF93B1; 
+        border-bottom: 1px solid #CF93B1;
+      }
+    }
+    
+    
+
+    .timeline-next {
       color: $roxo;
-      border-bottom: 1px solid $roxo;
     }
   }
 
   .line {
     position: fixed;
-    background: url("../assets/line.svg");
+    background: url("../assets/proj-bg/line.svg");
     opacity: .9;
   }
 
@@ -382,14 +399,14 @@ export default {
 
 // mobile only
 @media only screen and (min-width: 901px) {
-  #aurora {
+  #auroraI {
     .content-mob { display: none; }
   }
 }
 
 // MOBILE
 @media only screen and (max-width: 900px) {
-  #aurora {
+  #auroraI {
     .data {
       top: 30px;
       left: 55px;
@@ -424,6 +441,10 @@ export default {
       #img-1,
       #img-2 {
         margin-top: 20px;
+      }
+
+      #img-3 {
+        box-shadow: none;
       }
 
       p {
@@ -470,7 +491,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-          background: url("../assets/malha.png");
+          background: url("../assets/proj-bg/malha.png");
           width: 1503px;
           height: 852px;
           transform: rotate(-30deg);
@@ -483,7 +504,7 @@ export default {
 
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
- #aurora {
+ #auroraI {
     .data {
       top: 30px;
       left: 128px;
@@ -511,60 +532,27 @@ export default {
       margin-top: 160px;
       padding: 0px 20px 0px 40px;
 
-      .col-1 {
+      div {
         text-align: left;
 
-        img { max-width: 35vw; }
+        img { max-width: 20vw; }
 
-        .desc {
-          max-width: 30vw;
-          font-size: 1.1rem;
-          margin-top: 20px;
-          a { color: $roxo; }
+        p {
+          max-width: 20vw;
+          font-size: 1rem;
+          margin: 20px 0px;
+
+          strong { color: $roxo;}
         }
       }
 
-      .col-2 {
-        padding-top: 80px;
+      .col-2,
+      .col-3 {
         margin-left: 80px;
+      }
 
-        .desc-2 {
-          font-weight: bold;
-          // max-width: 200px;
-          font-size: 1.3rem;
-          margin-top: -60px;
-        }
-
-        .desc-3,
-        .desc-4,
-        .desc-5 {
-          font-size: 1rem;
-          margin-top: 20px;
-        }
-        .desc-3 { margin-top: 30px; }
-
-        .result{
-          margin-top: 60px;
-          border-radius: 10px;
-          padding: 15px 40px;
-
-          p { 
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-          }
-
-          a { 
-            font-size: .9rem;
-            font-weight: 300;
-          }
-        }
-
-        .video {
-          font-size: 1.1rem;
-          margin: 20px 40px 0px 0px;
-
-          a { font-size: 1rem;}
-        }
+      .col-3 img {
+        box-shadow: none;
       }
     }
 
@@ -587,7 +575,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.png");
+        background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-20deg);
@@ -601,7 +589,7 @@ export default {
 
 // WIDE
 @media only screen and (min-width: 2500px) {
-  #aurora {
+  #auroraI {
     .data {
       top: 30px;
       left: 789px;
@@ -626,62 +614,30 @@ export default {
     }
 
     .content-desk { 
-      margin-top: 250px;
+      margin-top: 160px;
       padding: 0px 20px 0px 40px;
 
-      .col-1 {
+      div {
         text-align: left;
 
-        img { max-width: 19vw; }
+        img { max-width: 10vw; }
 
-        .desc {
-          max-width: 19vw;
-          font-size: 1.3rem;
-          margin-top: 20px;
-          a { color: $roxo; }
+        p {
+          max-width: 10vw;
+          font-size: 1rem;
+          margin: 20px 0px;
+
+          strong { color: $roxo;}
         }
       }
 
-      .col-2 {
-        padding-top: 80px;
+      .col-2,
+      .col-3 {
         margin-left: 80px;
+      }
 
-        .desc-2 {
-          font-weight: bold;
-          font-size: 1.3rem;
-          margin-top: -60px;
-        }
-
-        .desc-3,
-        .desc-4,
-        .desc-5 {
-          font-size: 1.1rem;
-          margin-top: 20px;
-        }
-        .desc-3 { margin-top: 30px; }
-
-        .result{
-          margin-top: 60px;
-          border-radius: 10px;
-          padding: 20px 40px;
-
-          p { 
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-          }
-
-          a { 
-            font-size: 1.1rem;
-            font-weight: 300;
-          }
-        }
-
-        .video {
-          font-size: 1.2rem;
-          margin: 20px 40px 0px 40px;
-
-          a { font-size: 1.1rem;}
-        }
+      .col-3 img {
+        box-shadow: none;
       }
     }
 
@@ -704,7 +660,7 @@ export default {
 
    .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.png");
+        background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-25deg);

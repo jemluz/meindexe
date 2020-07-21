@@ -5,8 +5,8 @@
     )
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
-      img(src="../assets/dot.svg")
-      h3 ago/2017 #[router-link(to="/aurora-i") #[fa-icon(style="margin-left: 20px;" class="back-icon" icon="minus")]]
+      img(src="../assets/proj-bg/dot.svg")
+      h3 ago/2017 #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(style="margin-left: 20px;" class="back-icon" icon="minus")]]
 
     div.name#name
       h2 #[span.first auro]#[span.second ra_]
@@ -16,11 +16,11 @@
       p.desc-14  Então eu tranquei a faculdade e decidi renovar o visual do site, me aprofundar no processo de criação, em planejamento e novas tecnologias. 
       p.desc-15 Meu objetivo era que ao fim daquele semestre eu tivesse meu primeiro site no ar, feito por mim de ponta a ponta.
 
-      img#img-4(src="../assets/aurora-thumb4.png")
+      img#img-4(src="../assets/aurora/dr_ai.png")
       p.desc-16 Diagrama de Relação #[br] #[a(href='https://cutt.ly/oaWqG4g' target="_blank") https://cutt.ly/oaWqG4g]
       p.desc-17 Arquitetura da Informação #[br] #[a(href='https://cutt.ly/iaWqTFZ' target="_blank") https://cutt.ly/iaWqTFZ]
       
-      img#img-5(src="../assets/aurora-thumb5.png")
+      img#img-5(src="../assets/aurora/layout2.png")
       p.desc-18 Amostra do site 2.0 #[br] #[a(href='https://cutt.ly/9aWqMV7' target="_blank") https://cutt.ly/9aWqMV7]
 
       p.desc-19 Nesse período eu também aprendi muito sobre gerenciamento de tempo, rotina e produtividade. 
@@ -30,10 +30,12 @@
       //- p.desc-1 Já que não tinha mais nenhum compromisso que me obrigasse a cumprir horários.
       //- p.desc-1 Esse conhecimento me rendeu muitos frutos, ministrei oficinas e apliquei em metodologias no ano seguinte em que fui parte da diretoria da Empresa Júnior do meu curso. Virou projeto de aplicativo e em breve vai ter uma pagina dele aqui também! 
 
-      p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon(icon="minus")] Ver menos]
+      p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] Ver menos]
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
+      div.col-1#col-2
+      div.col-1#col-3
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -153,6 +155,10 @@ export default {
 
     color: $roxo;
     z-index: 3;
+
+    .timeline-prev {
+      color: $roxo;
+    }
   }
 
   .name {
@@ -202,6 +208,10 @@ export default {
     .vue-link {
       color: #4fc08d;
     
+    }
+
+    .timeline-prev {
+      color: $roxo;
     }
 
   }
@@ -282,7 +292,7 @@ export default {
 
   .line {
     position: fixed;
-    background: url("../assets/line.svg");
+    background: url("../assets/proj-bg/line.svg");
     opacity: .9;
   }
 
@@ -418,7 +428,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-          background: url("../assets/malha.png");
+          background: url("../assets/proj-bg/malha.png");
           width: 1503px;
           height: 852px;
           transform: rotate(-30deg);
@@ -471,49 +481,6 @@ export default {
           a { color: $roxo; }
         }
       }
-
-      .col-2 {
-        padding-top: 80px;
-        margin-left: 80px;
-
-        .desc-2 {
-          font-weight: bold;
-          // max-width: 200px;
-          font-size: 1.3rem;
-          margin-top: -60px;
-        }
-
-        .desc-3,
-        .desc-4,
-        .desc-5 {
-          font-size: 1rem;
-          margin-top: 20px;
-        }
-        .desc-3 { margin-top: 30px; }
-
-        .result{
-          margin-top: 60px;
-          border-radius: 10px;
-          padding: 15px 40px;
-
-          p { 
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-          }
-
-          a { 
-            font-size: .9rem;
-            font-weight: 300;
-          }
-        }
-
-        .video {
-          font-size: 1.1rem;
-          margin: 20px 40px 0px 0px;
-
-          a { font-size: 1rem;}
-        }
-      }
     }
 
     .line {
@@ -535,7 +502,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.png");
+        background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-20deg);
@@ -589,48 +556,6 @@ export default {
           a { color: $roxo; }
         }
       }
-
-      .col-2 {
-        padding-top: 80px;
-        margin-left: 80px;
-
-        .desc-2 {
-          font-weight: bold;
-          font-size: 1.3rem;
-          margin-top: -60px;
-        }
-
-        .desc-3,
-        .desc-4,
-        .desc-5 {
-          font-size: 1.1rem;
-          margin-top: 20px;
-        }
-        .desc-3 { margin-top: 30px; }
-
-        .result{
-          margin-top: 60px;
-          border-radius: 10px;
-          padding: 20px 40px;
-
-          p { 
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-          }
-
-          a { 
-            font-size: 1.1rem;
-            font-weight: 300;
-          }
-        }
-
-        .video {
-          font-size: 1.2rem;
-          margin: 20px 40px 0px 40px;
-
-          a { font-size: 1.1rem;}
-        }
-      }
     }
 
     .line {
@@ -652,7 +577,7 @@ export default {
 
    .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.png");
+        background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-25deg);

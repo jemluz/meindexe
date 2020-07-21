@@ -52,7 +52,7 @@ export default {
       if (code == 69) {
         this.$router.push(({ path: '/exchange'}) )
       } else if (code == 65) {
-        this.$router.push(({ path: '/aurora'}) )
+        this.$router.push(({ path: '/aurora-i'}) )  
       }
     }
   },
@@ -278,19 +278,19 @@ export default {
       }
 
       div#bg-3-1 {
-        background: url("../assets/tcm3.svg");
+        background: url("../assets/home-bg/tcm3.svg");
         width: 529px;
         height: 900px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../assets/tem.svg");
+        background-image: url("../assets/home-bg/tem.svg");
         width: 529px;
         height: 900px;
         right: 160px;
       }
       div#bg-3-3 {
-        background: url("../assets/em.svg");
+        background: url("../assets/home-bg/em.svg");
         width: 446px;
         height: 713px;
         right: 180px;
@@ -365,26 +365,26 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-tcm.svg");
+        background: url("../assets/home-bg/d-tcm.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../assets/d-tem.svg");
+        background-image: url("../assets/home-bg/d-tem.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-3 {
-        background: url("../assets/d-em.svg");
+        background: url("../assets/home-bg/d-em.svg");
         width: 100vw;
         height: 100vh;
         left: -250px;
       }
       div#bg-3-4 {
         position: fixed !important;
-        background: url("../assets/d-b.svg");
+        background: url("../assets/home-bg/d-b.svg");
         width: 100vw;
         height: 100vh;
         left: 0px;
@@ -458,26 +458,26 @@ export default {
     .parallax {
       div#bg-3-1 {
         display: none;
-        background: url("../assets/d-tcm.svg");
+        background: url("../assets/home-bg/d-tcm.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../assets/d-tem.svg");
+        background-image: url("../assets/home-bg/d-tem.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-3 {
-        background: url("../assets/d-em.svg");
+        background: url("../assets/home-bg/d-em.svg");
         width: 100vw;
         height: 100vh;
         left: -250px;
       }
       div#bg-3-4 {
         position: fixed !important;
-        background: url("../assets/d-b.svg");
+        background: url("../assets/home-bg/d-b.svg");
         width: 100vw;
         height: 100vh;
         left: 0px;

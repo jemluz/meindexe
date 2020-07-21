@@ -5,7 +5,7 @@
     )
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
-      img(src="../assets/dot.svg")
+      img(src="../assets/proj-bg/dot.svg")
       h3 mar/2018
 
     div.name#name
@@ -333,7 +333,7 @@ export default {
 
   .line {
     position: fixed;
-    background: url("../assets/line.svg");
+    background: url("../assets/proj-bg/line.svg");
     opacity: .9;
   }
 
@@ -477,7 +477,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-          background: url("../assets/malha.png");
+          background: url("../assets/proj-bg/malha.png");
           width: 1503px;
           height: 852px;
           transform: rotate(-30deg);
@@ -594,7 +594,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.png");
+        background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-20deg);
@@ -711,7 +711,7 @@ export default {
 
    .parallax {
       div#bg-3-1 {
-        background: url("../assets/d-malha.png");
+        background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-25deg);
