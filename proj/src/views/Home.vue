@@ -12,9 +12,9 @@
 
     nav.projs-navgation 
       div.row-1(data-aos="fade-right" data-aos-duration="2000" )
-        router-link(to='/exchange') e
         router-link(to='/aurora-i') a
-        router-link.empty(to='') -
+        router-link(to='/moniq') m
+        router-link(to='/exchange') e
       
       div.row-2(data-aos="fade-left" data-aos-duration="2000" )
         router-link.empty(to='') -

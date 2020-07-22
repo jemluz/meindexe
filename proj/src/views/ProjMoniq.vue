@@ -1,62 +1,42 @@
 <template lang="pug">
-  div#aurora
+  div#moniq
     vue-headful(
-      title="mindexe | Projeto Aurora"
-    )
+      title="mindexe | Projeto Aurora")
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
       img(src="../assets/proj-bg/dot.svg")
-      h3 ago/2017 #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(style="margin-left: 20px;" class="back-icon" icon="minus")]]
+      h3 dez/2017 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
 
     div.name#name
-      h2 #[span.first auro]#[span.second ra_]
+      h2 #[span.first monique]#[span.second luz_]
 
-    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500")
-      p.desc-13#contentmob-start Apesar de ter concluído o semestre 2017.1 com a sensação de um trabalho bem feito, eu ainda sentia que sabia pouco, e que precisaria de tempo para me aprofundar na área de programação.  
-      p.desc-14  Então eu tranquei a faculdade e decidi renovar o visual do site, me aprofundar no processo de criação, em planejamento e novas tecnologias. 
-      p.desc-15 Meu objetivo era que ao fim daquele semestre eu tivesse meu primeiro site no ar, feito por mim de ponta a ponta.
+    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
+      img#contentmob-start(src="../assets/moniq/rascunhos.png")
+      img(src="../assets/moniq/mockup.png")
+      img(src="../assets/moniq/social.png")
 
-      img#img-4(src="../assets/aurora/dr_ai.png")
-      p.desc-16 Diagrama de Relação #[br] #[a(href='https://drive.google.com/file/d/125BL2tePQQ-aWAnJrWotPrxmFSUxVJa8/view?usp=sharing' target="_blank") https://drive.google.com]
-      p.desc-17 Arquitetura da Informação #[br] #[a(href='https://drive.google.com/file/d/1StEG0OSgiQ7OuuKMAcog_SljEPeXy4hL/view?usp=sharing' target="_blank") https://drive.google.com]
+      p Apesar de não ser minha praia, vez ou outra eu arrisco um branding. Essa aqui é a marca de Monique Luz, uma professora particular.
+
+      div.result
+        p apresentação final
+        a(href="https://drive.google.com/file/d/1ALkr59dzaCvKUT64-nQJT1cGq9HnhUaW/view?usp=sharing") https://drive.google.com
       
-      img#img-5(src="../assets/aurora/layout2.png")
-      p.desc-18 Amostra do site 2.0 #[br] #[a(href='https://youtu.be/eW5_OWG8vN8' target="_blank") https://youtu.be/eW5_OWG8vN8]
-
-      p.desc-19 Nesse período eu também aprendi muito sobre gerenciamento de tempo, rotina e produtividade. 
-      
-      p.desc-20 Atualmente o aurora está sendo migrado para a tecnologia #[a.vue-link(href='https://br.vuejs.org/' target="_blank") Vue.js]. Aguardem notícias pois ele resurgirá em breve!
-
-      //- p.desc-1 Já que não tinha mais nenhum compromisso que me obrigasse a cumprir horários.
-      //- p.desc-1 Esse conhecimento me rendeu muitos frutos, ministrei oficinas e apliquei em metodologias no ano seguinte em que fui parte da diretoria da Empresa Júnior do meu curso. Virou projeto de aplicativo e em breve vai ter uma pagina dele aqui também! 
-
-      p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] Ver menos]
+      p
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        section
-          img.img-dr#contentdesk-col1-start(src="../assets/aurora/dr_ai.svg")
+        div#contentdesk-col1-start
+          img#contentmob-start(src="../assets/moniq/rascunhos.png")
+          img(src="../assets/moniq/mockup.png")
+          img(src="../assets/moniq/social.png")
 
-          div 
-            p.desc-13 Apesar de ter concluído o semestre 2017.1 com a sensação de um trabalho bem feito, eu ainda sentia que sabia pouco, e que precisaria de tempo para me aprofundar na área de programação.  
-            p.desc-14  Então eu tranquei a faculdade e decidi renovar o visual do site, me aprofundar no processo de criação, em planejamento e novas tecnologias. 
-            p.desc-15 Meu objetivo era que ao fim daquele semestre eu tivesse meu primeiro site no ar, feito por mim de ponta a ponta.
-            p.desc-16 Diagrama de Relação #[br] #[a(href='https://drive.google.com/file/d/125BL2tePQQ-aWAnJrWotPrxmFSUxVJa8/view?usp=sharing' target="_blank") https://drive.google.com]
-            p.desc-17 Arquitetura da Informação #[br] #[a(href='https://drive.google.com/file/d/1StEG0OSgiQ7OuuKMAcog_SljEPeXy4hL/view?usp=sharing' target="_blank") https://drive.google.com]
-      
+        p Apesar de não ser minha praia, vez ou outra eu arrisco um branding. Essa aqui é a marca de Monique Luz, uma professora particular.
 
-        section.sec-bottom
-          div
-            p.desc-18 Amostra do site 2.0 #[br] #[a(href='https://youtu.be/eW5_OWG8vN8' target="_blank") https://youtu.be/eW5_OWG8vN8]
-            p.desc-19 Nesse período eu também aprendi muito sobre gerenciamento de tempo, rotina e produtividade. 
+        div.result
+          p apresentação final
+          a(href="https://drive.google.com/file/d/1ALkr59dzaCvKUT64-nQJT1cGq9HnhUaW/view?usp=sharing") https://drive.google.com
         
-            p.desc-20 Atualmente o aurora está sendo migrado para a tecnologia #[a.vue-link(href='https://br.vuejs.org/' target="_blank") Vue.js]. Aguardem notícias pois ele resurgirá em breve!
-
-
-            p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] Ver menos]
-
-          img#img-5(src="../assets/aurora/layout2.png")
-
+            
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -70,57 +50,55 @@
 
 <script>
 export default {
-  name: "ProjAuroraII",
+  name: "ProjAuroraI",
   components: {},
   methods: {
     getMobileOperatingSystem() {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
-      {
-        return 'iOS';
-
-      }
-      else if( userAgent.match( /Android/i ) )
-      {
-
-        return 'Android';
-      }
-      else
-      {
-        return 'unknown';
+      if (
+        userAgent.match(/iPad/i) ||
+        userAgent.match(/iPhone/i) ||
+        userAgent.match(/iPod/i)
+      ) {
+        return "iOS";
+      } else if (userAgent.match(/Android/i)) {
+        return "Android";
+      } else {
+        return "unknown";
       }
     },
     lineHeight() {
       let backButtonTop = document.getElementById("back-btn").offsetTop;
       let line = document.getElementById("line");
 
-      line.style.height = (backButtonTop - 30) + "px";
+      line.style.height = backButtonTop - 30 + "px";
     },
     linePosition() {
       let line = document.getElementById("line");
       let col1 = document.getElementById("col-1");
 
-      col1.style.marginLeft = (line.offsetLeft + line.offsetWidth) + "px";
+      col1.style.marginLeft = line.offsetLeft + line.offsetWidth + "px";
     },
-    mobContentStart(){
+    mobContentStart() {
       // nao funfa?
       let lineHeight = document.getElementById("line").offsetHeight;
       let contentMob = document.getElementById("content-mob");
 
       let dataTop = document.getElementById("data").offsetTop;
       let dataheight = document.getElementById("data").offsetHeight;
-      let auroraII = document.getElementById("contentmob-start");
+      let moniq = document.getElementById("contentmob-start");
 
       contentMob.style.marginTop = 140 + "px";
-      contentMob.style.height = (lineHeight - 140)+"px";
-      
-      if (this.getMobileOperatingSystem() == 'iOS') {
+      contentMob.style.height = lineHeight - 140 + "px";
+
+      if (this.getMobileOperatingSystem() == "iOS") {
         // ios
-        auroraII.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 1000) + "px";
-      } else if (this.getMobileOperatingSystem() == 'Android') {
+        moniq.style.marginTop =
+          contentMob.offsetTop - dataTop - dataheight + 100 + "px";
+      } else if (this.getMobileOperatingSystem() == "Android") {
         // android
-        auroraII.style.marginTop = (contentMob.offsetTop  + 800) + "px";
+        moniq.style.marginTop = contentMob.offsetTop + 100 + "px";
       }
 
       // console.log(auroraStart.style.marginTop)
@@ -134,16 +112,16 @@ export default {
 
       let colIStart = document.getElementById("contentdesk-col1-start");
       contentDesk.style.marginTop = 140 + "px";
-      contentDesk.style.height = (lineHeight - 140)+"px";
-      
-      colIStart.style.marginTop = dataTop  + "px"; 
+      contentDesk.style.height = lineHeight - 140 + "px";
+
+      colIStart.style.marginTop = (dataTop )+ "px";
     },
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
 
       // 1 - ipress i: back to home
       if (code == 73) {
-        this.$router.push(({ path: '/'}) )
+        this.$router.push({ path: "/" });
       }
     }
   },
@@ -166,8 +144,8 @@ export default {
 <style lang="scss">
 @import "../styles/helpers/variables";
 
-#aurora {
-  background: linear-gradient(to bottom, #f1f1f1, #fff);
+#moniq {
+  background: linear-gradient(to bottom right, #eee, #fff);
   background-attachment: fixed;
 
   color: $branco;
@@ -183,7 +161,7 @@ export default {
     color: $roxo;
     z-index: 3;
 
-    .timeline-prev {
+    .timeline-next {
       color: $roxo;
     }
   }
@@ -193,23 +171,23 @@ export default {
     z-index: 3;
 
     h2 {
-      font-family: 'Khula', sans-serif;
+      font-family: "Khula", sans-serif;
       font-weight: 400;
 
       .first {
-        background-color: #CF93B1;
+        color: $roxo;
+        background-color: #FDD863;
         box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
         background-color: transparent;
-        color: #CF93B1;
+        color: #FDD863;
       }
     }
   }
 
   .content-mob {
-
     overflow-y: scroll;
     z-index: 2;
 
@@ -218,6 +196,11 @@ export default {
     align-items: flex-start;
     flex-direction: column;
     position: fixed;
+
+    img {
+      box-shadow: 0px 0px 20px 0px #00000030;
+      border: 2px solid #fff;
+    }
 
     p {
       font-family: t26-carbon, monospace;
@@ -233,47 +216,43 @@ export default {
       }
     }
 
-    .desc a { border-bottom: 1px solid $roxo; }
+    .result {
+      font-family: t26-carbon, monospace;
+      font-size: 16px;
+      font-style: italic;
 
-    .desc-16 a,
-    .desc-17 a { 
-      color: #298DBF; 
-      border-bottom: 1px solid #298DBF;
+      text-align: left;
+
+      background-color: $roxo;
+      p { color: #fff; margin: 0px;}
+
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px 0px #00000020;
+
+      a {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        font-weight: 700;
+        opacity: .4;
+      }
     }
-
-    .desc-18 a { 
-      color: #333; 
-      border-bottom: 1px solid #333;
-    }
-
-    .vue-link {
-      color: #4fc08d;
-    
-    }
-
-    .btn-prev a,
-    .timeline-prev {
-      color: $roxo;
-    }
-
   }
 
   .content-desk {
-    z-index: 2;
+    // direction: rtl;
     overflow-y: scroll;
-    width: 99vw;
+
+    z-index: 2;
 
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
     position: fixed;
 
     img {
-      box-shadow: 0px 0px 10px 0px #00000030;
-    }
-
-    .img-dr {
-      box-shadow: none;
+      box-shadow: 0px 0px 20px 0px #00000030;
+      border: 2px solid #fff;
     }
 
     p {
@@ -281,6 +260,7 @@ export default {
       font-size: 16px;
       font-style: italic;
 
+      text-align: left;
 
       color: #555;
 
@@ -289,47 +269,32 @@ export default {
       }
     }
 
+    .result {
+      font-family: t26-carbon, monospace;
+      font-size: 16px;
+      font-style: italic;
 
-    .col-1 {
-      display: flex;
-      flex-direction: column;
+      text-align: left;
 
-      #img-5 { 
-        box-shadow: none;
+      background-color: $roxo;
+      color: #fff;
+
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px 0px #00000020;
+
+      a {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        font-weight: 700;
+        opacity: .4;
       }
-
-      section {
-        display: flex;
-        flex-direction: row;
-      }
-
-    }
-
-    .desc-16 a,
-    .desc-17 a { 
-      color: #298DBF; 
-      border-bottom: 1px solid #298DBF;
-    }
-
-    .desc-18 a { 
-      color: #CF93B1; 
-      border-bottom: 1px solid #CF93B1;
-    }
-
-    .vue-link {
-      color: #4fc08d;
-    }
-
-    .btn-prev a,
-    .timeline-prev {
-      color: $roxo;
     }
   }
 
   .line {
     position: fixed;
     background: url("../assets/proj-bg/line.svg");
-    opacity: .9;
+    opacity: 0.9;
   }
 
   .back-btn {
@@ -341,7 +306,7 @@ export default {
     border: 2px solid $roxo;
     border-radius: 5px 10px 10px 5px;
 
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     display: flex;
     justify-content: center;
@@ -384,18 +349,20 @@ export default {
 
 // mobile only
 @media only screen and (min-width: 901px) {
-  #aurora {
-    .content-mob { display: none; }
+  #moniq {
+    .content-mob {
+      display: none;
+    }
   }
 }
 
 // MOBILE
 @media only screen and (max-width: 900px) {
-  #aurora {
+  #moniq {
     .data {
       top: 30px;
       left: 55px;
-      h3 { 
+      h3 {
         margin-left: 20px;
       }
     }
@@ -418,13 +385,9 @@ export default {
     .content-mob {
       margin-left: 40px;
       padding: 0px 70px 0px 50px;
-      
-      img {
-        width: 200px;
-      }
 
-      #img-4,
-      #img-5 {
+      img {
+        width: 250px;
         margin-top: 20px;
       }
 
@@ -433,17 +396,17 @@ export default {
         margin-left: 5px;
       }
 
-      #img-5,
-      .desc-9 {
-        margin-top: 60px;
-      }
-      
-      .btn-back {
-        margin-bottom: 20px;
+      .result {
+        margin: 40px 0px 0px -40px;
+        padding: 15px 40px;
+
+        p { margin-bottom: 5px;}
       }
     }
 
-    .content-desk { display: none; }
+    .content-desk {
+      display: none;
+    }
 
     .line {
       width: 5px;
@@ -464,24 +427,24 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-          background: url("../assets/proj-bg/malha.png");
-          width: 1503px;
-          height: 852px;
-          transform: rotate(-30deg);
-          left: 0px;
-          margin-top: -260px;
-        }
+        background: url("../assets/proj-bg/malha.png");
+        width: 1503px;
+        height: 852px;
+        transform: rotate(-30deg);
+        left: 0px;
+        margin-top: -260px;
+      }
     }
   }
 }
 
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
- #aurora {
+  #moniq {
     .data {
       top: 30px;
       left: 128px;
-      h3 { 
+      h3 {
         margin-left: 20px;
       }
     }
@@ -501,46 +464,50 @@ export default {
       }
     }
 
-    .content-desk { 
+    .content-desk {
       margin-top: 160px;
       padding: 0px 20px 0px 40px;
+      width: 99vw;
 
-      .col-1 {
-        #img-5 {
-          width: 20vw;
-        }
+      div {
+        text-align: left;
 
-        section {
-          text-align: left;
-
-          div { 
-            margin-left: 50px;
-            max-width: 200px;
-
-
-            p {
-              margin-top: 20px;
-            }
-
-            .desc {
-              max-width: 30vw;
-              font-size: 1.1rem;
-              margin-top: 20px;
-              a { color: $roxo; }
-            }
+        div {
+          img {
+            max-width: 20vw;
+            margin-right:20px;
           }
         }
 
-        .sec-bottom {
-          text-align: right;
+        p {
+          max-width: 40vw;
+          font-size: 1rem;
+          margin: 20px 0px;
 
-          margin: 50px 0px 0px 50px;
-          
-          img { margin-left: 50px;}
-          div { margin-top: 50px; }
+          strong {
+            color: $roxo;
+          }
         }
 
+        .result{
+          margin-top: 40px;
+          border-radius: 10px;
+          padding: 15px 40px;
+          max-width: 300px;
+
+          p { 
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 0px 0px 5px 0px;
+          }
+
+          a { 
+            font-size: .9rem;
+            font-weight: 300;
+          }
+        }
       }
+
     }
 
     .line {
@@ -568,7 +535,7 @@ export default {
         transform: rotate(-20deg);
         left: 100px;
         margin-top: -50px;
-        opacity: .5;
+        opacity: 0.5;
       }
     }
   }
@@ -576,11 +543,11 @@ export default {
 
 // WIDE
 @media only screen and (min-width: 2500px) {
-  #aurora {
+  #moniq {
     .data {
       top: 30px;
       left: 789px;
-      h3 { 
+      h3 {
         margin-left: 20px;
       }
     }
@@ -600,21 +567,35 @@ export default {
       }
     }
 
-    .content-desk { 
-      margin-top: 250px;
+    .content-desk {
+      margin-top: 160px;
       padding: 0px 20px 0px 40px;
 
-      .col-1 {
+      div {
         text-align: left;
 
-        img { max-width: 19vw; }
-
-        .desc {
-          max-width: 19vw;
-          font-size: 1.3rem;
-          margin-top: 20px;
-          a { color: $roxo; }
+        img {
+          max-width: 10vw;
         }
+
+        p {
+          max-width: 10vw;
+          font-size: 1rem;
+          margin: 20px 0px;
+
+          strong {
+            color: $roxo;
+          }
+        }
+      }
+
+      .col-2,
+      .col-3 {
+        margin-left: 80px;
+      }
+
+      .col-3 img {
+        box-shadow: none;
       }
     }
 
@@ -635,7 +616,7 @@ export default {
       }
     }
 
-   .parallax {
+    .parallax {
       div#bg-3-1 {
         background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;

@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 import ProjExchange from './views/ProjExchange.vue'
 import ProjAuroraI from './views/ProjAuroraI.vue'
 import ProjAuroraII from './views/ProjAuroraII.vue'
+import ProjMoniq from './views/ProjMoniq.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/aurora-ii',
       name: 'aurora-ii',
       component: ProjAuroraII
+    },
+    {
+      path: '/moniq',
+      name: 'moniq',
+      component: ProjMoniq
     }
   ]
 })
