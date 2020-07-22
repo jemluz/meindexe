@@ -13,11 +13,16 @@
     nav.projs-navgation 
       div.row-1(data-aos="fade-right" data-aos-duration="2000" )
         router-link(to='/aurora-i') a
-        router-link(to='/moniq') m
+        router-link(to='/monique') m
         router-link(to='/exchange') e
       
       div.row-2(data-aos="fade-left" data-aos-duration="2000" )
-        router-link.empty(to='') -
+        router-link(to='/bubbox') b
+        router-link.empty(to='') c
+        router-link.empty(to='') v
+
+      div.row-3(data-aos="fade-right" data-aos-duration="3000" )
+        router-link(to='/gt') g
         router-link.empty(to='') -
         router-link.empty(to='') -
 
@@ -53,6 +58,12 @@ export default {
         this.$router.push(({ path: '/exchange'}) )
       } else if (code == 65) {
         this.$router.push(({ path: '/aurora-i'}) )  
+      } else if (code == 77) {
+        this.$router.push(({ path: '/monique'}))
+      } else if (code == 66) {
+        this.$router.push(({ path: '/bubbox'}))
+      } else if (code == 71) {
+        this.$router.push(({ path: '/gt'}))
       }
     }
   },
@@ -343,6 +354,9 @@ export default {
       .row-2 {
         margin-right: 40vw;
       }
+      .row-3 {
+        margin-left: 41vw;
+      }
 
       a {
         padding: 10px 20px;
@@ -353,7 +367,7 @@ export default {
 
     .about {
       width: 100vw;
-      top: 680px;
+      top: 600px;
 
       a {
         box-shadow: 0px 0px 30px 10px #00000030;

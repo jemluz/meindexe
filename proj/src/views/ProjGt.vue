@@ -1,42 +1,35 @@
 <template lang="pug">
-  div#moniq
+  div#gt
     vue-headful(
-      title="mindexe | IDV Monique Luz")
+      title="mindexe | Projeto Gren Text"    )
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
       img(src="../assets/proj-bg/dot.svg")
-      h3 dez/2017 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
+      h3 fev/2020 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
 
     div.name#name
-      h2 #[span.first monique]#[span.second luz_]
+      h2 #[span.first grenn]#[span.second Text_]
 
     div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
-      img#contentmob-start(src="../assets/moniq/rascunhos.png")
-      img(src="../assets/moniq/mockup.png")
-      img(src="../assets/moniq/social.png")
+      p#contentmob-start Esse é um dos meus queridinhos do momento (tô trabalhando nele).
+      img(src="../assets/gt/login-mob.png")
 
-      p Apesar de não ser minha praia, vez ou outra eu arrisco um branding. Essa aqui é a marca de Monique Luz, uma professora particular.
+      p É uma rede social, com o frontend em Vue.js, backend em node.js e MongoDB.
+      p Vou deixar para dar mais detalhes quando concluir. Por enquanto deixo só o gostinho da interface ;)
 
-      div.result
-        p apresentação final
-        a(href="https://drive.google.com/file/d/1ALkr59dzaCvKUT64-nQJT1cGq9HnhUaW/view?usp=sharing") https://drive.google.com
-      
-      p
+      img(src="../assets/gt/dash-mob.png")
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        div#contentdesk-col1-start
-          img#contentmob-start(src="../assets/moniq/rascunhos.png")
-          img(src="../assets/moniq/mockup.png")
-          img(src="../assets/moniq/social.png")
+        img#contentmob-start(src="../assets/gt/login-desk.png")
 
-        p Apesar de não ser minha praia, vez ou outra eu arrisco um branding. Essa aqui é a marca de Monique Luz, uma professora particular.
+        p Esse é um dos meus queridinhos do momento (tô trabalhando nele).
+        p É uma rede social, com o frontend em Vue.js, backend em node.js e MongoDB.
+        p Vou deixar para dar mais detalhes quando concluir. Por enquanto fica aqui só o gostinho da interface ;)
 
-        div.result
-          p apresentação final
-          a(href="https://drive.google.com/file/d/1ALkr59dzaCvKUT64-nQJT1cGq9HnhUaW/view?usp=sharing") https://drive.google.com
-        
-            
+      
+      div.col-2#col-2
+        img(src="../assets/gt/dash-desk.png")
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -50,55 +43,57 @@
 
 <script>
 export default {
-  name: "ProjAuroraI",
+  name: "ProjGt",
   components: {},
   methods: {
     getMobileOperatingSystem() {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      if (
-        userAgent.match(/iPad/i) ||
-        userAgent.match(/iPhone/i) ||
-        userAgent.match(/iPod/i)
-      ) {
-        return "iOS";
-      } else if (userAgent.match(/Android/i)) {
-        return "Android";
-      } else {
-        return "unknown";
+      if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+      {
+        return 'iOS';
+
+      }
+      else if( userAgent.match( /Android/i ) )
+      {
+
+        return 'Android';
+      }
+      else
+      {
+        return 'unknown';
       }
     },
     lineHeight() {
       let backButtonTop = document.getElementById("back-btn").offsetTop;
       let line = document.getElementById("line");
 
-      line.style.height = backButtonTop - 30 + "px";
+      line.style.height = (backButtonTop - 30) + "px";
     },
     linePosition() {
       let line = document.getElementById("line");
       let col1 = document.getElementById("col-1");
 
-      col1.style.marginLeft = line.offsetLeft + line.offsetWidth + "px";
+      col1.style.marginLeft = (line.offsetLeft + line.offsetWidth) + "px";
     },
-    mobContentStart() {
+    mobContentStart(){
       // nao funfa?
       let lineHeight = document.getElementById("line").offsetHeight;
       let contentMob = document.getElementById("content-mob");
 
       let dataTop = document.getElementById("data").offsetTop;
       let dataheight = document.getElementById("data").offsetHeight;
-      let moniq = document.getElementById("contentmob-start");
+      let auroraI = document.getElementById("contentmob-start");
 
       contentMob.style.marginTop = 140 + "px";
-      contentMob.style.height = lineHeight - 140 + "px";
-
-      if (this.getMobileOperatingSystem() == "iOS") {
+      contentMob.style.height = (lineHeight - 140)+"px";
+      
+      if (this.getMobileOperatingSystem() == 'iOS') {
         // ios
-        moniq.style.marginTop =
-          contentMob.offsetTop - dataTop - dataheight + 400 + "px";
-      } else if (this.getMobileOperatingSystem() == "Android") {
+        auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 600) + "px";
+      } else if (this.getMobileOperatingSystem() == 'Android') {
         // android
-        moniq.style.marginTop = contentMob.offsetTop + 200 + "px";
+        auroraI.style.marginTop = (contentMob.offsetTop  + 400) + "px";
       }
 
       // console.log(auroraStart.style.marginTop)
@@ -112,16 +107,16 @@ export default {
 
       let colIStart = document.getElementById("contentdesk-col1-start");
       contentDesk.style.marginTop = 140 + "px";
-      contentDesk.style.height = lineHeight - 140 + "px";
-
-      colIStart.style.marginTop = (dataTop )+ "px";
+      contentDesk.style.height = (lineHeight - 140)+"px";
+      
+      colIStart.style.marginTop = dataTop  + "px";      
     },
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
 
       // 1 - ipress i: back to home
       if (code == 73) {
-        this.$router.push({ path: "/" });
+        this.$router.push(({ path: '/'}) )
       }
     }
   },
@@ -144,7 +139,7 @@ export default {
 <style lang="scss">
 @import "../styles/helpers/variables";
 
-#moniq {
+#gt {
   background: linear-gradient(to bottom right, #eee, #fff);
   background-attachment: fixed;
 
@@ -171,23 +166,23 @@ export default {
     z-index: 3;
 
     h2 {
-      font-family: "Khula", sans-serif;
+      font-family: 'Khula', sans-serif;
       font-weight: 400;
 
       .first {
-        color: $roxo;
-        background-color: #FDD863;
+        background-color: #39DF81;
         box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
         background-color: transparent;
-        color: #FDD863;
+        color: #39DF81;
       }
     }
   }
 
   .content-mob {
+
     overflow-y: scroll;
     z-index: 2;
 
@@ -196,11 +191,6 @@ export default {
     align-items: flex-start;
     flex-direction: column;
     position: fixed;
-
-    img {
-      box-shadow: 0px 0px 20px 0px #00000030;
-      border: 2px solid #fff;
-    }
 
     p {
       font-family: t26-carbon, monospace;
@@ -216,6 +206,10 @@ export default {
       }
     }
 
+    .vue-link {
+      color: #4fc08d;
+    }
+
     .result {
       font-family: t26-carbon, monospace;
       font-size: 16px;
@@ -224,7 +218,7 @@ export default {
       text-align: left;
 
       background-color: $roxo;
-      p { color: #fff; margin: 0px;}
+      p { color: #fff;}
 
       border-radius: 5px;
       box-shadow: 0px 0px 20px 0px #00000020;
@@ -239,21 +233,15 @@ export default {
   }
 
   .content-desk {
-    // direction: rtl;
     overflow-y: scroll;
-
+    
     z-index: 2;
 
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     position: fixed;
-
-    img {
-      box-shadow: 0px 0px 20px 0px #00000030;
-      border: 2px solid #fff;
-    }
 
     p {
       font-family: t26-carbon, monospace;
@@ -267,6 +255,10 @@ export default {
       a {
         font-weight: 700;
       }
+    }
+
+    .vue-link {
+      color: #4fc08d;
     }
 
     .result {
@@ -294,7 +286,7 @@ export default {
   .line {
     position: fixed;
     background: url("../assets/proj-bg/line.svg");
-    opacity: 0.9;
+    opacity: .9;
   }
 
   .back-btn {
@@ -306,7 +298,7 @@ export default {
     border: 2px solid $roxo;
     border-radius: 5px 10px 10px 5px;
 
-    transition: all 0.5s ease;
+    transition: all .5s ease;
 
     display: flex;
     justify-content: center;
@@ -349,20 +341,18 @@ export default {
 
 // mobile only
 @media only screen and (min-width: 901px) {
-  #moniq {
-    .content-mob {
-      display: none;
-    }
+  #gt {
+    .content-mob { display: none; }
   }
 }
 
 // MOBILE
 @media only screen and (max-width: 900px) {
-  #moniq {
+  #gt {
     .data {
       top: 30px;
       left: 55px;
-      h3 {
+      h3 { 
         margin-left: 20px;
       }
     }
@@ -383,15 +373,17 @@ export default {
     }
 
     .content-mob {
+      width: 89vw;
       margin-left: 40px;
       padding: 0px 70px 0px 50px;
 
-      img {
-        max-width: 200px;
+      img { 
         margin-top: 20px;
+        max-width: 200px;
       }
 
       p {
+        max-width: 200px;
         margin-top: 20px;
         margin-left: 5px;
       }
@@ -400,13 +392,11 @@ export default {
         margin: 40px 0px 0px -40px;
         padding: 15px 40px;
 
-        p { margin-bottom: 5px;}
-      }
+        p { margin: 0px 0px 5px 0px;}
+      } 
     }
 
-    .content-desk {
-      display: none;
-    }
+    .content-desk { display: none; }
 
     .line {
       width: 5px;
@@ -427,24 +417,24 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/proj-bg/malha.png");
-        width: 1503px;
-        height: 852px;
-        transform: rotate(-30deg);
-        left: 0px;
-        margin-top: -260px;
-      }
+          background: url("../assets/proj-bg/malha.png");
+          width: 1503px;
+          height: 852px;
+          transform: rotate(-30deg);
+          left: 0px;
+          margin-top: -260px;
+        }
     }
   }
 }
 
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
-  #moniq {
+ #gt {
     .data {
       top: 30px;
       left: 128px;
-      h3 {
+      h3 { 
         margin-left: 20px;
       }
     }
@@ -464,7 +454,7 @@ export default {
       }
     }
 
-    .content-desk {
+    .content-desk { 
       margin-top: 160px;
       padding: 0px 20px 0px 40px;
       width: 99vw;
@@ -472,42 +462,42 @@ export default {
       div {
         text-align: left;
 
-        div {
-          img {
-            max-width: 20vw;
-            margin-right:20px;
-          }
-        }
+        img { max-width: 30vw; }
 
         p {
-          max-width: 40vw;
+          max-width: 27vw;
           font-size: 1rem;
           margin: 20px 0px;
 
-          strong {
-            color: $roxo;
-          }
-        }
-
-        .result{
-          margin-top: 40px;
-          border-radius: 10px;
-          padding: 15px 40px;
-          max-width: 300px;
-
-          p { 
-            color: #fff;
-            font-size: 1.1rem;
-            margin: 0px 0px 5px 0px;
-          }
-
-          a { 
-            font-size: .9rem;
-            font-weight: 300;
-          }
+          strong { color: $roxo;}
         }
       }
 
+      .col-2 {
+        p {padding-left: 20px;}
+        margin-left: 40px;
+
+        img { max-width: 40vw; }
+      }
+
+      .result{
+        margin-top: 40px;
+        border-radius: 10px;
+        padding: 15px 40px;
+        max-width: 300px;
+
+        p { 
+          color: #fff;
+          font-size: 1.1rem;
+          margin: 0px 0px 5px 0px;
+          padding: 0px;
+        }
+
+        a { 
+          font-size: .9rem;
+          font-weight: 300;
+        }
+      }
     }
 
     .line {
@@ -535,7 +525,7 @@ export default {
         transform: rotate(-20deg);
         left: 100px;
         margin-top: -50px;
-        opacity: 0.5;
+        opacity: .5;
       }
     }
   }
@@ -543,11 +533,11 @@ export default {
 
 // WIDE
 @media only screen and (min-width: 2500px) {
-  #moniq {
+  #gt {
     .data {
       top: 30px;
       left: 789px;
-      h3 {
+      h3 { 
         margin-left: 20px;
       }
     }
@@ -567,25 +557,21 @@ export default {
       }
     }
 
-    .content-desk {
+    .content-desk { 
       margin-top: 160px;
       padding: 0px 20px 0px 40px;
 
       div {
         text-align: left;
 
-        img {
-          max-width: 10vw;
-        }
+        img { max-width: 10vw; }
 
         p {
           max-width: 10vw;
           font-size: 1rem;
           margin: 20px 0px;
 
-          strong {
-            color: $roxo;
-          }
+          strong { color: $roxo;}
         }
       }
 
@@ -616,7 +602,7 @@ export default {
       }
     }
 
-    .parallax {
+   .parallax {
       div#bg-3-1 {
         background: url("../assets/proj-bg/d-malha.png");
         width: 1503px;

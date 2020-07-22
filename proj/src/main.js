@@ -3,6 +3,9 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import VueAgile from 'vue-agile'
+Vue.use(VueAgile)
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
