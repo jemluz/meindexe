@@ -19,6 +19,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { 
   faArrowLeft,
+  faArrowRight, 
   faPlus,
   faMinus
 } from '@fortawesome/free-solid-svg-icons'
@@ -26,6 +27,7 @@ import {
 Vue.component('fa-icon', FontAwesomeIcon)
 library.add(
   faArrowLeft, 
+  faArrowRight, 
   faPlus,
   faMinus
 )

@@ -3,58 +3,82 @@
     vue-headful(
       title="mindexe | Projeto Bubbox"    )
 
-    //- div.data#data(data-aos="fade-down" data-aos-duration="1000")
-    //-   fa-icon.content-desk(class="line-icon" icon="arrow-left")
-    //-   img(src="../assets/proj-bg/dot.svg")
-    //-   h3 abr/2018 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
+    //- nao pode tirar
+    div.data#data(data-aos="fade-down" data-aos-duration="1000")
+      //- img(src="../assets/proj-bg/dot.svg")
+      //- h3 abr/2018 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
 
     div.name#name
       h2 #[span.first nosso ti]#[span.second me_]
 
     div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
-      p#contentmob-start O 
+      p#contentmob-start O bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a #[a#analu-link(@click="") @analuiza] e o #[a#alexandre-link(@click="") @alexandre]. Similar ao Group Session que vemos no Spotify.
+      img(src="../assets/bubbox/iniciais.png")
+
+      p Eu participei da construção e implementação da interface do bubbox, meu maior aprendizado aqui foi com as guidelines do material e na utilização do react para desenvolvimento. 
+      
+      img(src="../assets/bubbox/finais.png")
+      
+      p Atualmente não uso mais react, pois me envolvi e me apaixonei pelo Vue. 
+      p O amor é assim, chega de surpresa. Você também deveria dar uma chance para o #[a.vue-link(href="https://br.vuejs.org/index.html") Vue.js.]
+      
+
+      div.result
+        p apresentação final
+        a(href="https://youtu.be/itqZ99T2lDc") youtu.be/itqZ99T2lDc
+
+      p
       
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        agile#contentdesk-start(autoplay="true" fade="true")
-          div.slide
+        agile#contentdesk-start(ref="carousel" fade="true" navButtons="false")
+          div.slide.membro
             div
               img.photo(src="../assets/sobre/jeyse.png")
 
-            div 
+            div.nome-funcao
               h4 Jeyse Muler
               p Full Stack Developer
 
-          div.slide
+          div.slide.membro
             div
               img.photo(src="../assets/sobre/jemima.png")
 
-            div 
-              h4
-              p
+            div.nome-funcao
+              h4 Jemima Luz
+              p Coordenadora de Projetos
 
-          div.slide
+          div.slide.membro
             div
               img.photo(src="../assets/sobre/jemine.png")
 
-              div 
-                h4
-                p
+            div.nome-funcao 
+              h4 Jemine Carvalho
+              p Gerente de vendas
 
-          div.slide
+          div.slide.membro
             div
               img.photo(src="../assets/sobre/juliana.png")
 
-              div 
-                h4
-                p
-              
-        img#contentmob-start(src="")
+            div.nome-funcao 
+              h4 Juliana Ximenes
+              p Designer UI
+
+        div.slide-btn
+          button.btn-prev-photo(@click="$refs.carousel.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
+          button.btn-next-photo(@click="$refs.carousel.goToPrev()" style="color: ;border-color: ;") #[fa-icon(class="photo-icon" icon="arrow-right")]
+        
+        p.normal.p-1 O tempo passou, a família o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.
+        p.normal confira os candidatos atuais:
+
+        nav.projs-navgation.normal
+          div.row-1
+            router-link(to='/gt' style="color: #39DF81;border-color: #39DF81;") g
+            router-link(to='/produtividade' style="color: #B4A1F3;border-color: #B4A1F3;") p
+            router-link.empty(to='') v
 
       div.col-2#col-2  
-
-      
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -68,7 +92,7 @@
 
 <script>
 export default {
-  name: "Sobre",
+  name: "ProjBubbox",
   components: {},
   methods: {
     getMobileOperatingSystem() {
@@ -99,7 +123,7 @@ export default {
       let line = document.getElementById("line");
       let col1 = document.getElementById("col-1");
 
-      col1.style.marginLeft = (line.offsetLeft + line.offsetWidth) + "px";
+      col1.style.marginLeft = 35 + "px";
     },
     mobContentStart(){
       // nao funfa?
@@ -130,11 +154,11 @@ export default {
       let dataTop = document.getElementById("data").offsetTop;
       let dataheight = document.getElementById("data").offsetHeight;
 
-      let colIStart = document.getElementById("contentdesk-col1-start");
+      let colIStart = document.getElementById("contentdesk-start");
       contentDesk.style.marginTop = 140 + "px";
       contentDesk.style.height = (lineHeight - 140)+"px";
       
-      colIStart.style.marginTop = dataTop  + "px";      
+      colIStart.style.marginTop = (dataTop + 50) + "px";      
     },
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
@@ -171,21 +195,6 @@ export default {
   color: $branco;
   text-align: center;
 
-  .data {
-    font-family: t26-carbon, monospace;
-
-    display: flex;
-    justify-content: center;
-    position: fixed;
-
-    color: $roxo;
-    z-index: 3;
-
-    .timeline-next {
-      color: $roxo;
-    }
-  }
-
   .name {
     position: fixed;
     z-index: 3;
@@ -195,13 +204,13 @@ export default {
       font-weight: 400;
 
       .first {
-        background-color: #8552B3;
+        background-color: #FFAB2D;
         box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
         background-color: transparent;
-        color: #8552B3;
+        color: #FFAB2D;
       }
     }
   }
@@ -268,6 +277,46 @@ export default {
     flex-direction: row;
     position: fixed;
 
+    .agile__actions {
+      display: none;
+    }
+
+    .slide-btn {
+      display: flex;
+      justify-content: space-between;
+      button {
+        border-radius: 50%;
+        background-color: $branco;
+        color: $roxo;
+        padding: 8px;
+        font-size: 10px;
+        box-shadow: 0px 0px 20px 0px #00000020;
+      }
+    }
+
+    .membro {
+      display: flex;
+
+      .photo {
+        border: 3px solid #fff;
+        border-radius: 50%;
+        background-size: contain;
+      }
+
+      .nome-funcao {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p { margin: 0px; }
+      }
+
+      h4 { 
+        font-family: t26-carbon, monospace;
+        color: $roxo; 
+      }
+    }
+
     p {
       font-family: t26-carbon, monospace;
       font-size: 16px;
@@ -282,30 +331,42 @@ export default {
       }
     }
 
-    .vue-link {
-      color: #4fc08d;
-    }
-
-    .result {
+    .projs-navgation {
       font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-      text-align: left;
+      z-index: 5;
 
-      background-color: $roxo;
-      color: #fff;
+      div {
+        display: flex;
+        justify-self: center;
 
-      border-radius: 5px;
-      box-shadow: 0px 0px 20px 0px #00000020;
+        .empty {
+          opacity: .2;
+        }
+      }
 
       a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-        opacity: .4;
+        border: 2px solid $roxo;
+        border-radius: 10px;
+        color: $roxo;
+        z-index: 10;
+
+        transition: all 0.5s ease;
+        opacity: 1;
+
+
+
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
       }
     }
+
   }
 
   .line {
@@ -374,14 +435,6 @@ export default {
 // MOBILE
 @media only screen and (max-width: 900px) {
   #sobre {
-    .data {
-      top: 30px;
-      left: 55px;
-      h3 { 
-        margin-left: 20px;
-      }
-    }
-
     .name {
       top: 80px;
       left: 30px;
@@ -456,16 +509,8 @@ export default {
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
  #sobre {
-    .data {
-      top: 30px;
-      left: 128px;
-      h3 { 
-        margin-left: 20px;
-      }
-    }
-
     .name {
-      top: 40px;
+      top: 30px;
       left: 100px;
       transform: rotate(-10deg);
 
@@ -480,9 +525,9 @@ export default {
     }
 
     .content-desk { 
-      margin-top: 160px;
+      margin-top: 130px;
       padding: 0px 20px 0px 40px;
-      width: 99vw;
+      // width: 99vw;
 
       div {
         text-align: left;
@@ -498,27 +543,32 @@ export default {
         }
       }
 
+      .slide-btn {
+        max-width: 140px;
+        transform: rotate(90deg);
+        margin-top: -85px;
+        margin-left: -10px;
+        margin-bottom: 90px;
+      }
+
+      .normal {
+        margin-left: 100px;
+      }
+
       .col-2 {
         p {padding-left: 20px;}
         margin-left: 40px;
       }
 
-      .result{
-        margin-top: 40px;
-        border-radius: 10px;
-        padding: 15px 40px;
-        max-width: 300px;
-
-        p { 
-          color: #fff;
-          font-size: 1.1rem;
-          margin: 0px 0px 5px 0px;
-          padding: 0px;
+      .projs-navgation {
+        div {
+          margin: 0px auto;
         }
 
-        a { 
-          font-size: .9rem;
-          font-weight: 300;
+        a {
+          padding: 5px 10px;
+          margin: 0px 5px 20px 5px;
+          font-size: 20px;
         }
       }
     }
@@ -557,14 +607,6 @@ export default {
 // WIDE
 @media only screen and (min-width: 2500px) {
   #sobre {
-    .data {
-      top: 30px;
-      left: 789px;
-      h3 { 
-        margin-left: 20px;
-      }
-    }
-
     .name {
       top: 80px;
       left: 760px;

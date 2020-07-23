@@ -10,6 +10,7 @@ import ProjAuroraII from './views/ProjAuroraII.vue'
 import ProjMoniq from './views/ProjMoniq.vue'
 import ProjBubbox from './views/ProjBubbox.vue'
 import ProjGt from './views/ProjGt.vue'
+import ProjProdutividade from './views/ProjProdutividade.vue'
 
 Vue.use(Router)
 
@@ -31,6 +32,7 @@ export default new Router({
     { path: '/aurora-ii', name: 'aurora-ii', component: ProjAuroraII },
     { path: '/monique', name: 'monique', component: ProjMoniq },
     { path: '/bubbox', name: 'bubbox', component: ProjBubbox },
-    { path: '/gt', name: 'gt', component: ProjGt }
+    { path: '/gt', name: 'gt', component: ProjGt },
+    { path: '/produtividade', name: 'produtividade', component: ProjProdutividade }
   ]
 })

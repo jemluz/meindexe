@@ -18,7 +18,7 @@
       
       div.row-2(data-aos="fade-left" data-aos-duration="2000" )
         router-link(to='/bubbox') b
-        router-link.empty(to='') c
+        router-link(to='/produtividade') p
         router-link.empty(to='') v
 
       div.row-3(data-aos="fade-right" data-aos-duration="3000" )
@@ -27,7 +27,7 @@
         router-link.empty(to='') -
 
     div.about(data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom")
-      router-link(to='') sobre
+      router-link(to='/sobre') sobre
 
     div.parallax
       div(id="parallax-bg-3" class="parallax-bg")
@@ -64,6 +64,8 @@ export default {
         this.$router.push(({ path: '/bubbox'}))
       } else if (code == 71) {
         this.$router.push(({ path: '/gt'}))
+      } else if (code == 80) {
+        this.$router.push(({ path: '/produtividade'}))
       }
     }
   },

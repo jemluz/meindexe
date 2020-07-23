@@ -31,7 +31,7 @@
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        img#contentmob-start(src="../assets/bubbox/iniciais.png")
+        img#contentdesk-start(src="../assets/bubbox/iniciais.png")
         p O bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a #[a#analu-link(@click="") @analuiza] e o #[a#alexandre-link(@click="") @alexandre]. Similar ao Group Session que vemos no Spotify.
 
         p Eu participei da construção e implementação da interface do bubbox, meu maior aprendizado aqui foi com as guidelines do material e na utilização do react para desenvolvimento.  
@@ -122,7 +122,7 @@ export default {
       let dataTop = document.getElementById("data").offsetTop;
       let dataheight = document.getElementById("data").offsetHeight;
 
-      let colIStart = document.getElementById("contentdesk-col1-start");
+      let colIStart = document.getElementById("contentdesk-start");
       contentDesk.style.marginTop = 140 + "px";
       contentDesk.style.height = (lineHeight - 140)+"px";
       

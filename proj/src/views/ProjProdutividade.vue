@@ -1,55 +1,37 @@
 <template lang="pug">
-  div#exchange
+  div#ybm
     vue-headful(
-      title="mindexe | Projeto Exchange"
-    )
+      title="mindexe | Projeto Produtividade"    )
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
       img(src="../assets/proj-bg/dot.svg")
-      h3 mar/2018
+      h3 ago/2018 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
 
     div.name#name
-      h2 #[span.first exchan]#[span.second ge_]
+      h2 #[span.first é melhor vc ]#[span.second medir_]
 
-    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500")
-      img#exchange-img(src="../assets/exchange-thumb.png")
-
-      p.desc redesign de um #[a(href='https://play.google.com/store/apps/details?id=com.easy.currency.extra.androary' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
-
-      p.desc-2 o estudo incluiu 3 fases:
-
-      p.desc-3 1ª - Análise da Interface #[br] #[a(href='https://drive.google.com/file/d/1rZ0-EFQgJ7wZJXN8uN3ACPPT4w1UQnPj/view?usp=sharing' target="_blank") https://drive.google.com]
-      p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://drive.google.com/file/d/1g48E-fdBdhNX8AUznf5p7R2y1Q0vK2ix/view?usp=sharing' target="_blank") https://drive.google.com]
-      p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://drive.google.com/file/d/1Fzz_Hs1eEAuH7bZRACkS_rgGh_6Y1nBG/view?usp=sharing' target="_blank") https://drive.google.com]
-
-      div.result
-        p apresentação final
-        a(href="https://drive.google.com/file/d/1UxCGUh5IQhRdTlvYxPIRPzo1s4VeYOSy/view?usp=sharing") hhttps://drive.google.com
-
-
-      p.video video mockup #[br] #[a(href='https://youtu.be/zR2lhP5rLbE' target="_blank") https://youtu.be/zR2lhP5rLbE]
-
-      p.video demo da interface #[br] #[a(href='https://youtu.be/zqRHtRby9Xo' target="_blank") https://youtu.be/zqRHtRby9Xo]
+    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
+      img#contentmob-start(src="../assets/produtividade/login.png")
+      p No projeto aurora eu mencionei ter aprendido sobre produtividade, e essa ideia aqui é a consequência disso.
+      p Durante o semestre que tranquei a faculdade, eu periodicamente varria a PlayStore procurando e testando apps de produtividade.
+ 
+      img(src="../assets/produtividade/telas.png")
+      
+      p No fim das contas acabei com uns 3, e depois de um tempo comecei a pensar em um app que reunisse todas essas funcionalidades e mais algumas coisas que desenvolvi sozinha.
+      p Atualmente ele teve o design atulizado, ganhando inclusive uma versão escura. Ele também vai virar um app em #[a(href="https://flutter.dev/") Flutter], mas por hora eu sigo estudando.
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        img#exchange-img(src="../assets/exchange-thumb.png")
-        p.desc#desc redesign de um #[a(href='https://play.google.com/store/apps/details?id=com.easy.currency.extra.androary' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
+        img#contentdesk-start(src="../assets/produtividade/login.png")
+        p No projeto aurora eu mencionei ter aprendido sobre produtividade, e essa ideia aqui é a consequência disso.
+        p Durante o semestre que tranquei a faculdade, eu periodicamente varria a PlayStore procurando e testando apps de produtividade.
+ 
+      div.col-2#col-2  
+        p No fim das contas acabei com uns 3, e depois de um tempo comecei a pensar em um app que reunisse todas essas funcionalidades e mais algumas coisas que desenvolvi sozinha.
+        img(src="../assets/produtividade/telas.png")
+      
+        p Atualmente ele teve o design atulizado, ganhando inclusive uma versão escura. Ele também vai virar um app em #[a(href="https://flutter.dev/") Flutter], mas por hora eu sigo estudando.
 
-      div.col-2
-        p.desc-2 o estudo incluiu 3 fases:
-
-        p.desc-3 1ª - Análise da Interface #[br] #[a(href='https://drive.google.com/file/d/1rZ0-EFQgJ7wZJXN8uN3ACPPT4w1UQnPj/view?usp=sharing' target="_blank") https://drive.google.com]
-        p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://drive.google.com/file/d/1g48E-fdBdhNX8AUznf5p7R2y1Q0vK2ix/view?usp=sharing' target="_blank") https://drive.google.com]
-        p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://drive.google.com/file/d/1Fzz_Hs1eEAuH7bZRACkS_rgGh_6Y1nBG/view?usp=sharing' target="_blank") https://drive.google.com]
-
-        div.result
-          p apresentação final
-          a(href="https://drive.google.com/file/d/1UxCGUh5IQhRdTlvYxPIRPzo1s4VeYOSy/view?usp=sharing") https://drive.google.com
-
-        p.video video mockup #[br] #[a(href='https://youtu.be/zR2lhP5rLbE' target="_blank") https://youtu.be/zR2lhP5rLbE]
-
-        p.video demo da interface #[br] #[a(href='https://youtu.be/zqRHtRby9Xo' target="_blank") https://youtu.be/zqRHtRby9Xo]
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -63,10 +45,7 @@
 
 <script>
 export default {
-  name: "ProjExchange",
-  data: () => {
-    return {}
-  },
+  name: "ProjProdutividade",
   components: {},
   methods: {
     getMobileOperatingSystem() {
@@ -100,30 +79,39 @@ export default {
       col1.style.marginLeft = (line.offsetLeft + line.offsetWidth) + "px";
     },
     mobContentStart(){
+      // nao funfa?
       let lineHeight = document.getElementById("line").offsetHeight;
       let contentMob = document.getElementById("content-mob");
 
       let dataTop = document.getElementById("data").offsetTop;
       let dataheight = document.getElementById("data").offsetHeight;
-      let exchangeImage = document.getElementById("exchange-img");
+      let auroraI = document.getElementById("contentmob-start");
 
       contentMob.style.marginTop = 140 + "px";
       contentMob.style.height = (lineHeight - 140)+"px";
       
       if (this.getMobileOperatingSystem() == 'iOS') {
-        exchangeImage.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 200) + "px";
+        // ios
+        auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 650) + "px";
       } else if (this.getMobileOperatingSystem() == 'Android') {
-        exchangeImage.style.marginTop = (contentMob.offsetTop + 60) + "px";
+        // android
+        auroraI.style.marginTop = (contentMob.offsetTop  + 400) + "px";
       }
 
-      console.log(exchangeImage.style.marginTop)
+      // console.log(auroraStart.style.marginTop)
     },
     deskContentStart() {
       let contentDesk = document.getElementById("content-desk");
       let lineHeight = document.getElementById("line").offsetHeight;
 
-      contentDesk.style.height = (lineHeight - 160)+"px";
-      console.log(lineHeight)
+      let dataTop = document.getElementById("data").offsetTop;
+      let dataheight = document.getElementById("data").offsetHeight;
+
+      let colIStart = document.getElementById("contentdesk-col1-start");
+      contentDesk.style.marginTop = 140 + "px";
+      contentDesk.style.height = (lineHeight - 140)+"px";
+      
+      colIStart.style.marginTop = dataTop  + "px";      
     },
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
@@ -133,6 +121,9 @@ export default {
         this.$router.push(({ path: '/'}) )
       }
     }
+  },
+  updated() {
+    this.mobContentStart();
   },
   mounted() {
     this.lineHeight();
@@ -150,8 +141,8 @@ export default {
 <style lang="scss">
 @import "../styles/helpers/variables";
 
-#exchange {
-  background: linear-gradient(to bottom, #f1f1f1, #fff);
+#ybm {
+  background: linear-gradient(to bottom right, #eee, #fff);
   background-attachment: fixed;
 
   color: $branco;
@@ -166,6 +157,10 @@ export default {
 
     color: $roxo;
     z-index: 3;
+
+    .timeline-next {
+      color: $roxo;
+    }
   }
 
   .name {
@@ -177,13 +172,13 @@ export default {
       font-weight: 400;
 
       .first {
-        background-color: #659DE7;
+        background-color: #B4A1F3;
         box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
         background-color: transparent;
-        color: #659DE7;
+        color: #B4A1F3;
       }
     }
   }
@@ -199,16 +194,7 @@ export default {
     flex-direction: column;
     position: fixed;
 
-    img {
-      box-shadow: 0px 0px 10px 0px #00000030;
-    }
-
-    .desc,
-    .desc-2,
-    .desc-3,
-    .desc-4,
-    .desc-5,
-    .video {
+    p {
       font-family: t26-carbon, monospace;
       font-size: 16px;
       font-style: italic;
@@ -222,19 +208,8 @@ export default {
       }
     }
 
-    .desc a { border-bottom: 1px solid $roxo; }
-
-    .desc-3 a { 
-      color: #5570F9; 
-      border-bottom: 1px solid #5570F9;
-    }
-    .desc-4 a { 
-      color: #659DE8; 
-      border-bottom: 1px solid #659DE8;
-    }
-    .desc-5 a { 
-      color: #70BCDC; 
-      border-bottom: 1px solid #70BCDC;
+    .vue-link {
+      color: #4fc08d;
     }
 
     .result {
@@ -245,7 +220,7 @@ export default {
       text-align: left;
 
       background-color: $roxo;
-      color: #fff;
+      p { color: #fff;}
 
       border-radius: 5px;
       box-shadow: 0px 0px 20px 0px #00000020;
@@ -257,14 +232,11 @@ export default {
         opacity: .4;
       }
     }
-
-    .video a {
-      color: $roxo;
-      border-bottom: 1px solid $roxo;
-    }
   }
 
   .content-desk {
+    overflow-y: scroll;
+    
     z-index: 2;
 
     display: flex;
@@ -273,16 +245,7 @@ export default {
     flex-direction: row;
     position: fixed;
 
-    img {
-      box-shadow: 0px 0px 10px 0px #00000030;
-    }
-
-    .desc,
-    .desc-2,
-    .desc-3,
-    .desc-4,
-    .desc-5,
-    .video {
+    p {
       font-family: t26-carbon, monospace;
       font-size: 16px;
       font-style: italic;
@@ -296,19 +259,8 @@ export default {
       }
     }
 
-    .desc a { border-bottom: 1px solid $roxo; }
-
-    .desc-3 a { 
-      color: #5570F9; 
-      border-bottom: 1px solid #5570F9;
-    }
-    .desc-4 a { 
-      color: #659DE8; 
-      border-bottom: 1px solid #659DE8;
-    }
-    .desc-5 a { 
-      color: #70BCDC; 
-      border-bottom: 1px solid #70BCDC;
+    .vue-link {
+      color: #4fc08d;
     }
 
     .result {
@@ -330,11 +282,6 @@ export default {
         font-weight: 700;
         opacity: .4;
       }
-    }
-
-    .video a {
-      color: $roxo;
-      border-bottom: 1px solid $roxo;
     }
   }
 
@@ -396,14 +343,14 @@ export default {
 
 // mobile only
 @media only screen and (min-width: 901px) {
-  #exchange {
+  #ybm {
     .content-mob { display: none; }
   }
 }
 
 // MOBILE
 @media only screen and (max-width: 900px) {
-  #exchange {
+  #ybm {
     .data {
       top: 30px;
       left: 55px;
@@ -428,39 +375,27 @@ export default {
     }
 
     .content-mob {
+      width: 89vw;
       margin-left: 40px;
       padding: 0px 70px 0px 50px;
-      
-      img {
-        width: 200px;
-      }
 
-      .desc {
+      img { 
         margin-top: 20px;
-        a { color: $roxo; }
+        max-width: 200px;
       }
 
-      .desc-2 {
-        margin-top: 40px;
-      }
-
-      .desc-3,
-      .desc-4,
-      .desc-5 {
+      p {
+        max-width: 200px;
         margin-top: 20px;
+        margin-left: 5px;
       }
-      
+
       .result {
         margin: 40px 0px 0px -40px;
         padding: 15px 40px;
 
-        p { margin-bottom: 5px;}
-      }
-
-      .video {
-        margin-top: 20px;
-      }
-      
+        p { margin: 0px 0px 5px 0px;}
+      } 
     }
 
     .content-desk { display: none; }
@@ -497,7 +432,7 @@ export default {
 
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
- #exchange {
+ #ybm {
     .data {
       top: 30px;
       left: 128px;
@@ -524,60 +459,43 @@ export default {
     .content-desk { 
       margin-top: 160px;
       padding: 0px 20px 0px 40px;
+      width: 99vw;
 
-      .col-1 {
+      div {
         text-align: left;
 
-        img { max-width: 35vw; }
+        img { max-width: 30vw; }
 
-        .desc {
-          max-width: 30vw;
-          font-size: 1.1rem;
-          margin-top: 20px;
-          a { color: $roxo; }
+        p {
+          max-width: 27vw;
+          font-size: 1rem;
+          margin: 20px 0px;
+
+          strong { color: $roxo;}
         }
       }
 
       .col-2 {
-        padding-top: 80px;
-        margin-left: 80px;
+        p {padding-left: 20px;}
+        margin-left: 40px;
+      }
 
-        .desc-2 {
-          font-weight: bold;
-          // max-width: 200px;
-          font-size: 1.3rem;
-          margin-top: -60px;
-        }
+      .result{
+        margin-top: 40px;
+        border-radius: 10px;
+        padding: 15px 40px;
+        max-width: 300px;
 
-        .desc-3,
-        .desc-4,
-        .desc-5 {
-          font-size: 1rem;
-          margin-top: 20px;
-        }
-        .desc-3 { margin-top: 30px; }
-
-        .result{
-          margin-top: 60px;
-          border-radius: 10px;
-          padding: 15px 40px;
-
-          p { 
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-          }
-
-          a { 
-            font-size: .9rem;
-            font-weight: 300;
-          }
-        }
-
-        .video {
+        p { 
+          color: #fff;
           font-size: 1.1rem;
-          margin: 20px 40px 0px 0px;
+          margin: 0px 0px 5px 0px;
+          padding: 0px;
+        }
 
-          a { font-size: 1rem;}
+        a { 
+          font-size: .9rem;
+          font-weight: 300;
         }
       }
     }
@@ -615,7 +533,7 @@ export default {
 
 // WIDE
 @media only screen and (min-width: 2500px) {
-  #exchange {
+  #ybm {
     .data {
       top: 30px;
       left: 789px;
@@ -640,62 +558,30 @@ export default {
     }
 
     .content-desk { 
-      margin-top: 250px;
+      margin-top: 160px;
       padding: 0px 20px 0px 40px;
 
-      .col-1 {
+      div {
         text-align: left;
 
-        img { max-width: 19vw; }
+        img { max-width: 10vw; }
 
-        .desc {
-          max-width: 19vw;
-          font-size: 1.3rem;
-          margin-top: 20px;
-          a { color: $roxo; }
+        p {
+          max-width: 10vw;
+          font-size: 1rem;
+          margin: 20px 0px;
+
+          strong { color: $roxo;}
         }
       }
 
-      .col-2 {
-        padding-top: 80px;
+      .col-2,
+      .col-3 {
         margin-left: 80px;
+      }
 
-        .desc-2 {
-          font-weight: bold;
-          font-size: 1.3rem;
-          margin-top: -60px;
-        }
-
-        .desc-3,
-        .desc-4,
-        .desc-5 {
-          font-size: 1.1rem;
-          margin-top: 20px;
-        }
-        .desc-3 { margin-top: 30px; }
-
-        .result{
-          margin-top: 60px;
-          border-radius: 10px;
-          padding: 20px 40px;
-
-          p { 
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-          }
-
-          a { 
-            font-size: 1.1rem;
-            font-weight: 300;
-          }
-        }
-
-        .video {
-          font-size: 1.2rem;
-          margin: 20px 40px 0px 40px;
-
-          a { font-size: 1.1rem;}
-        }
+      .col-3 img {
+        box-shadow: none;
       }
     }
 
