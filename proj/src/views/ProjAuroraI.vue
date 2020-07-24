@@ -11,7 +11,7 @@
       h2 #[span.first auro]#[span.second ra_]
 
     div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
-      p.desc#contentmob-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade, e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
+      p.desc#contentmob-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade com a #[a#carmen-pop @carmenli#[div.popover-carmen #[a.carmen-linked(href="https://www.linkedin.com/in/carmenli-1308" target="_blank") LinkedIn]]], #[a#brunool-pop @brunool#[div.popover-brunool #[a.brunool-behance(href="https://www.behance.net/brunool" target="_blank") Behance]]], #[a#rosi-pop @rosilenemoufer #[div.popover-rosi #[a.rosi-lattes(href="http://lattes.cnpq.br/9252640618973149" target="_blank") Lattes]]] e #[a#emili-pop @emiliborges #[div.popover-emili #[a.emili-linked(href="https://www.linkedin.com/in/emili-borges-597a4b1b1" target="_blank") LinkedIn]]], e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
 
       img#img-1(src="../assets/aurora/prototipo1.png")
 
@@ -42,7 +42,7 @@
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        p.desc#contentdesk-col1-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade, e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
+        p.desc#contentdesk-col1-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade com a #[a#carmen-pop @carmenli#[div.popover-carmen #[a.carmen-linked(href="https://www.linkedin.com/in/carmenli-1308" target="_blank") LinkedIn]]], #[a#brunool-pop @brunool#[div.popover-brunool #[a.brunool-behance(href="https://www.behance.net/brunool" target="_blank") Behance]]], #[a#rosi-pop @rosilenemoufer #[div.popover-rosi #[a.rosi-lattes(href="http://lattes.cnpq.br/9252640618973149" target="_blank") Lattes]]] e #[a#emili-pop @emiliborges #[div.popover-emili #[a.emili-linked(href="https://www.linkedin.com/in/emili-borges-597a4b1b1" target="_blank") LinkedIn]]], e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
 
         img#img-1(src="../assets/aurora/prototipo1.png")
 
@@ -239,6 +239,51 @@ export default {
       border: 2px solid #fff;
     }
 
+    .popover-carmen,
+    .popover-brunool, 
+    .popover-rosi, 
+    .popover-emili {
+      position: absolute;
+      opacity: 0;
+      transition: all .5s ease;
+
+      a { 
+        color: #333; 
+        &:hover { color: #fff; }
+      }
+
+      .alex-linked {
+        margin-left: 10px;
+      }
+
+      background-color: #CF93B1;
+      margin: 0px auto;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    #carmen-pop,
+    #brunool-pop,
+    #rosi-pop,
+    #emili-pop {
+      cursor: pointer;
+
+      &:hover {
+        transition: all .5s ease;
+        color: #CF93B1;
+      }
+    }
+
+    #carmen-pop:hover .popover-carmen,
+    #brunool-pop:hover .popover-brunool,
+    #rosi-pop:hover .popover-rosi,
+    #emili-pop:hover .popover-emili {
+      display: flex;
+      position: absolute;
+
+      opacity: 1;
+    }
+
     p {
       font-family: t26-carbon, monospace;
       font-size: 16px;
@@ -285,6 +330,51 @@ export default {
     align-items: flex-start;
     flex-direction: row;
     position: fixed;
+
+    .popover-carmen,
+    .popover-brunool, 
+    .popover-rosi, 
+    .popover-emili {
+      position: absolute;
+      opacity: 0;
+      transition: all .5s ease;
+
+      a { 
+        color: #333; 
+        &:hover { color: #fff; }
+      }
+
+      .alex-linked {
+        margin-left: 10px;
+      }
+
+      background-color: #CF93B1;
+      margin: 0px auto;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    #carmen-pop,
+    #brunool-pop,
+    #rosi-pop,
+    #emili-pop {
+      cursor: pointer;
+
+      &:hover {
+        transition: all .5s ease;
+        color: #CF93B1;
+      }
+    }
+
+    #carmen-pop:hover .popover-carmen,
+    #brunool-pop:hover .popover-brunool,
+    #rosi-pop:hover .popover-rosi,
+    #emili-pop:hover .popover-emili {
+      display: flex;
+      position: absolute;
+
+      opacity: 1;
+    }
 
     img {
       box-shadow: 0px 0px 10px 0px #00000030;
@@ -432,6 +522,22 @@ export default {
     .content-mob {
       margin-left: 40px;
       padding: 0px 70px 0px 50px;
+
+      .popover-carmen {
+        margin: -45px 0px 0px 0px;
+      }
+
+      .popover-brunool {
+        margin: -45px 0px 0px 150px;
+      }
+
+      .popover-rosi {
+        margin: 0px 0px 0px 0px;
+      }
+
+      .popover-emili {
+        margin: 0px 0px 0px 150px;
+      }
       
       img {
         width: 200px;
@@ -533,6 +639,18 @@ export default {
       margin-top: 160px;
       padding: 0px 20px 0px 40px;
       width: 99vw;
+
+      .popover-carmen {
+        margin: -45px 0px 0px 0px;
+      }
+
+      .popover-brunool {
+        margin: -45px 0px 0px 150px;
+      }
+
+      .popover-emili {
+        margin: 0px 0px 0px 150px;
+      }
 
       div {
         text-align: left;
