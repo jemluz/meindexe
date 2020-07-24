@@ -11,7 +11,7 @@
       h2 #[span.first bub]#[span.second box_]
 
     div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
-      p#contentmob-start O bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a #[a#analu-link(@click="") @analuiza] e o #[a#alexandre-link(@click="") @alexandre]. Similar ao Group Session que vemos no Spotify.
+      p#contentmob-start O bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a #[a#analu-pop.empty @analuiza] e o #[a#alexandre-pop @alexandre #[div.popover-alex #[a.alex-git(href="https://github.com/soloalex1" target="_blank") GitHub] #[a.alex-linked(href="https://www.linkedin.com/in/alexmachina" target="_blank") LinkedIn] ]]. Similar ao Group Session que vemos no Spotify.
       img(src="../assets/bubbox/iniciais.png")
 
       p Eu participei da construção e implementação da interface do bubbox, meu maior aprendizado aqui foi com as guidelines do material e na utilização do react para desenvolvimento. 
@@ -32,7 +32,7 @@
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
         img#contentdesk-start(src="../assets/bubbox/iniciais.png")
-        p O bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a #[a#analu-link(@click="") @analuiza] e o #[a#alexandre-link(@click="") @alexandre]. Similar ao Group Session que vemos no Spotify.
+        p O bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a #[a#analu-pop.empty @analuiza] e o #[a#alexandre-pop @alexandre #[div.popover-alex #[a.alex-git(href="https://github.com/soloalex1" target="_blank") GitHub] #[a.alex-linked(href="https://www.linkedin.com/in/alexmachina" target="_blank") LinkedIn] ]]. Similar ao Group Session que vemos no Spotify.
 
         p Eu participei da construção e implementação da interface do bubbox, meu maior aprendizado aqui foi com as guidelines do material e na utilização do react para desenvolvimento.  
 
@@ -46,7 +46,7 @@
 
           div.result
             p apresentação final
-            a(href="https://youtu.be/itqZ99T2lDc") youtu.be/itqZ99T2lDc
+            a(href="https://youtu.be/itqZ99T2lDc" target="_blank") youtu.be/itqZ99T2lDc
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -62,6 +62,12 @@
 export default {
   name: "ProjBubbox",
   components: {},
+  data: () => {
+    return {
+      isEnabled: false,
+      msg: 'a'
+    }
+  },
   methods: {
     getMobileOperatingSystem() {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -227,6 +233,45 @@ export default {
       color: #4fc08d;
     }
 
+    .popover-alex,
+    .popover-analu {
+      position: absolute;
+      opacity: 0;
+      transition: all .5s ease;
+
+      a { 
+        color: #333; 
+        &:hover { color: #fff; }
+      }
+
+      .alex-linked {
+        margin-left: 10px;
+      }
+
+      background-color: #FFAB2D;
+      margin: 0px auto;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    #alexandre-pop,
+    #analu-pop {
+      cursor: pointer;
+
+      &:hover {
+        transition: all .5s ease;
+        color: #FFAB2D;
+      }
+    }
+
+    #alexandre-pop:hover .popover-alex,
+    #analu-pop:hover .popover-analu {
+      display: flex;
+      position: absolute;
+
+      opacity: 1;
+    }
+
     .result {
       font-family: t26-carbon, monospace;
       font-size: 16px;
@@ -276,6 +321,45 @@ export default {
 
     .vue-link {
       color: #4fc08d;
+    }
+
+    .popover-alex,
+    .popover-analu {
+      position: absolute;
+      opacity: 0;
+      transition: all .5s ease;
+
+      a { 
+        color: #333; 
+        &:hover { color: #fff; }
+      }
+
+      .alex-linked {
+        margin-left: 10px;
+      }
+
+      background-color: #FFAB2D;
+      margin: 0px auto;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    #alexandre-pop,
+    #analu-pop {
+      cursor: pointer;
+
+      &:hover {
+        transition: all .5s ease;
+        color: #FFAB2D;
+      }
+    }
+
+    #alexandre-pop:hover .popover-alex,
+    #analu-pop:hover .popover-analu {
+      display: flex;
+      position: absolute;
+
+      opacity: 1;
     }
 
     .result {
@@ -488,6 +572,11 @@ export default {
 
           strong { color: $roxo;}
         }
+      }
+
+      .popover-alex,
+      .popover-analu {
+        margin: -45px 200px;
       }
 
       .col-2 {
