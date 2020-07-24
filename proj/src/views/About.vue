@@ -69,7 +69,7 @@
           button.btn-prev-photo(@click="$refs.carousel.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
           button.btn-next-photo(@click="$refs.carousel.goToPrev()" style="color: ;border-color: ;") #[fa-icon(class="photo-icon" icon="arrow-right")]
         
-        p.normal.p-1 O tempo passou, a família o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.
+        p.normal.p-1 O tempo passou, #[strike a família] o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.
         p.normal confira os candidatos atuais:
 
         nav.projs-navgation.normal
