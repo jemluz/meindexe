@@ -15,7 +15,7 @@
       div.name#contentmob-start
         h2 #[span.first nosso ti]#[span.second me_]
         
-      agile(ref="carousel" fade="true" navButtons="false" autoplay="true" speed="1000")
+      agile(ref="carouselmob" fade="true" navButtons="false" autoplay="true" speed="1000")
         div.slide.membro
           div
             img.photo(src="../assets/sobre/jeyse.png")
@@ -49,8 +49,8 @@
             p Designer UI
 
       div.slide-btn
-        button.btn-prev-photo(@click="$refs.carousel.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
-        button.btn-next-photo(@click="$refs.carousel.goToPrev()") #[fa-icon(class="photo-icon" icon="arrow-right")]
+        button.btn-prev-photo(@click="$refs.carouselmob.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
+        button.btn-next-photo(@click="$refs.carouselmob.goToPrev()") #[fa-icon(class="photo-icon" icon="arrow-right")]
 
       p.normal.p-1 O tempo passou, #[strike a família] o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.
       p.normal confira os candidatos atuais:
@@ -87,7 +87,7 @@
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        agile#contentdesk-start(ref="carousel" fade="true" navButtons="false" autoplay="true" speed="1000")
+        agile#contentdesk-start(ref="carouseldesk" fade="true" navButtons="false" autoplay="true" speed="1000")
           div.slide.membro
             div
               img.photo(src="../assets/sobre/jeyse.png")
@@ -121,8 +121,8 @@
               p Designer UI
 
         div.slide-btn
-          button.btn-prev-photo(@click="$refs.carousel.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
-          button.btn-next-photo(@click="$refs.carousel.goToPrev()" style="color: ;border-color: ;") #[fa-icon(class="photo-icon" icon="arrow-right")]
+          button.btn-prev-photo(@click="$refs.carouseldesk.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
+          button.btn-next-photo(@click="$refs.carouseldesk.goToPrev()" style="color: ;border-color: ;") #[fa-icon(class="photo-icon" icon="arrow-right")]
         
         p.normal.p-1 O tempo passou, #[strike a família] o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.
         p.normal confira os candidatos atuais:
