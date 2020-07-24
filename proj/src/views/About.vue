@@ -1,7 +1,7 @@
 <template lang="pug">
   div#sobre
     vue-headful(
-      title="mindexe | Projeto Bubbox"    )
+      title="mindexe | Sobre"    )
 
     //- nao pode tirar
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
@@ -32,7 +32,7 @@
 
     div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
       div.col-1#col-1
-        agile#contentdesk-start(ref="carousel" fade="true" navButtons="false")
+        agile#contentdesk-start(ref="carousel" fade="true" navButtons="false" autoplay="true")
           div.slide.membro
             div
               img.photo(src="../assets/sobre/jeyse.png")
@@ -75,10 +75,23 @@
         nav.projs-navgation.normal
           div.row-1
             router-link(to='/gt' style="color: #39DF81;border-color: #39DF81;") g
-            router-link(to='/produtividade' style="color: #B4A1F3;border-color: #B4A1F3;") p
+            router-link(to='/produtividade') p
             router-link.empty(to='') v
 
-      div.col-2#col-2  
+      div.col-2#col-2
+        div.name-2#name-2.name-2
+          h2 #[span.first nosso ro]#[span.second lê_]  
+
+        p Organização, estudo e teste aqui são lei. E a graça de cada projeto está em:
+        p.no-margin 1. Curtir a nostalgia dos esboços.
+        p.no-margin 2. Admirar a complexidade dos processos.
+        p.no-margin 3. Encontrar-se no fim de tudo.
+
+        p.poema "Lápis duro em papel mole, #[br]escreveu tanto e não aguentou. #[br]Se viu perdido em muitas ideias, #[br] que a tal folha quase rasgou.
+        p.poema Praquê isso, minha filha? #[br]Deixe de ser louca, #[br]junte toda essa bagunça, #[br]coloque em um site #[br]e chame isso portfólio. (??)"
+        p.poema.autor - Autor desconhecido
+        
+
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -155,10 +168,10 @@ export default {
       let dataheight = document.getElementById("data").offsetHeight;
 
       let colIStart = document.getElementById("contentdesk-start");
-      contentDesk.style.marginTop = 140 + "px";
-      contentDesk.style.height = (lineHeight - 140)+"px";
+      contentDesk.style.marginTop = 100 + "px";
+      contentDesk.style.height = (lineHeight - 100)+"px";
       
-      colIStart.style.marginTop = (dataTop + 50) + "px";      
+      // colIStart.style.marginTop = + "px";      
     },
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
@@ -204,13 +217,13 @@ export default {
       font-weight: 400;
 
       .first {
-        background-color: #FFAB2D;
+        background-color: #8552B3;
         box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
         background-color: transparent;
-        color: #FFAB2D;
+        color: #8552B3;
       }
     }
   }
@@ -277,6 +290,26 @@ export default {
     flex-direction: row;
     position: fixed;
 
+    .name-2 {
+      // position: fixed;
+      z-index: 3;
+
+      h2 {
+        font-family: 'Khula', sans-serif;
+        font-weight: 400;
+
+        .first {
+          background-color: #8552B3;
+          box-shadow: 0px 0px 20px 0px #00000020;
+        }
+
+        .second {
+          background-color: transparent;
+          color: #8552B3;
+        }
+      }
+    }
+
     .agile__actions {
       display: none;
     }
@@ -340,15 +373,6 @@ export default {
 
       z-index: 5;
 
-      div {
-        display: flex;
-        justify-self: center;
-
-        .empty {
-          opacity: .2;
-        }
-      }
-
       a {
         border: 2px solid $roxo;
         border-radius: 10px;
@@ -356,13 +380,20 @@ export default {
         z-index: 10;
 
         transition: all 0.5s ease;
-        opacity: 1;
-
-
+        opacity: .5;
 
         &:hover,
         &:focus {
           opacity: 1;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-self: center;
+
+        .empty {
+          opacity: .2;
         }
       }
     }
@@ -525,17 +556,16 @@ export default {
     }
 
     .content-desk { 
-      margin-top: 130px;
-      padding: 0px 20px 0px 40px;
+      margin-top: 100px;
+      padding: 20px 20px 0px 40px;
       // width: 99vw;
 
       div {
         text-align: left;
 
-        img { max-width: 30vw; }
-
         p {
-          max-width: 27vw;
+          min-width: 200px;
+          max-width: 18vw;
           font-size: 1rem;
           margin: 20px 0px;
 
@@ -543,32 +573,74 @@ export default {
         }
       }
 
-      .slide-btn {
-        max-width: 140px;
-        transform: rotate(90deg);
-        margin-top: -85px;
-        margin-left: -10px;
-        margin-bottom: 90px;
+      .no-margin {
+        margin: 0px;
       }
 
       .normal {
         margin-left: 100px;
       }
 
-      .col-2 {
-        p {padding-left: 20px;}
-        margin-left: 40px;
-      }
+      .col-1 {
+        max-width: 30vw;
 
-      .projs-navgation {
-        div {
-          margin: 0px auto;
+        .slide-btn {
+          max-width: 140px;
+          transform: rotate(90deg);
+          margin-top: -85px;
+          margin-left: -10px;
+          margin-bottom: 90px;
         }
 
-        a {
-          padding: 5px 10px;
-          margin: 0px 5px 20px 5px;
-          font-size: 20px;
+        .p-1 {
+          margin-top: -30px;
+        }
+
+        p {
+          min-width: 250px;
+          font-size: 1rem;
+          strong { color: $roxo;}
+        }
+
+        .projs-navgation {
+          div {
+            margin: 0px auto;
+          }
+
+          a {
+            padding: 5px 10px;
+            margin: 0px 5px 20px 5px;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .col-2 {
+        margin-left: 100px;
+        width: 61vw;
+
+        .name-2 {
+          margin: -30px 0px 90px -50px;
+          transform: rotate(-10deg);
+
+          h2 {
+            font-size: 30px;
+            left: 0px;
+
+            .first {
+              padding: 0px 0px 0px 30px;
+            }
+          }
+        }
+
+        .poema {
+          // font-weight: bold;
+          color: $roxo;
+        }
+
+        p {
+          // padding-left: 60px;
+          min-width: 350px;
         }
       }
     }

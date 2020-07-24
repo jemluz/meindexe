@@ -342,8 +342,7 @@ export default {
 
     .projs-navgation {
       width: 100vw;
-
-      margin: 270px auto 0px auto;
+      margin: 250px auto 0px auto;
       
 
       div {
@@ -369,7 +368,7 @@ export default {
 
     .about {
       width: 100vw;
-      top: 600px;
+      bottom: 50px;
 
       a {
         box-shadow: 0px 0px 30px 10px #00000030;
