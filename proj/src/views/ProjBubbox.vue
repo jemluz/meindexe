@@ -490,11 +490,11 @@ export default {
       }
 
       .popover-alex {
-        margin: -45px 0px 0px 80px;
+        margin: 10px 0px 0px 0px;
       }
 
       .popover-analu {
-        margin: 0px 200px 0px 0px;
+        margin: -50px 0px 0px 0px;
       }
 
       .result {
@@ -583,11 +583,11 @@ export default {
       }
 
       .popover-alex {
-        margin: -45px 200px;
+        margin: 10px 0px 0px 180px;
       }
 
       .popover-analu {
-        margin: -45px 200px;
+        margin: -45px 0px 0px 80px;
       }
 
       .col-2 {
