@@ -4,8 +4,9 @@ import router from './router'
 import store from './store'
 
 import ProjTemplate from './components/template/ProjTemplate'
-
 Vue.component('proj-template', ProjTemplate)
+
+import VueLanguage from 'vue-multilanguage'
 
 import VueAgile from 'vue-agile'
 Vue.use(VueAgile)

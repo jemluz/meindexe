@@ -32,7 +32,9 @@ export default {
     'haveMore',
     'firstName',
     'lastName',
-    'titleColor'
+    'titleColor',
+    'ios',
+    'and'
   ],
   methods: {
     getMobileOperatingSystem() {
@@ -79,10 +81,10 @@ export default {
       
       if (this.getMobileOperatingSystem() == 'iOS') {
         // ios
-        auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 2100) + "px";
+        auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + this.ios) + "px";
       } else if (this.getMobileOperatingSystem() == 'Android') {
         // android
-        auroraI.style.marginTop = (contentMob.offsetTop  + 1900) + "px";
+        auroraI.style.marginTop = (contentMob.offsetTop  + this.and) + "px";
       }
 
       // console.log(auroraStart.style.marginTop)
@@ -94,7 +96,7 @@ export default {
       let dataTop = document.getElementById("data").offsetTop;
       let dataheight = document.getElementById("data").offsetHeight;
 
-      let colIStart = document.getElementById("contentdesk-col1-start");
+      let colIStart = document.getElementById("contentdesk-start");
       contentDesk.style.marginTop = 140 + "px";
       contentDesk.style.height = (lineHeight - 140)+"px";
       

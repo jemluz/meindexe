@@ -7,8 +7,8 @@
     h1.logo(data-aos="fade-down" data-aos-duration="500" ) #[p] m#[strong indexe] #[p]
 
     div.titulo(data-aos="fade-right" data-aos-duration="1000" )
-      h2 #[span.first aperte uma te]#[span.second cla_]
-      p para ver um #[span projeto] 
+      h2 #[span.first {{ lang.homePage.title }} ]#[span.second {{ lang.homePage.secondTitle }}_]
+      p {{ lang.homePage.sub }} #[span {{ lang.homePage.secondSub }}] 
 
     nav.projs-navgation 
       div.row-1(data-aos="fade-right" data-aos-duration="2000" )
@@ -27,7 +27,11 @@
         router-link.empty(to='') -
 
     div.about(data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom")
-      router-link(to='/sobre') sobre
+      router-link(to='/sobre') {{ lang.homePage.btn }}
+
+    div.btn-language 
+      button(@click="selectPT") PT-BR
+      button(@click="selectEN") EN
 
     div.parallax
       div(id="parallax-bg-3" class="parallax-bg")
@@ -39,9 +43,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: "Home",
-  components: {},
+  computed: mapState(["lang"]),
   methods: {
     parallaxScroll() {
       var scrolled = window.scrollY;
@@ -67,9 +73,16 @@ export default {
       } else if (code == 80) {
         this.$router.push(({ path: '/produtividade'}))
       }
+    },
+    selectPT() {
+      this.$store.commit("setLangPT")
+    },
+    selectEN() {
+      this.$store.commit("setLangEN")
     }
   },
   created() {
+    this.selectPT()
     window.addEventListener("scroll", this.parallaxScroll);
     document.addEventListener("keyup", this.listenKeyboard)
   }
@@ -193,6 +206,32 @@ export default {
     }
   }
 
+  .btn-language { 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+    
+    button {
+      
+      font-family: t26-carbon, monospace;
+      border: 1px solid $branco;
+      border-bottom: none;
+      border-radius: 10px 10px 0px 0px;
+      color: $branco;
+  
+      transition: all 0.5s ease;
+      opacity: 0.8;
+  
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+
   .parallax {
     height: calc(100vh + 200px);
 
@@ -281,6 +320,19 @@ export default {
 
         font-size: 40px;
         padding: 10px 20px;
+      }
+    }
+
+    .btn-language {
+      width: 100vw;
+
+      button {
+        box-shadow: 0px 0px 30px 10px #00000030;
+  
+        font-size: 20px;
+        padding: 10px 20px;
+
+        margin: 0px 10px;
       }
     }
 
@@ -376,6 +428,13 @@ export default {
         font-size: 25px;
         padding: 10px 20px
       }
+    }
+
+    .btn-language {
+      box-shadow: 0px 0px 30px 10px #00000030;
+
+      font-size: 25px;
+      padding: 10px 20px
     }
 
     .parallax {

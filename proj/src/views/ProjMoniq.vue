@@ -5,7 +5,7 @@
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
       img(src="../assets/proj-bg/dot.svg")
-      h3 dez/2017 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
+      h3 dez/2017
 
     div.name#name
       h2 #[span.first monique]#[span.second luz_]

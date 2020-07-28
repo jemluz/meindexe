@@ -1,5 +1,5 @@
 <template lang="pug">
-  proj-template(nomeProj="Projeto Aurora" date="ago/2017" firstName="auro" lastName="ra" titleColor="" class="aurora-ii")
+  proj-template(nomeProj="Projeto Aurora" date="ago/2017" firstName="auro" lastName="ra" titleColor="" class="aurora-ii" :ios="1000" :and="800")
     template(v-slot:haveMore) 
       router-link(to="/aurora-i") 
         fa-icon.timeline-prev(style="margin-left: 20px;" class="back-icon" icon="minus")
@@ -21,10 +21,12 @@
         
         p.desc-20 Atualmente o aurora está sendo migrado para a tecnologia #[a.vue-link(href='https://br.vuejs.org/' target="_blank") Vue.js]. Aguardem notícias pois ele resurgirá em breve!
 
+        p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] Ver menos]
+
       div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
         div.col-1#col-1
           section
-            img.img-dr#contentdesk-col1-start(src="../assets/aurora/dr_ai.svg")
+            img.img-dr#contentdesk-start(src="../assets/aurora/dr_ai.svg")
 
             div 
               p.desc-13 Apesar de ter concluído o semestre 2017.1 com a sensação de um trabalho bem feito, eu ainda sentia que sabia pouco, e que precisaria de tempo para me aprofundar na área de programação.  
@@ -50,7 +52,8 @@
 
 <script>
 export default {
-  name: "PageAuroraII"
+  name: "PageAuroraII",
+
 };
 </script>
 
@@ -134,28 +137,6 @@ export default {
 // MOBILE
 @media only screen and (max-width: 900px) {
   .aurora-ii {
-    .data {
-      top: 30px;
-      left: 55px;
-      h3 { 
-        margin-left: 20px;
-      }
-    }
-
-    .name {
-      top: 80px;
-      left: 30px;
-      transform: rotate(-10deg);
-
-      h2 {
-        font-size: 25px;
-        left: 0px;
-
-        .first {
-          padding: 5px 0px 0px 30px;
-        }
-      }
-    }
 
     .content-mob {
       margin-left: 40px;
@@ -186,63 +167,12 @@ export default {
     }
 
     .content-desk { display: none; }
-
-    .line {
-      width: 5px;
-      height: 85vh;
-      left: 60px;
-    }
-
-    .back-btn {
-      font-size: 20px;
-      margin: 0px 0px 30px 30px;
-      padding: 5px 20px 5px 20px;
-
-      .back-icon {
-        height: 15px;
-        margin-right: 10px;
-      }
-    }
-
-    .parallax {
-      div#bg-3-1 {
-          background: url("../assets/proj-bg/malha.png");
-          width: 1503px;
-          height: 852px;
-          transform: rotate(-30deg);
-          left: 0px;
-          margin-top: -260px;
-        }
-    }
   }
 }
 
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
  .aurora-ii {
-    .data {
-      top: 30px;
-      left: 128px;
-      h3 { 
-        margin-left: 20px;
-      }
-    }
-
-    .name {
-      top: 80px;
-      left: 100px;
-      transform: rotate(-10deg);
-
-      h2 {
-        font-size: 30px;
-        left: 0px;
-
-        .first {
-          padding: 0px 0px 0px 30px;
-        }
-      }
-    }
-
     .content-desk { 
       margin-top: 160px;
       padding: 0px 20px 0px 40px;
@@ -284,64 +214,12 @@ export default {
 
       }
     }
-
-    .line {
-      width: 5px;
-      height: 85vh;
-      left: 133px;
-    }
-
-    .back-btn {
-      font-size: 20px;
-      margin: 0px 0px 50px 100px;
-      padding: 5px 20px;
-
-      .back-icon {
-        height: 15px;
-        margin-right: 10px;
-      }
-    }
-
-    .parallax {
-      div#bg-3-1 {
-        background: url("../assets/proj-bg/d-malha.png");
-        width: 1503px;
-        height: 852px;
-        transform: rotate(-20deg);
-        left: 100px;
-        margin-top: -50px;
-        opacity: .5;
-      }
-    }
   }
 }
 
 // WIDE
 @media only screen and (min-width: 2500px) {
   .aurora-ii {
-    .data {
-      top: 30px;
-      left: 789px;
-      h3 { 
-        margin-left: 20px;
-      }
-    }
-
-    .name {
-      top: 80px;
-      left: 760px;
-      transform: rotate(-10deg);
-
-      h2 {
-        font-size: 30px;
-        left: 0px;
-
-        .first {
-          padding: 0px 0px 0px 30px;
-        }
-      }
-    }
-
     .content-desk { 
       margin-top: 250px;
       padding: 0px 20px 0px 40px;
@@ -357,35 +235,6 @@ export default {
           margin-top: 20px;
           a { color: $roxo; }
         }
-      }
-    }
-
-    .line {
-      width: 5px;
-      height: 85vh;
-      left: 31vw;
-    }
-
-    .back-btn {
-      font-size: 20px;
-      margin: 0px 0px 70px 30vw;
-      padding: 5px 20px;
-
-      .back-icon {
-        height: 15px;
-        margin-right: 10px;
-      }
-    }
-
-   .parallax {
-      div#bg-3-1 {
-        background: url("../assets/proj-bg/d-malha.png");
-        width: 1503px;
-        height: 852px;
-        transform: rotate(-25deg);
-        scale: 3;
-        left: 700px;
-        margin-top: -50px;
       }
     }
   }

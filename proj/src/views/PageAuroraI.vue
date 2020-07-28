@@ -1,5 +1,5 @@
 <template lang="pug">
-  proj-template(nomeProj="Projeto Aurora" date="jan/2017" firstName="auro" lastName="ra" titleColor="" class="aurora")
+  proj-template(nomeProj="Projeto Aurora" date="jan/2017" firstName="auro" lastName="ra" titleColor="" class="aurora" :ios="2100" :and="1900")
     template(v-slot:haveMore) 
       router-link(to="/aurora-ii") 
         fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")

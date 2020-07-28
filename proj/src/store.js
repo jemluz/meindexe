@@ -3,25 +3,21 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+import en from './en.json'
+import pt from './pt.json'
+
 export default new Vuex.Store({
-  state: {
-    isMenuVisible: true,
-    isCloseIcon: false
+  state: { 
+    PT: pt,
+    EN: en,
+    lang: null
   },
   mutations: {
-    toggleMenu (state, isVisible) {
-      // se isVisible ainda não foi definida
-      if(isVisible === undefined) {
-        state.isMenuVisible = !state.isMenuVisible
-        state.isCloseIcon = !state.isCloseIcon
-        // modifica os estados alternadamente
-      } else {
-        // se já tem um valor atribuido
-        state.isMenuVisible = isVisible
-        state.isCloseIcon = isVisible
-        // alterne para o valor oposto
-      }
-      console.log('toggleMenu = ' + state.isMenuVisible + ' PositionFixed = ' + state.isCloseIcon)
+    setLangPT (state) {
+      state.lang = pt
+    },
+    setLangEN (state) {
+      state.lang = en
     }
   }
 }) 
