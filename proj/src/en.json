@@ -7,5 +7,49 @@
     "btn": "about"
   },
   "aboutPage": {
-  }
+    "firstTitle": "our te",
+    "firstTitle2": "am",
+
+    "func1": "Project coordinator",
+    "func2": "Full Stack Developer",
+    "func3": "Designer UI",
+    "func4": "Sales manager",
+
+    "who": "The time has passed,",
+    "whoDash": "the family",
+    "who2": "the team has grown, and everyone is wondering what will be the next project of most watched portfolio in Brazil.",
+
+    "nextProjs": "check out the current candidates:",
+
+    "secondTitle": "our",
+    "secondTitle2": "",
+
+    "howWeWork": "Organization, study and testing here are law. And the grace of each project is in:",
+    "list1": "1. Enjoy the nostalgia of the sketches.",
+    "list2": "2. Admire the complexity of the processes.",
+    "list3": "3. Find yourself at the end of everything.",
+
+    "poemLine1": "Lápis duro em papel mole,",
+    "poemLine2": "escreveu tanto e não aguentou.",
+    "poemLine3": "Se viu perdido em muitas ideias,",
+    "poemLine4": "que a tal folha quase rasgou.",
+
+    "poemLine5": "Praquê isso, minha filha?",
+    "poemLine6": "Deixe de ser louca,",
+    "poemLine7": "junte toda essa bagunça,",
+    "poemLine8": "coloque em um site",
+    "poemLine9": "e chame isso portfólio. (??)",
+
+    "poemLine10": "- Unknown author",
+
+    "thirdTitle": "need",
+    "thirdTitle2": "help?",
+
+    "request": "Do you need a website or web system? Request a quote.",
+
+    "mail": "contato@meindexe.com",
+    "insta": "@me.indexe",
+    "whats": "(85) 9 0000-0000"
+  },
+  "backBtn": "Back to home (←)"
 }

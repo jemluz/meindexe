@@ -7,5 +7,49 @@
     "btn": "sobre"
   },
   "aboutPage": {
-  }
+    "firstTitle": "nosso ti",
+    "firstTitle2": "me",
+
+    "func1": "Coordenadora de projetos",
+    "func2": "Full Stack Developer",
+    "func3": "Designer UI",
+    "func4": "Gerente de vendas",
+
+    "who": "O tempo passou,",
+    "whoDash": "a família",
+    "who2": "o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.",
+
+    "nextProjs": "confira os candidatos atuais:",
+
+    "secondTitle": "nosso ro",
+    "secondTitle2": "lê",
+
+    "howWeWork": "Organização, estudo e teste aqui são lei. E a graça de cada projeto está em:",
+    "list1": "1. Curtir a nostalgia dos esboços.",
+    "list2": "2. Admirar a complexidade dos processos.",
+    "list3": "3. Encontrar-se no fim de tudo.",
+
+    "poemLine1": "Lápis duro em papel mole,",
+    "poemLine2": "escreveu tanto e não aguentou.",
+    "poemLine3": "Se viu perdido em muitas ideias,",
+    "poemLine4": "que a tal folha quase rasgou.",
+
+    "poemLine5": "Praquê isso, minha filha?",
+    "poemLine6": "Deixe de ser louca,",
+    "poemLine7": "junte toda essa bagunça,",
+    "poemLine8": "coloque em um site",
+    "poemLine9": "e chame isso portfólio. (??)",
+
+    "poemLine10": "- Autor desconhecido",
+
+    "thirdTitle": "need",
+    "thirdTitle2": "help?",
+
+    "request": "Tá precisando de um site ou sistema web? Solicite um orçamento.",
+
+    "mail": "contato@meindexe.com",
+    "insta": "@me.indexe",
+    "whats": "(85) 9 0000-0000"
+  },
+  "backBtn": "Voltar p/ o início (←)"
 }
