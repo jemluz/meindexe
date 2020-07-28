@@ -1,37 +1,17 @@
 <template lang="pug">
-  div#ybm
+  div#projTemplate
     vue-headful(
-      title="mindexe | Projeto Produtividade"    )
+      title=`mindexe | ${nomeProj}`    )
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
-      img(src="../assets/proj-bg/dot.svg")
-      h3 ago/2018 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
+      img(src="../../assets/proj-bg/dot.svg")
+      h3 {{ date }} 
+        slot(name="haveMore")
 
     div.name#name
-      h2 #[span.first é melhor vc ]#[span.second medir_]
+      h2 #[span.first {{ firstName }}]#[span.second {{ lastName }}_]
 
-    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
-      img#contentmob-start(src="../assets/produtividade/login.png")
-      p No projeto aurora eu mencionei ter aprendido sobre produtividade, e essa ideia aqui é a consequência disso.
-      p Durante o semestre que tranquei a faculdade, eu periodicamente varria a PlayStore procurando e testando apps de produtividade.
- 
-      img(src="../assets/produtividade/telas.png")
-      
-      p No fim das contas acabei com uns 3, e depois de um tempo comecei a pensar em um app que reunisse todas essas funcionalidades e mais algumas coisas que desenvolvi sozinha.
-      p Atualmente ele teve o design atulizado, ganhando inclusive uma versão escura. Ele também vai virar um app em #[a(href="https://flutter.dev/") Flutter], mas por hora eu sigo estudando.
-
-    div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
-      div.col-1#col-1
-        img#contentdesk-start(src="../assets/produtividade/login.png")
-        p No projeto aurora eu mencionei ter aprendido sobre produtividade, e essa ideia aqui é a consequência disso.
-        p Durante o semestre que tranquei a faculdade, eu periodicamente varria a PlayStore procurando e testando apps de produtividade.
- 
-      div.col-2#col-2  
-        p No fim das contas acabei com uns 3, e depois de um tempo comecei a pensar em um app que reunisse todas essas funcionalidades e mais algumas coisas que desenvolvi sozinha.
-        img(src="../assets/produtividade/telas.png")
-      
-        p Atualmente ele teve o design atulizado, ganhando inclusive uma versão escura. Ele também vai virar um app em #[a(href="https://flutter.dev/") Flutter], mas por hora eu sigo estudando.
-
+    slot(name="content")
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
@@ -45,8 +25,15 @@
 
 <script>
 export default {
-  name: "ProjProdutividade",
-  components: {},
+  name: "ProjTemplate",
+  props: [
+    'nomeProj',
+    'date', 
+    'haveMore',
+    'firstName',
+    'lastName',
+    'titleColor'
+  ],
   methods: {
     getMobileOperatingSystem() {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -92,10 +79,10 @@ export default {
       
       if (this.getMobileOperatingSystem() == 'iOS') {
         // ios
-        auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 650) + "px";
+        auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 2100) + "px";
       } else if (this.getMobileOperatingSystem() == 'Android') {
         // android
-        auroraI.style.marginTop = (contentMob.offsetTop  + 400) + "px";
+        auroraI.style.marginTop = (contentMob.offsetTop  + 1900) + "px";
       }
 
       // console.log(auroraStart.style.marginTop)
@@ -139,9 +126,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../styles/helpers/variables";
+@import "../../styles/helpers/variables";
 
-#ybm {
+#projTemplate {
   background: linear-gradient(to bottom right, #eee, #fff);
   background-attachment: fixed;
 
@@ -172,121 +159,60 @@ export default {
       font-weight: 400;
 
       .first {
-        background-color: #B4A1F3;
         box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
         background-color: transparent;
-        color: #B4A1F3;
+      }
+    }
+  }
+
+  .content-mob,
+  .content-desk  {
+    overflow-y: scroll;
+    z-index: 2;
+    
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+
+    p {
+      font-family: t26-carbon, monospace;
+      font-size: 16px;
+      font-style: italic;
+
+      text-align: left;
+
+      color: #555;
+
+      a {
+        font-weight: 700;
       }
     }
   }
 
   .content-mob {
-    overflow-y: scroll;
-    z-index: 2;
-
-    display: flex;
     justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-    position: fixed;
-
-    p {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      color: #555;
-
-      a {
-        font-weight: 700;
-      }
-    }
 
     .vue-link {
       color: #4fc08d;
-    }
-
-    .result {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      background-color: $roxo;
-      p { color: #fff;}
-
-      border-radius: 5px;
-      box-shadow: 0px 0px 20px 0px #00000020;
-
-      a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-        opacity: .4;
-      }
     }
   }
 
   .content-desk {
-    overflow-y: scroll;
-    
-    z-index: 2;
-
-    display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: row;
-    position: fixed;
-
-    p {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      color: #555;
-
-      a {
-        font-weight: 700;
-      }
-    }
 
     .vue-link {
       color: #4fc08d;
-    }
-
-    .result {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      background-color: $roxo;
-      color: #fff;
-
-      border-radius: 5px;
-      box-shadow: 0px 0px 20px 0px #00000020;
-
-      a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-        opacity: .4;
-      }
     }
   }
 
   .line {
     position: fixed;
-    background: url("../assets/proj-bg/line.svg");
+    background: url("../../assets/proj-bg/line.svg");
     opacity: .9;
   }
 
@@ -342,14 +268,14 @@ export default {
 
 // mobile only
 @media only screen and (min-width: 901px) {
-  #ybm {
+  #projTemplate {
     .content-mob { display: none; }
   }
 }
 
 // MOBILE
 @media only screen and (max-width: 900px) {
-  #ybm {
+  #projTemplate {
     .data {
       top: 30px;
       left: 55px;
@@ -373,30 +299,6 @@ export default {
       }
     }
 
-    .content-mob {
-      width: 89vw;
-      margin-left: 40px;
-      padding: 0px 70px 0px 50px;
-
-      img { 
-        margin-top: 20px;
-        max-width: 200px;
-      }
-
-      p {
-        max-width: 200px;
-        margin-top: 20px;
-        margin-left: 5px;
-      }
-
-      .result {
-        margin: 40px 0px 0px -40px;
-        padding: 15px 40px;
-
-        p { margin: 0px 0px 5px 0px;}
-      } 
-    }
-
     .content-desk { display: none; }
 
     .line {
@@ -418,7 +320,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-          background: url("../assets/proj-bg/malha.png");
+          background: url("../../assets/proj-bg/malha.png");
           width: 1503px;
           height: 852px;
           transform: rotate(-30deg);
@@ -431,7 +333,7 @@ export default {
 
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
- #ybm {
+ #projTemplate {
     .data {
       top: 30px;
       left: 128px;
@@ -455,50 +357,6 @@ export default {
       }
     }
 
-    .content-desk { 
-      margin-top: 160px;
-      padding: 0px 20px 0px 40px;
-      width: 99vw;
-
-      div {
-        text-align: left;
-
-        img { max-width: 30vw; }
-
-        p {
-          max-width: 27vw;
-          font-size: 1rem;
-          margin: 20px 0px;
-
-          strong { color: $roxo;}
-        }
-      }
-
-      .col-2 {
-        p {padding-left: 20px;}
-        margin-left: 40px;
-      }
-
-      .result{
-        margin-top: 40px;
-        border-radius: 10px;
-        padding: 15px 40px;
-        max-width: 300px;
-
-        p { 
-          color: #fff;
-          font-size: 1.1rem;
-          margin: 0px 0px 5px 0px;
-          padding: 0px;
-        }
-
-        a { 
-          font-size: .9rem;
-          font-weight: 300;
-        }
-      }
-    }
-
     .line {
       width: 5px;
       height: 85vh;
@@ -518,7 +376,7 @@ export default {
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/proj-bg/d-malha.png");
+        background: url("../../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-20deg);
@@ -532,7 +390,7 @@ export default {
 
 // WIDE
 @media only screen and (min-width: 2500px) {
-  #ybm {
+  #projTemplate {
     .data {
       top: 30px;
       left: 789px;
@@ -556,34 +414,6 @@ export default {
       }
     }
 
-    .content-desk { 
-      margin-top: 160px;
-      padding: 0px 20px 0px 40px;
-
-      div {
-        text-align: left;
-
-        img { max-width: 10vw; }
-
-        p {
-          max-width: 10vw;
-          font-size: 1rem;
-          margin: 20px 0px;
-
-          strong { color: $roxo;}
-        }
-      }
-
-      .col-2,
-      .col-3 {
-        margin-left: 80px;
-      }
-
-      .col-3 img {
-        box-shadow: none;
-      }
-    }
-
     .line {
       width: 5px;
       height: 85vh;
@@ -603,7 +433,7 @@ export default {
 
    .parallax {
       div#bg-3-1 {
-        background: url("../assets/proj-bg/d-malha.png");
+        background: url("../../assets/proj-bg/d-malha.png");
         width: 1503px;
         height: 852px;
         transform: rotate(-25deg);

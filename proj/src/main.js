@@ -3,6 +3,10 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import ProjTemplate from './components/template/ProjTemplate'
+
+Vue.component('proj-template', ProjTemplate)
+
 import VueAgile from 'vue-agile'
 Vue.use(VueAgile)
 
