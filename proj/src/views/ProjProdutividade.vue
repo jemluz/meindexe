@@ -117,7 +117,7 @@ export default {
       let code = event.keyCode ? event.keyCode : event.which;
 
       // 1 - ipress i: back to home
-      if (code == 73) {
+      if (code == 8) {
         this.$router.push(({ path: '/'}) )
       }
     }

@@ -1,19 +1,13 @@
 <template lang="pug">
   div#sobre
-    vue-headful(
-      title="mindexe | Sobre"    )
+    vue-headful(:title="lang.aboutPage.metatitle")
 
     //- nao pode tirar
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
-      //- img(src="../assets/proj-bg/dot.svg")
-      //- h3 abr/2018 #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")]]
-
-    //- div.name#name
-    //-   h2 #[span.first nosso ti]#[span.second me_]
 
     div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500")
       div.name#contentmob-start
-        h2 #[span.first nosso ti]#[span.second me_]
+        h2 #[span.first {{ lang.aboutPage.firstTitle }}]#[span.second {{ lang.aboutPage.firstTitle2 }}_]
         
       agile(ref="carouselmob" fade="true" navButtons="false" autoplay="true" speed="1000")
         div.slide.membro
@@ -21,8 +15,8 @@
             img.photo(src="../assets/sobre/jeyse.png")
 
           div.nome-funcao
-            h4 Jeyse Muler
-            p Full Stack Developer
+            h4 Jemima Luz
+            p {{ lang.aboutPage.func1 }}
 
         div.slide.membro
           div
@@ -30,30 +24,30 @@
 
           div.nome-funcao
             h4 Jemima Luz
-            p Coordenadora de Projetos
+            p {{ lang.aboutPage.func2 }}
 
         div.slide.membro
           div
             img.photo(src="../assets/sobre/jemine.png")
 
           div.nome-funcao 
-            h4 Jemine Carvalho
-            p Gerente de vendas
+            h4 Jemima Luz
+            p {{ lang.aboutPage.func3 }}
 
         div.slide.membro
           div
             img.photo(src="../assets/sobre/juliana.png")
 
           div.nome-funcao 
-            h4 Juliana Ximenes
-            p Designer UI
+            h4 Jemima Luz
+            p {{ lang.aboutPage.func4 }}
 
       div.slide-btn
         button.btn-prev-photo(@click="$refs.carouselmob.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
         button.btn-next-photo(@click="$refs.carouselmob.goToPrev()") #[fa-icon(class="photo-icon" icon="arrow-right")]
 
-      p.normal.p-1 O tempo passou, #[strike a família] o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.
-      p.normal confira os candidatos atuais:
+      p.normal.p-1 {{ lang.aboutPage.who }} #[strike {{ lang.aboutPage.whoDash }}] {{ lang.aboutPage.who2 }}
+      p.normal {{ lang.aboutPage.nextProjs }}
 
       nav.projs-navgation.normal
         div.row-1
@@ -62,26 +56,26 @@
           router-link.empty(to='') v
 
       div.name-2#name-2.name-2
-        h2 #[span.first nosso ro]#[span.second lê_]  
+        h2 #[span.first {{ lang.aboutPage.secondTitle }}]#[span.second {{ lang.aboutPage.secondTitle2 }}_]  
 
-      p.normal Organização, estudo e teste aqui são lei. E a graça de cada projeto está em:
-      p.normal 1. Curtir a nostalgia dos esboços.
-      p.normal.no-margin 2. Admirar a complexidade dos processos.
-      p.normal.no-margin 3. Encontrar-se no fim de tudo.
+      p.normal {{ lang.aboutPage.howWeWork }}
+      p.normal {{ lang.aboutPage.list1 }}
+      p.normal.no-margin {{ lang.aboutPage.list2 }}
+      p.normal.no-margin {{ lang.aboutPage.list3 }}
 
-      p.normal.poema "Lápis duro em papel mole, #[br]escreveu tanto e não aguentou. #[br]Se viu perdido em muitas ideias, #[br] que a tal folha quase rasgou.
-      p.normal.poema Praquê isso, minha filha? #[br]Deixe de ser louca, #[br]junte toda essa bagunça, #[br]coloque em um site #[br]e chame isso portfólio. (??)"
-      p.normal.poema.autor - Autor desconhecido
+      p.normal.poema "{{ lang.aboutPage.poemLine1 }} #[br]{{ lang.aboutPage.poemLine2 }} #[br]{{ lang.aboutPage.poemLine3 }} #[br] {{ lang.aboutPage.poemLine4 }}
+      p.normal.poema {{ lang.aboutPage.poemLine5 }} #[br]{{ lang.aboutPage.poemLine6 }} #[br]{{ lang.aboutPage.poemLine7 }} #[br]{{ lang.aboutPage.poemLine8 }} #[br]{{ lang.aboutPage.poemLine9 }}"
+      p.normal.poema.autor {{ lang.aboutPage.poemLine10 }}
 
       div.contato
         div.name-2#name-2.name-2
-          h2 #[span.first need ]#[span.second help?_] 
+          h2 #[span.first {{ lang.aboutPage.thirdTitle }} ]#[span.second {{ lang.aboutPage.thirdTitle2 }}_] 
 
-        p.normal.p-1 Tá precisando de um site ou sistema web? Solicite um orçamento.
+        p.normal.p-1 {{ lang.aboutPage.request }}
 
-        a.normal.mail(href="") #[fa-icon(icon="envelope")] contato@meindexe.com
-        a.normal.insta(href="https://www.instagram.com/me.indexe/") #[fa-icon(:icon="['fab', 'instagram']")] @me.indexe
-        a.normal.zap(href="") #[fa-icon(:icon="['fab', 'whatsapp']")] (85) 9 0000-0000
+        a.normal.mail(href="") #[fa-icon(icon="envelope")] {{ lang.aboutPage.mail }}
+        a.normal.insta(href="https://www.instagram.com/me.indexe/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
+        a.normal.zap(href="") #[fa-icon(:icon="['fab', 'whatsapp']")] {{ lang.aboutPage.whats }}
 
         a
 
@@ -89,12 +83,12 @@
       div.col-1#col-1
         agile#contentdesk-start(ref="carouseldesk" fade="true" navButtons="false" autoplay="true" speed="1000")
           div.slide.membro
-            div
-              img.photo(src="../assets/sobre/jeyse.png")
+          div
+            img.photo(src="../assets/sobre/jeyse.png")
 
-            div.nome-funcao
-              h4 Jeyse Muler
-              p Full Stack Developer
+          div.nome-funcao
+            h4 Jemima Luz
+            p {{ lang.aboutPage.func1 }}
 
           div.slide.membro
             div
@@ -102,30 +96,30 @@
 
             div.nome-funcao
               h4 Jemima Luz
-              p Coordenadora de Projetos
+              p {{ lang.aboutPage.func2 }}
 
           div.slide.membro
             div
               img.photo(src="../assets/sobre/jemine.png")
 
             div.nome-funcao 
-              h4 Jemine Carvalho
-              p Gerente de vendas
+              h4 Jemima Luz
+              p {{ lang.aboutPage.func3 }}
 
           div.slide.membro
             div
               img.photo(src="../assets/sobre/juliana.png")
 
             div.nome-funcao 
-              h4 Juliana Ximenes
-              p Designer UI
+              h4 Jemima Luz
+              p {{ lang.aboutPage.func4 }}
 
         div.slide-btn
           button.btn-prev-photo(@click="$refs.carouseldesk.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
           button.btn-next-photo(@click="$refs.carouseldesk.goToPrev()" style="color: ;border-color: ;") #[fa-icon(class="photo-icon" icon="arrow-right")]
         
-        p.normal.p-1 O tempo passou, #[strike a família] o time cresceu, e ta todo mundo se perguntando qual será o próximo projeto do portifólio mais vigiado do Brasil.
-        p.normal confira os candidatos atuais:
+        p.normal.p-1 {{ lang.aboutPage.who }} #[strike {{ lang.aboutPage.whoDash }}] {{ lang.aboutPage.who2 }}
+        p.normal {{ lang.aboutPage.nextProjs }}
 
         nav.projs-navgation.normal
           div.row-1
@@ -136,34 +130,34 @@
 
         div.contato
           div.name-2#name-2.name-2
-            h2 #[span.first need ]#[span.second help?_] 
+            h2 #[span.first {{ lang.aboutPage.thirdTitle }} ]#[span.second {{ lang.aboutPage.thirdTitle2 }}_] 
 
-          p.normal.p-1 Tá precisando de um site ou sistema web? Solicite um orçamento.
+          p.normal.p-1 {{ lang.aboutPage.request }}
 
-          a.normal.mail(href="") #[fa-icon(icon="envelope")] contato@meindexe.com
-          a.normal.insta(href="https://www.instagram.com/me.indexe/") #[fa-icon(:icon="['fab', 'instagram']")] @me.indexe
-          a.normal.zap(href="") #[fa-icon(:icon="['fab', 'whatsapp']")] (85) 9 0000-0000
+          a.normal.mail(href="") #[fa-icon(icon="envelope")] {{ lang.aboutPage.mail }}
+          a.normal.insta(href="https://www.instagram.com/me.indexe/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
+          a.normal.zap(href="") #[fa-icon(:icon="['fab', 'whatsapp']")] {{ lang.aboutPage.whats }}
 
           a
 
       div.col-2#col-2
         div.name-2#name-2.name-2
-          h2 #[span.first nosso ro]#[span.second lê_]  
+          h2 #[span.first {{ lang.aboutPage.secondTitle }}]#[span.second {{ lang.aboutPage.secondTitle2 }}_]  
 
-        p Organização, estudo e teste aqui são lei. E a graça de cada projeto está em:
-        p.no-margin 1. Curtir a nostalgia dos esboços.
-        p.no-margin 2. Admirar a complexidade dos processos.
-        p.no-margin 3. Encontrar-se no fim de tudo.
+        p {{ lang.aboutPage.howWeWork }}
+        p.no-margin {{ lang.aboutPage.list1 }}
+        p.no-margin {{ lang.aboutPage.list2 }}
+        p.no-margin {{ lang.aboutPage.list3 }}
 
-        p.poema "Lápis duro em papel mole, #[br]escreveu tanto e não aguentou. #[br]Se viu perdido em muitas ideias, #[br] que a tal folha quase rasgou.
-        p.poema Praquê isso, minha filha? #[br]Deixe de ser louca, #[br]junte toda essa bagunça, #[br]coloque em um site #[br]e chame isso portfólio. (??)"
-        p.poema.autor - Autor desconhecido
+        p.poema "{{ lang.aboutPage.poemLine1 }} #[br]{{ lang.aboutPage.poemLine2 }} #[br]{{ lang.aboutPage.poemLine3 }} #[br] {{ lang.aboutPage.poemLine4 }}
+        p.poema {{ lang.aboutPage.poemLine5 }} #[br]{{ lang.aboutPage.poemLine6 }} #[br]{{ lang.aboutPage.poemLine7 }} #[br]{{ lang.aboutPage.poemLine8 }} #[br]{{ lang.aboutPage.poemLine9 }}"
+        p.poema.autor {{ lang.aboutPage.poemLine10 }}
         
 
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
-    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] Voltar p/ o início (i)
+    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] {{ lang.backBtn }}
 
     div.parallax(data-aos="fade-down" data-aos-duration="500" )
       div(id="parallax-bg-3" class="parallax-bg")
@@ -172,9 +166,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: "ProjBubbox",
-  components: {},
+  computed: mapState(["lang"]),
   methods: {
     getMobileOperatingSystem() {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -245,7 +241,7 @@ export default {
       let code = event.keyCode ? event.keyCode : event.which;
 
       // 1 - ipress i: back to home
-      if (code == 73) {
+      if (code == 8) {
         this.$router.push(({ path: '/'}) )
       }
     }

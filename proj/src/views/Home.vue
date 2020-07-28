@@ -1,8 +1,6 @@
 <template lang="pug">
   div#home
-    vue-headful(
-      title="mindexe | Web & Sistemas"
-    )
+    vue-headful(:title="lang.homePage.metatitle")
 
     h1.logo(data-aos="fade-down" data-aos-duration="500" ) #[p] m#[strong indexe] #[p]
 

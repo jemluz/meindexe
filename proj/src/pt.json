@@ -1,5 +1,7 @@
 {
   "homePage": {
+    "metatitle": "meindexe | Web & Sistemas",
+
     "title": "aperte uma te",
     "secondTitle": "cla",
     "sub": "para ver um",
@@ -7,6 +9,8 @@
     "btn": "sobre"
   },
   "aboutPage": {
+    "metatitle": "About",
+
     "firstTitle": "nosso ti",
     "firstTitle2": "me",
 

@@ -1,19 +1,23 @@
 {
   "homePage": {
-    "title": "press one",
+    "metatitle": "meindexe | Web & Systems",
+
+    "title": "press a",
     "secondTitle": "key",
     "sub": "to see a",
     "secondSub": "project",
     "btn": "about"
   },
   "aboutPage": {
+    "metatitle": "About",
+
     "firstTitle": "our te",
     "firstTitle2": "am",
 
-    "func1": "Project coordinator",
-    "func2": "Full Stack Developer",
-    "func3": "Designer UI",
-    "func4": "Sales manager",
+    "func1": "Full Stack Developer",
+    "func2": "Project Coordinator",
+    "func3": "Sales Manager",
+    "func4": "Designer UI",
 
     "who": "The time has passed,",
     "whoDash": "the family",
@@ -21,10 +25,10 @@
 
     "nextProjs": "check out the current candidates:",
 
-    "secondTitle": "our",
-    "secondTitle2": "",
+    "secondTitle": "our stu",
+    "secondTitle2": "ffs",
 
-    "howWeWork": "Organization, study and testing here are law. And the grace of each project is in:",
+    "howWeWork": "Organization, study and testing here are law. And the grace of each project is:",
     "list1": "1. Enjoy the nostalgia of the sketches.",
     "list2": "2. Admire the complexity of the processes.",
     "list3": "3. Find yourself at the end of everything.",

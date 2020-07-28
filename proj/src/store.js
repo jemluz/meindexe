@@ -8,9 +8,7 @@ import pt from './pt.json'
 
 export default new Vuex.Store({
   state: { 
-    PT: pt,
-    EN: en,
-    lang: null
+    lang: pt
   },
   mutations: {
     setLangPT (state) {
