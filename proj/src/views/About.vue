@@ -83,12 +83,12 @@
       div.col-1#col-1
         agile#contentdesk-start(ref="carouseldesk" fade="true" navButtons="false" autoplay="true" speed="1000")
           div.slide.membro
-          div
-            img.photo(src="../assets/sobre/jeyse.png")
+            div
+              img.photo(src="../assets/sobre/jeyse.png")
 
-          div.nome-funcao
-            h4 Jemima Luz
-            p {{ lang.aboutPage.func1 }}
+            div.nome-funcao
+              h4 Jemima Luz
+              p {{ lang.aboutPage.func1 }}
 
           div.slide.membro
             div
