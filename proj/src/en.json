@@ -9,7 +9,7 @@
     "btn": "about"
   },
   "aboutPage": {
-    "metatitle": "About",
+    "metatitle": "meindexe | About",
 
     "firstTitle": "our te",
     "firstTitle2": "am",
@@ -54,6 +54,35 @@
     "mail": "contato@meindexe.com",
     "insta": "@me.indexe",
     "whats": "(85) 9 0000-0000"
+  },
+  "auroraI": {
+    "metatitle": "meindexe | Aurora Project",
+
+    "prototipo1": "This was the project that taught me to think like a programmer. It came from a college project with",
+    "prototipo2": "and one of the project requirements was to be done in processing or stencyl.",
+    "prototipo3": "I was responsible for programming, and my team’s idea was a mobile app prototype, so the problem was:",
+    "prototipo4": "How am I going to imitate a mobile application in a program language that was designed for drawings?",
+    "prototipo5": "The solution I found was to create a video/frames algorithm with support for interactions simulating a mobile interface.",
+
+    "linkTitle1": "Algorithm running",
+
+    "slide1": "Another thing I loved doing was the presentation slides for our project proposal.",
+    "slide2": "What is written without effort is read without pleasure.",
+    "slide3": "describes the opposite of what I did in that task.",
+
+    "linkTitle2": "Presentation",
+
+    "codigo1": "A challenge I found in this step was to teach the team the code algorithm for evaluation in one of the disciplines.",
+    "codigo2": "So I created an infographic, systematizing the code and used it to teach. It worked so well that we got the maximum grade in the discipline: D",
+
+    "linkTitle3": "Infographic",
+
+    "layout1": "I also created the layout for the project website.",
+    "layout2": "As it was my first website, I decided to do it 100% by hand, before trying to any workflow, automation, and versioning system, such as preprocessors, git, gulp, npm, botstrap and everything.",
+
+    "linkTitle4": "Sample site",
+
+    "seeMore": "Show more"
   },
   "backBtn": "Back to home (←)"
 }

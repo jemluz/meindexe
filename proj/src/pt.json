@@ -55,5 +55,34 @@
     "insta": "@me.indexe",
     "whats": "(85) 9 0000-0000"
   },
+  "auroraI": {
+    "metatitle": "meindexe | Projeto Aurora",
+
+    "prototipo1": "Esse foi o projeto que me ensinou a pensar como uma programadora. Ele surgiu de um trabalho da faculdade com a",
+    "prototipo2": "e um dos requisitos do trabalho era ser feito em processing ou stencyl.",
+    "prototipo3": "Eu fiquei responsável pela programação, e a idéia da minha equipe era um protótipo de app mobile, então o problema era:",
+    "prototipo4": "Como eu vou imitar uma aplicação mobile em uma linguagem que foi projetada para desenhos?",
+    "prototipo5": "A solução que encontrei foi criar um algorítimo de vídeo/frames com suporte a interações simulando uma interface mobile.",
+
+    "linkTitle1": "Algorítimo rodando",
+
+    "slide1": "Outra coisa que amei fazer foi os slides de apresentação da proposta do nosso trabalho.",
+    "slide2": "O que é escrito sem esforço é lido sem prazer.",
+    "slide3": "descreve o oposto da que fiz nessa tarefa.",
+
+    "linkTitle2": "Apresentação",
+
+    "codigo1": "Um desafio que encontrei nessa etapa foi ensinar ao time o algoritimo do código para avaliação em uma das disciplinas.",
+    "codigo2": "Então criei um infográfico, sistematizando o código e usei ele pra ensinar. Deu tão certo que conseguimos a nota máxima na disciplina :D",
+
+    "linkTitle3": "Infográfico",
+
+    "layout1": "Também criei o layout para o site do projeto.",
+    "layout2": "Como foi meu primeiro site, decidi fazer 100% na mão, antes de correr pra qualquer sistema de workflow, automação, e versionamento, como pré-processadores, git, gulp, npm, botstrap e tudo o mais.",
+
+    "linkTitle4": "Amostra do site 1.0",
+
+    "seeMore": "Ver mais"
+  },
   "backBtn": "Voltar p/ o início (←)"
 }

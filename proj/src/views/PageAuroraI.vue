@@ -1,76 +1,79 @@
 <template lang="pug">
-  proj-template(nomeProj="Projeto Aurora" date="jan/2017" firstName="auro" lastName="ra" titleColor="" class="aurora" :ios="2100" :and="1900")
+  proj-template(:nomeProj="lang.auroraI.metatitle" date="jan/2017" firstName="auro" lastName="ra" class="aurora" :ios="2100" :and="1900")
     template(v-slot:haveMore) 
       router-link(to="/aurora-ii") 
         fa-icon.timeline-next(style="margin-left: 20px;" icon="plus")
 
     template(v-slot:content) 
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
-        p.desc#contentmob-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade com a #[a#carmen-pop @carmenli#[div.popover-carmen #[a.carmen-linked(href="https://www.linkedin.com/in/carmenli-1308" target="_blank") LinkedIn]]], #[a#brunool-pop @brunool#[div.popover-brunool #[a.brunool-behance(href="https://www.behance.net/brunool" target="_blank") Behance]]], #[a#rosi-pop @rosilenemoufer #[div.popover-rosi #[a.rosi-lattes(href="http://lattes.cnpq.br/9252640618973149" target="_blank") Lattes]]] e #[a#emili-pop @emiliborges #[div.popover-emili #[a.emili-linked(href="https://www.linkedin.com/in/emili-borges-597a4b1b1" target="_blank") LinkedIn]]], e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
+        p.desc#contentmob-start {{ lang.auroraI.prototipo1 }} #[a#carmen-pop @carmenli#[div.popover-carmen #[a.carmen-linked(href="https://www.linkedin.com/in/carmenli-1308" target="_blank") LinkedIn]]], #[a#brunool-pop @brunool#[div.popover-brunool #[a.brunool-behance(href="https://www.behance.net/brunool" target="_blank") Behance]]], #[a#rosi-pop @rosilenemoufer #[div.popover-rosi #[a.rosi-lattes(href="http://lattes.cnpq.br/9252640618973149" target="_blank") Lattes]]] e #[a#emili-pop @emiliborges #[div.popover-emili #[a.emili-linked(href="https://www.linkedin.com/in/emili-borges-597a4b1b1" target="_blank") LinkedIn]]], {{ lang.auroraI.prototipo2 }}
 
         img#img-1(src="../assets/aurora/prototipo1.png")
 
-        p.desc-2 Eu fiquei responsável pela programação, e a idéia da minha equipe era um protótipo de app mobile, então o problema era:  
-        p.desc-3 #[strong Como eu vou imitar uma aplicação mobile em uma linguagem que  foi projetada para desenhos? ]
-        p.desc-4 A solução que encontrei foi criar um algorítimo de vídeo com suporte a interações simulando uma interface mobile.
-        p.desc-5 Algorítimo rodando #[br] #[a(href='https://youtu.be/k_jvxk8Cl5Q' target="_blank") https://youtu.be/k_jvxk8Cl5Q]
+        p.desc-2 {{ lang.auroraI.prototipo3 }}
+        p.desc-3 #[strong {{ lang.auroraI.prototipo4 }} ]
+        p.desc-4 {{ lang.auroraI.prototipo5 }}
+        p.desc-5 {{ lang.auroraI.linkTitle1 }} #[br] #[a(href='https://youtu.be/k_jvxk8Cl5Q' target="_blank") https://youtu.be/k_jvxk8Cl5Q]
 
-        p.desc-2#contentdesk-col2-start Outra coisa que amei fazer foi os slide de apresentação da proposta do nosso trabalho. 
-        p "O que é escrito sem esforço é lido sem prazer." descreve o oposto da que fiz nessa tarefa. 
+        p.desc-2#contentdesk-col2-start {{ lang.auroraI.slide1 }}
+        p "{{ lang.auroraI.slide2 }}" {{ lang.auroraI.slide3 }}
 
         img#img-1(src="../assets/aurora/slide.png")
 
-        p.desc-8 Apresentação #[br] #[a(href='https://drive.google.com/file/d/1LiZ1pu84gt4OEAFUsS_8-W3YB-D1fyKk/view?usp=sharing' target="_blank") https://drive.google.com]
+        p.desc-8 {{ lang.auroraI.linkTitle2 }} #[br] #[a(href='https://drive.google.com/file/d/1LiZ1pu84gt4OEAFUsS_8-W3YB-D1fyKk/view?usp=sharing' target="_blank") https://drive.google.com]
 
 
-        p.desc-6 Um desafio que encontrei nessa etapa foi ensinar ao time o algoritimo do código para avaliação em uma das disciplinas. 
-        p.desc-7 Então criei um infográfico, sistematizando o código e usei ele pra ensinar. Deu tão certo que conseguimos a nota máxima na disciplina :D 
+        p.desc-6 {{ lang.auroraI.codigo1 }}
+        p.desc-7 {{ lang.auroraI.codigo2 }}
         img#img-2(src="../assets/aurora/info_codigo.png")
-        p.desc-8 Infográfico #[br] #[a(href='https://drive.google.com/file/d/1-fu8XxQ3vioxTXFIHAdSAMVPitEetqbj/view?usp=sharing' target="_blank") https://drive.google.com]
+        p.desc-8  {{ lang.auroraI.linkTitle3 }} #[br] #[a(href='https://drive.google.com/file/d/1-fu8XxQ3vioxTXFIHAdSAMVPitEetqbj/view?usp=sharing' target="_blank") https://drive.google.com]
 
-        p.desc-9 Também criei o layout para o site do projeto.
+        p.desc-9 {{ lang.auroraI.layout1 }}
         img#img-3(src="../assets/aurora/layout1.png")
-        p.desc-10 como foi meu primeiro site, decidi fazer 100% na mão, antes de correr pra qualquer sistema de workflow, automação, e versionamento, como pré-processadores, git, gulp, npm, botstrap e tudo o mais.
-        p.desc-11 Amostra do site 1.0 #[br] #[a(href='https://youtu.be/4t9KMo5fXAY' target="_blank") https://youtu.be/4t9KMo5fXAY]
+        p.desc-10 {{ lang.auroraI.layout2 }}
+        p.desc-11 {{ lang.auroraI.linkTitle4 }} #[br] #[a(href='https://youtu.be/4t9KMo5fXAY' target="_blank") https://youtu.be/4t9KMo5fXAY]
 
-        p.desc-12.btn-next #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(icon="plus")] Ver mais] 
+        p.desc-12.btn-next #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(icon="plus")] {{ lang.auroraI.seeMore }}] 
       
       div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
         div.col-1#col-1
-          p.desc#contentdesk-col1-start Esse foi o projeto que me ensinou a pensar como uma programadora.  Ele surgiu de um trabalho da faculdade com a #[a#carmen-pop @carmenli#[div.popover-carmen #[a.carmen-linked(href="https://www.linkedin.com/in/carmenli-1308" target="_blank") LinkedIn]]], #[a#brunool-pop @brunool#[div.popover-brunool #[a.brunool-behance(href="https://www.behance.net/brunool" target="_blank") Behance]]], #[a#rosi-pop @rosilenemoufer #[div.popover-rosi #[a.rosi-lattes(href="http://lattes.cnpq.br/9252640618973149" target="_blank") Lattes]]] e #[a#emili-pop @emiliborges #[div.popover-emili #[a.emili-linked(href="https://www.linkedin.com/in/emili-borges-597a4b1b1" target="_blank") LinkedIn]]], e um dos requisitos do trabalho era ser feito em  processing ou stencyl. 
+          p.desc#contentdesk-col1-start {{ lang.auroraI.prototipo1 }} #[a#carmen-pop @carmenli#[div.popover-carmen #[a.carmen-linked(href="https://www.linkedin.com/in/carmenli-1308" target="_blank") LinkedIn]]], #[a#brunool-pop @brunool#[div.popover-brunool #[a.brunool-behance(href="https://www.behance.net/brunool" target="_blank") Behance]]], #[a#rosi-pop @rosilenemoufer #[div.popover-rosi #[a.rosi-lattes(href="http://lattes.cnpq.br/9252640618973149" target="_blank") Lattes]]] e #[a#emili-pop @emiliborges #[div.popover-emili #[a.emili-linked(href="https://www.linkedin.com/in/emili-borges-597a4b1b1" target="_blank") LinkedIn]]], {{ lang.auroraI.prototipo2 }}
 
           img#img-1(src="../assets/aurora/prototipo1.png")
 
-          p.desc-2 Eu fiquei responsável pela programação, e a idéia da minha equipe era um protótipo de app mobile, então o problema era:  
-          p.desc-3 #[strong Como eu vou imitar uma aplicação mobile em uma linguagem que  foi projetada para desenhos? ]
-          p.desc-4 A solução que encontrei foi criar um algorítimo de vídeo com suporte a interações simulando uma interface mobile.
-          p.desc-5 Algorítimo rodando #[br] #[a(href='https://youtu.be/k_jvxk8Cl5Q' target="_blank") https://youtu.be/k_jvxk8Cl5Q]
+          p.desc-2 {{ lang.auroraI.prototipo3 }}
+          p.desc-3 #[strong {{ lang.auroraI.prototipo4 }} ]
+          p.desc-4 {{ lang.auroraI.prototipo5 }}
+          p.desc-5 {{ lang.auroraI.linkTitle1 }} #[br] #[a(href='https://youtu.be/k_jvxk8Cl5Q' target="_blank") https://youtu.be/k_jvxk8Cl5Q]
 
         div.col-2#col-2
-          p.desc#contentdesk-col2-start Outra coisa que amei fazer foi os slide de apresentação da proposta do nosso trabalho. 
-          p.desc-2 "O que é escrito sem esforço é lido sem prazer." descreve o oposto da que fiz nessa tarefa. 
+          p.desc#contentdesk-col2-start {{ lang.auroraI.slide1 }}
+          p.desc-2 "{{ lang.auroraI.slide2 }}" {{ lang.auroraI.slide3 }}
 
           img#img-1.img-slide(src="../assets/aurora/slide.png")
 
-          p.desc-3 Apresentação #[br] #[a(href='https://drive.google.com/file/d/1LiZ1pu84gt4OEAFUsS_8-W3YB-D1fyKk/view?usp=sharing' target="_blank") https://drive.google.com]
+          p.desc-3 {{ lang.auroraI.linkTitle2 }} #[br] #[a(href='https://drive.google.com/file/d/1LiZ1pu84gt4OEAFUsS_8-W3YB-D1fyKk/view?usp=sharing' target="_blank") https://drive.google.com]
 
-          p.desc-4 Um desafio que encontrei nessa etapa foi ensinar ao time o algoritimo do código para avaliação em uma das disciplinas. 
-          p.desc-5 Então criei um infográfico, sistematizando o código e usei ele pra ensinar. Deu tão certo que conseguimos a nota máxima na disciplina :D 
+          p.desc-4 {{ lang.auroraI.codigo1 }} 
+          p.desc-5 {{ lang.auroraI.codigo2 }}
           img#img-2.img-info(src="../assets/aurora/info_codigo.png")
-          p.desc-6 Infográfico #[br] #[a(href='https://drive.google.com/file/d/1-fu8XxQ3vioxTXFIHAdSAMVPitEetqbj/view?usp=sharing' target="_blank") https://drive.google.com]
+          p.desc-6 {{ lang.auroraI.linkTitle3 }} #[br] #[a(href='https://drive.google.com/file/d/1-fu8XxQ3vioxTXFIHAdSAMVPitEetqbj/view?usp=sharing' target="_blank") https://drive.google.com]
 
         div.col-3#col-3
-          p.desc#contentdesk-col3-start Também criei o layout para o site do projeto.
+          p.desc#contentdesk-col3-start {{ lang.auroraI.layout1 }}
           img#img-3(src="../assets/aurora/layout1.png")
-          p.desc-2 como foi meu primeiro site, decidi fazer 100% na mão, antes de correr pra qualquer sistema de workflow, automação, e versionamento, como pré-processadores, git, gulp, npm, botstrap e tudo o mais.
-          p.desc-3 Amostra do site 1.0 #[br] #[a(href='https://youtu.be/4t9KMo5fXAY' target="_blank") https://youtu.be/4t9KMo5fXAY]
+          p.desc-2 {{ lang.auroraI.layout2 }}
+          p.desc-3 {{ lang.auroraI.linkTitle4 }} #[br] #[a(href='https://youtu.be/4t9KMo5fXAY' target="_blank") https://youtu.be/4t9KMo5fXAY]
 
-          p.desc-4.btn-next #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(icon="plus")] Ver mais] 
+          p.desc-4.btn-next #[router-link(to="/aurora-ii") #[fa-icon.timeline-next(icon="plus")] {{ lang.auroraI.seeMore }}] 
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
-  name: "PageAuroraI"
+  name: "PageAuroraI",
+  computed: mapState(["lang"])
 };
 </script>
 

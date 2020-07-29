@@ -42,6 +42,7 @@
 
 <script>
 import { mapState } from 'vuex';
+import { userLanguage } from '@/global'
 
 export default {
   name: "Home",
@@ -74,13 +75,14 @@ export default {
     },
     selectPT() {
       this.$store.commit("setLangPT")
+      localStorage.setItem(userLanguage, 'pt')
     },
     selectEN() {
       this.$store.commit("setLangEN")
+      localStorage.setItem(userLanguage, 'en')
     }
   },
   created() {
-    this.selectPT()
     window.addEventListener("scroll", this.parallaxScroll);
     document.addEventListener("keyup", this.listenKeyboard)
   }
