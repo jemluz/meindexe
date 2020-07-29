@@ -84,5 +84,24 @@
 
     "seeMore": "Ver mais"
   },
+  "auroraII": {
+    "metatitle": "meindexe | Projeto Aurora",
+
+    "trancamento1": "Apesar de ter concluído o semestre 2017.1 com a sensação de um trabalho bem feito, eu ainda sentia que sabia pouco, e que precisaria de tempo para me aprofundar na área de programação.",
+    "trancamento2": "Então eu tranquei a faculdade e decidi renovar o visual do site, me aprofundar no processo de criação, em planejamento e novas tecnologias.",
+    "trancamento2": "Meu objetivo era que ao fim daquele semestre eu tivesse meu primeiro site no ar, feito por mim de ponta a ponta.",
+
+    "linkTitle1": "Diagrama de Relação",
+    "linkTitle2": "Arquitetura da Informação",
+
+    "prodt1": "Nesse período eu também aprendi muito sobre gerenciamento de tempo, rotina e produtividade.",
+    "prodt2": "Atualmente o aurora está sendo migrado para a tecnologia",
+    "vueLink": "Vue.js.",
+    "prodt3": "Aguardem notícias pois ele resurgirá em breve!",
+
+    "linkTitle3": "Amostra do site 2.0",
+
+    "showLess": "Ver menos"
+  },
   "backBtn": "Voltar p/ o início (←)"
 }

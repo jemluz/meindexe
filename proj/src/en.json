@@ -80,9 +80,28 @@
     "layout1": "I also created the layout for the project website.",
     "layout2": "As it was my first website, I decided to do it 100% by hand, before trying to any workflow, automation, and versioning system, such as preprocessors, git, gulp, npm, botstrap and everything.",
 
-    "linkTitle4": "Sample site",
+    "linkTitle4": "Sample site 1.0",
 
     "seeMore": "Show more"
+  },
+  "auroraII": {
+    "metatitle": "meindexe | Aurora Project",
+
+    "trancamento1": "Despite having concluded the 2017.1 semester with the feeling of have done a great job,i still felt like I didn't know many things, and that i would need more time to improove myself into the programming area.",
+    "trancamento2": "So i locked up college and decided to renew the look of the site, improove me into the creation process, planning and new technologies.",
+    "trancamento3": "My goal was that by the end of that semester I would have my first website published, done by me from end to end.",
+
+    "linkTitle1": "Site map",
+    "linkTitle2": "Information Architecture",
+
+    "prodt1": "During this period, I also learned a lot about time management, routine and productivity.",
+    "prodt2": "Aurora is currently being migrated to technology",
+    "vueLink": "Vue.js.",
+    "prodt3": "Wait for news because he will republished soon!",
+
+    "linkTitle3": "Sample site 2.0",
+
+    "showLess": "Show less"
   },
   "backBtn": "Back to home (←)"
 }
