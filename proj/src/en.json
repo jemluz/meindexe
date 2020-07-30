@@ -110,5 +110,39 @@
 
     "linkTitle1": "Final presentation"
   },
+  "exchange": {
+    "metatitle": "meindexe | Exchange Project",
+
+    "desc": "Redesign of an",
+    "descLink": "android aplication",
+    "desc2": ", in an alternative concept to the mobile guidelines.",
+
+    "linkTitle1": "1ª - Interface Analysis",
+    "linkTitle2": "2ª - Pre Development",
+    "linkTitle3": "3ª - Test Report",
+
+    "linkTitle4": "final presentation",
+
+    "linkTitle5": "video mockup",
+    "linkTitle6": "interface demo"
+  },
+  "bubbox": {
+    "metatitle": "meindexe | Bubbox Project",
+
+    "desc": "Bubbox was another project by college, a prototype of a music streaming app made with",
+
+    "mencao1": "@analuiza",
+    "mencao1": "@alexandre",
+
+    "desc2": " and ",
+    "desc3": ". Similar to the Spotify's Group Session feature.",
+
+    "learn": "I participated in the construction and implementation of the bubbox interface, my biggest learning here was with the material guidelines and with react development.",
+
+    "currentTech": "I don't use react anymore, because I got involved and fell in love with Vue",
+    "love": "This is love, it comes by surprise. You should give a chance to ",
+
+    "linkTitle1": "final presentation"
+  },
   "backBtn": "Back to home (←)"
 }

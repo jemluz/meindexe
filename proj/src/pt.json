@@ -110,5 +110,40 @@
 
     "linkTitle1": "apresentação final"
   },
+  "exchange": {
+    "metatitle": "meindexe | Projeto Exchange",
+
+    "desc": "redesign de um",
+    "descLink": "aplicativo android",
+    "desc2": ", em um conceito alternativo às guidelines mobile.",
+
+    "linkTitle1": "1ª - Análise da Interface",
+    "linkTitle2": "2ª - Pré Desenvolvimento",
+    "linkTitle3": "3ª - Relatório de Testes",
+
+    "linkTitle4": "apresentação final",
+
+    "linkTitle5": "video mockup",
+    "linkTitle6": "demo da interface"
+
+  },
+  "bubbox": {
+    "metatitle": "meindexe | Projeto Bubbox",
+
+    "desc": "O Bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a ",
+
+    "mencao1": "@analuiza",
+    "mencao1": "@alexandre",
+
+    "desc2": " e o ",
+    "desc3": ". Similar ao Group Session que vemos no Spotify.",
+
+    "learn": "Eu participei da construção e implementação da interface do bubbox, meu maior aprendizado aqui foi com as guidelines do material e na utilização do react para desenvolvimento.",
+
+    "currentTech": "Atualmente não uso mais react, pois me envolvi e me apaixonei pelo Vue",
+    "love": "O amor é assim, chega de surpresa. Você também deveria dar uma chance para o",
+
+    "linkTitle1": "apresentação final"
+  },
   "backBtn": "Voltar p/ o início (←)"
 }
