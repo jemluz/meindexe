@@ -28,8 +28,8 @@
       router-link(to='/sobre') {{ lang.homePage.btn }}
 
     div.btn-language 
-      button(@click="selectPT") PT-BR
-      button(@click="selectEN") EN
+      button(@click="selectPT" :class="[ isPtLanguage ? 'active': 'disabled']") #[img(src="../assets/brazil.svg") ]PT-BR
+      button(@click="selectEN" :class="[ !isPtLanguage ? 'active': 'disabled']") #[img(src="../assets/usa-today.svg") ]EN
 
     div.parallax
       div(id="parallax-bg-3" class="parallax-bg")
@@ -45,6 +45,11 @@ import { mapState } from 'vuex';
 
 export default {
   name: "Home",
+  data: () => {
+    return {
+      isPtLanguage: true
+    }
+  },
   computed: mapState(["lang"]),
   methods: {
     parallaxScroll() {
@@ -74,13 +79,14 @@ export default {
     },
     selectPT() {
       this.$store.commit("setLangPT")
+      this.isPtLanguage = true
     },
     selectEN() {
       this.$store.commit("setLangEN")
+      this.isPtLanguage = false
     }
   },
   created() {
-    this.selectPT()
     window.addEventListener("scroll", this.parallaxScroll);
     document.addEventListener("keyup", this.listenKeyboard)
   }
@@ -210,17 +216,27 @@ export default {
     position: fixed;
     bottom: 0;
     z-index: 5;
+
+    .disabled { opacity: .3;}
+    .active { opacity: .8;}
     
     button {
-      
+      display: flex;
+      align-items: center;
+      img { margin-right: 10px;}
+
+      white-space: nowrap;
       font-family: t26-carbon, monospace;
       border: 1px solid $branco;
       border-bottom: none;
-      border-radius: 10px 10px 0px 0px;
       color: $branco;
-  
+      border-radius: 10px 0px 0px 0px;
       transition: all 0.5s ease;
       opacity: 0.8;
+
+      &:last-child {
+        border-radius: 0px 10px 0px 0px;
+      }
   
       &:hover,
       &:focus {
@@ -429,10 +445,21 @@ export default {
     }
 
     .btn-language {
-      box-shadow: 0px 0px 30px 10px #00000030;
+      width: 100vw;
+      left: 300px;
 
-      font-size: 25px;
-      padding: 10px 20px
+      button {
+        width: 120px;
+        img { max-width: 20px;}
+  
+        &:last-child {
+          width: 100px;
+        }
+
+        font-size: 20px;
+        padding: 10px 20px;
+      }
+
     }
 
     .parallax {
@@ -524,6 +551,22 @@ export default {
 
         font-size: 30px;
         padding: 10px 20px;
+      }
+    }
+
+    .btn-language {
+      width: 100vw;
+      left: 500px;
+
+      button {
+        img { max-width: 20px;}
+        box-shadow: 0px 0px 30px 10px #00000030;
+  
+
+        font-size: 20px;
+        padding: 10px 20px;
+
+        margin: 0px;
       }
     }
 
