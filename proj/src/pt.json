@@ -55,5 +55,95 @@
     "insta": "@me.indexe",
     "whats": "(85) 9 0000-0000"
   },
+  "auroraI": {
+    "metatitle": "meindexe | Projeto Aurora",
+
+    "prototipo1": "Esse foi o projeto que me ensinou a pensar como uma programadora. Ele surgiu de um trabalho da faculdade com a",
+    "prototipo2": "e um dos requisitos do trabalho era ser feito em processing ou stencyl.",
+    "prototipo3": "Eu fiquei responsável pela programação, e a idéia da minha equipe era um protótipo de app mobile, então o problema era:",
+    "prototipo4": "Como eu vou imitar uma aplicação mobile em uma linguagem que foi projetada para desenhos?",
+    "prototipo5": "A solução que encontrei foi criar um algorítimo de vídeo/frames com suporte a interações simulando uma interface mobile.",
+
+    "linkTitle1": "Algorítimo rodando",
+
+    "slide1": "Outra coisa que amei fazer foi os slides de apresentação da proposta do nosso trabalho.",
+    "slide2": "O que é escrito sem esforço é lido sem prazer.",
+    "slide3": "descreve o oposto da que fiz nessa tarefa.",
+
+    "linkTitle2": "Apresentação",
+
+    "codigo1": "Um desafio que encontrei nessa etapa foi ensinar ao time o algoritimo do código para avaliação em uma das disciplinas.",
+    "codigo2": "Então criei um infográfico, sistematizando o código e usei ele pra ensinar. Deu tão certo que conseguimos a nota máxima na disciplina :D",
+
+    "linkTitle3": "Infográfico",
+
+    "layout1": "Também criei o layout para o site do projeto.",
+    "layout2": "Como foi meu primeiro site, decidi fazer 100% na mão, antes de correr pra qualquer sistema de workflow, automação, e versionamento, como pré-processadores, git, gulp, npm, botstrap e tudo o mais.",
+
+    "linkTitle4": "Amostra do site 1.0",
+
+    "seeMore": "Ver mais"
+  },
+  "auroraII": {
+    "metatitle": "meindexe | Projeto Aurora",
+
+    "trancamento1": "Apesar de ter concluído o semestre 2017.1 com a sensação de um trabalho bem feito, eu ainda sentia que sabia pouco, e que precisaria de tempo para me aprofundar na área de programação.",
+    "trancamento2": "Então eu tranquei a faculdade e decidi renovar o visual do site, me aprofundar no processo de criação, em planejamento e novas tecnologias.",
+    "trancamento2": "Meu objetivo era que ao fim daquele semestre eu tivesse meu primeiro site no ar, feito por mim de ponta a ponta.",
+
+    "linkTitle1": "Diagrama de Relação",
+    "linkTitle2": "Arquitetura da Informação",
+
+    "prodt1": "Nesse período eu também aprendi muito sobre gerenciamento de tempo, rotina e produtividade.",
+    "prodt2": "Atualmente o aurora está sendo migrado para a tecnologia",
+    "vueLink": "Vue.js.",
+    "prodt3": "Aguardem notícias pois ele resurgirá em breve!",
+
+    "linkTitle3": "Amostra do site 2.0",
+
+    "showLess": "Ver menos"
+  },
+  "monique": {
+    "metatitle": "meindexe | IDV Monique Luz",
+
+    "desc": "Apesar de não ser minha praia, vez ou outra eu arrisco um branding. Essa aqui é a marca de Monique Luz, uma professora particular.",
+
+    "linkTitle1": "apresentação final"
+  },
+  "exchange": {
+    "metatitle": "meindexe | Projeto Exchange",
+
+    "desc": "redesign de um",
+    "descLink": "aplicativo android",
+    "desc2": ", em um conceito alternativo às guidelines mobile.",
+
+    "linkTitle1": "1ª - Análise da Interface",
+    "linkTitle2": "2ª - Pré Desenvolvimento",
+    "linkTitle3": "3ª - Relatório de Testes",
+
+    "linkTitle4": "apresentação final",
+
+    "linkTitle5": "video mockup",
+    "linkTitle6": "demo da interface"
+
+  },
+  "bubbox": {
+    "metatitle": "meindexe | Projeto Bubbox",
+
+    "desc": "O Bubbox foi outro projetinho da facul, um protótipo de aplicativo para streamming de música feito com a ",
+
+    "mencao1": "@analuiza",
+    "mencao1": "@alexandre",
+
+    "desc2": " e o ",
+    "desc3": ". Similar ao Group Session que vemos no Spotify.",
+
+    "learn": "Eu participei da construção e implementação da interface do bubbox, meu maior aprendizado aqui foi com as guidelines do material e na utilização do react para desenvolvimento.",
+
+    "currentTech": "Atualmente não uso mais react, pois me envolvi e me apaixonei pelo Vue",
+    "love": "O amor é assim, chega de surpresa. Você também deveria dar uma chance para o",
+
+    "linkTitle1": "apresentação final"
+  },
   "backBtn": "Voltar p/ o início (←)"
 }

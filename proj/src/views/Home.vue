@@ -42,15 +42,11 @@
 
 <script>
 import { mapState } from 'vuex';
+import { userLanguage } from '@/global'
 
 export default {
   name: "Home",
-  data: () => {
-    return {
-      isPtLanguage: true
-    }
-  },
-  computed: mapState(["lang"]),
+  computed: mapState(["lang", "isPtLanguage"]),
   methods: {
     parallaxScroll() {
       var scrolled = window.scrollY;
@@ -79,11 +75,11 @@ export default {
     },
     selectPT() {
       this.$store.commit("setLangPT")
-      this.isPtLanguage = true
+      localStorage.setItem(userLanguage, 'pt')
     },
     selectEN() {
       this.$store.commit("setLangEN")
-      this.isPtLanguage = false
+      localStorage.setItem(userLanguage, 'en')
     }
   },
   created() {

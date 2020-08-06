@@ -34,8 +34,8 @@
         p.video demo da interface #[br] #[a(href='https://youtu.be/zqRHtRby9Xo' target="_blank") https://youtu.be/zqRHtRby9Xo]
 
       div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
-        div.col-1#contentdesk-start
-          img#exchange-img(src="../assets/exchange-thumb.png")
+        div.col-1#col-1
+          img#contentdesk-start(src="../assets/exchange-thumb.png")
           p.desc#desc redesign de um #[a(href='https://play.google.com/store/apps/details?id=com.easy.currency.extra.androary' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
 
         div.col-2
@@ -59,7 +59,6 @@
 <script>
 export default {
   name: "PageAuroraII",
-
 };
 </script>
 

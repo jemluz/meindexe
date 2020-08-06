@@ -9,7 +9,7 @@
     "btn": "about"
   },
   "aboutPage": {
-    "metatitle": "About",
+    "metatitle": "meindexe | About",
 
     "firstTitle": "our te",
     "firstTitle2": "am",
@@ -54,6 +54,95 @@
     "mail": "contato@meindexe.com",
     "insta": "@me.indexe",
     "whats": "(85) 9 0000-0000"
+  },
+  "auroraI": {
+    "metatitle": "meindexe | Aurora Project",
+
+    "prototipo1": "This was the project that taught me to think like a programmer. It came from a college project with",
+    "prototipo2": "and one of the project requirements was to be done in processing or stencyl.",
+    "prototipo3": "I was responsible for programming, and my team’s idea was a mobile app prototype, so the problem was:",
+    "prototipo4": "How am I going to imitate a mobile application in a program language that was designed for drawings?",
+    "prototipo5": "The solution I found was to create a video/frames algorithm with support for interactions simulating a mobile interface.",
+
+    "linkTitle1": "Algorithm running",
+
+    "slide1": "Another thing I loved doing was the presentation slides for our project proposal.",
+    "slide2": "What is written without effort is read without pleasure.",
+    "slide3": "describes the opposite of what I did in that task.",
+
+    "linkTitle2": "Presentation",
+
+    "codigo1": "A challenge I found in this step was to teach the team the code algorithm for evaluation in one of the disciplines.",
+    "codigo2": "So I created an infographic, systematizing the code and used it to teach. It worked so well that we got the maximum grade in the discipline: D",
+
+    "linkTitle3": "Infographic",
+
+    "layout1": "I also created the layout for the project website.",
+    "layout2": "As it was my first website, I decided to do it 100% by hand, before trying to any workflow, automation, and versioning system, such as preprocessors, git, gulp, npm, botstrap and everything.",
+
+    "linkTitle4": "Sample site 1.0",
+
+    "seeMore": "Show more"
+  },
+  "auroraII": {
+    "metatitle": "meindexe | Aurora Project",
+
+    "trancamento1": "Despite having concluded the 2017.1 semester with the feeling of have done a great job,i still felt like I didn't know many things, and that i would need more time to improove myself into the programming area.",
+    "trancamento2": "So i locked up college and decided to renew the look of the site, improove me into the creation process, planning and new technologies.",
+    "trancamento3": "My goal was that by the end of that semester I would have my first website published, done by me from end to end.",
+
+    "linkTitle1": "Site map",
+    "linkTitle2": "Information Architecture",
+
+    "prodt1": "During this period, I also learned a lot about time management, routine and productivity.",
+    "prodt2": "Aurora is currently being migrated to technology",
+    "vueLink": "Vue.js.",
+    "prodt3": "Wait for news because he will republished soon!",
+
+    "linkTitle3": "Sample site 2.0",
+
+    "showLess": "Show less"
+  },
+  "monique": {
+    "metatitle": "meindexe | Monique Luz Brand",
+
+    "desc": "Although not my thing, sometimes i try design some brand.This is the brand of Monique Luz, a personal teacher.",
+
+    "linkTitle1": "Final presentation"
+  },
+  "exchange": {
+    "metatitle": "meindexe | Exchange Project",
+
+    "desc": "Redesign of an",
+    "descLink": "android aplication",
+    "desc2": ", in an alternative concept to the mobile guidelines.",
+
+    "linkTitle1": "1ª - Interface Analysis",
+    "linkTitle2": "2ª - Pre Development",
+    "linkTitle3": "3ª - Test Report",
+
+    "linkTitle4": "final presentation",
+
+    "linkTitle5": "video mockup",
+    "linkTitle6": "interface demo"
+  },
+  "bubbox": {
+    "metatitle": "meindexe | Bubbox Project",
+
+    "desc": "Bubbox was another project by college, a prototype of a music streaming app made with",
+
+    "mencao1": "@analuiza",
+    "mencao1": "@alexandre",
+
+    "desc2": " and ",
+    "desc3": ". Similar to the Spotify's Group Session feature.",
+
+    "learn": "I participated in the construction and implementation of the bubbox interface, my biggest learning here was with the material guidelines and with react development.",
+
+    "currentTech": "I don't use react anymore, because I got involved and fell in love with Vue",
+    "love": "This is love, it comes by surprise. You should give a chance to ",
+
+    "linkTitle1": "final presentation"
   },
   "backBtn": "Back to home (←)"
 }

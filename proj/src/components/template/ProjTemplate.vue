@@ -1,7 +1,7 @@
 <template lang="pug">
   div#projTemplate
     vue-headful(
-      title=`mindexe | ${nomeProj}`    )
+      :title="nomeProj")
 
     div.data#data(data-aos="fade-down" data-aos-duration="1000")
       img(src="../../assets/proj-bg/dot.svg")
@@ -15,7 +15,7 @@
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
-    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] Voltar p/ o início (i)
+    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] {{ lang.backBtn }}
 
     div.parallax(data-aos="fade-down" data-aos-duration="500" )
       div(id="parallax-bg-3" class="parallax-bg")
@@ -24,8 +24,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: "ProjTemplate",
+  computed: mapState(["lang"]),
   props: [
     'nomeProj',
     'date', 

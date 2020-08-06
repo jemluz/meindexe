@@ -5,16 +5,28 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import Header from '@/components/template/Header'
-import Nav from '@/components/template/Nav'
 import Content from '@/components/template/Content'
-import Footer from '@/components/template/Footer'
+import { mapState } from 'vuex';
+import { userLanguage } from '@/global'
 
 export default {
   name: 'App',
-  components: { Header, Nav, Content, Footer },
-  computed:  mapState(['isMenuVisible'])
+  computed: mapState(["lang"]),
+  components: { Content },
+  methods: {
+    verifyLanguage() {
+      const userLang = localStorage.getItem(userLanguage)
+
+      if(userLang === 'pt') {
+        this.$store.commit("setLangPT")
+      } else if (userLang === 'en') {
+        this.$store.commit("setLangEN")
+      }
+    }
+  },
+  created() {
+    this.verifyLanguage();
+  }
 }
 </script>
 
