@@ -1,27 +1,27 @@
 <template lang="pug">
-  proj-template(nomeProj="Projeto Aurora" date="ago/2017" firstName="auro" lastName="ra" titleColor="" class="aurora-ii" :ios="1000" :and="800")
+  proj-template(:nomeProj="lang.auroraII.metatitle" date="ago/2017" firstName="auro" lastName="ra" titleColor="" class="aurora-ii" :ios="1000" :and="800")
     template(v-slot:haveMore) 
       router-link(to="/aurora-i") 
         fa-icon.timeline-prev(style="margin-left: 20px;" class="back-icon" icon="minus")
 
     template(v-slot:content) 
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500")
-        p.desc-13#contentmob-start Apesar de ter concluído o semestre 2017.1 com a sensação de um trabalho bem feito, eu ainda sentia que sabia pouco, e que precisaria de tempo para me aprofundar na área de programação.  
-        p.desc-14  Então eu tranquei a faculdade e decidi renovar o visual do site, me aprofundar no processo de criação, em planejamento e novas tecnologias. 
-        p.desc-15 Meu objetivo era que ao fim daquele semestre eu tivesse meu primeiro site no ar, feito por mim de ponta a ponta.
+        p.desc-13#contentmob-start {{ lang.auroraII.trancamento1 }}
+        p.desc-14  {{ lang.auroraII.trancamento2 }}
+        p.desc-15 {{ lang.auroraII.trancamento3 }}
 
         img#img-4(src="../assets/aurora/dr_ai.png")
-        p.desc-16 Diagrama de Relação #[br] #[a(href='https://drive.google.com/file/d/125BL2tePQQ-aWAnJrWotPrxmFSUxVJa8/view?usp=sharing' target="_blank") https://drive.google.com]
-        p.desc-17 Arquitetura da Informação #[br] #[a(href='https://drive.google.com/file/d/1StEG0OSgiQ7OuuKMAcog_SljEPeXy4hL/view?usp=sharing' target="_blank") https://drive.google.com]
+        p.desc-16 {{ lang.auroraII.linkTitle1 }} #[br] #[a(href='https://drive.google.com/file/d/125BL2tePQQ-aWAnJrWotPrxmFSUxVJa8/view?usp=sharing' target="_blank") https://drive.google.com]
+        p.desc-17 {{ lang.auroraII.linkTitle2 }} #[br] #[a(href='https://drive.google.com/file/d/1StEG0OSgiQ7OuuKMAcog_SljEPeXy4hL/view?usp=sharing' target="_blank") https://drive.google.com]
         
         img#img-5(src="../assets/aurora/layout2.png")
-        p.desc-18 Amostra do site 2.0 #[br] #[a(href='https://youtu.be/eW5_OWG8vN8' target="_blank") https://youtu.be/eW5_OWG8vN8]
+        p.desc-18 {{ lang.auroraII.linkTitle3 }} #[br] #[a(href='https://youtu.be/eW5_OWG8vN8' target="_blank") https://youtu.be/eW5_OWG8vN8]
 
-        p.desc-19 Nesse período eu também aprendi muito sobre gerenciamento de tempo, rotina e produtividade. 
+        p.desc-19 {{ lang.auroraII.prodt1 }}
         
-        p.desc-20 Atualmente o aurora está sendo migrado para a tecnologia #[a.vue-link(href='https://br.vuejs.org/' target="_blank") Vue.js]. Aguardem notícias pois ele resurgirá em breve!
+        p.desc-20 {{ lang.auroraII.prodt2 }} #[a.vue-link(href='https://br.vuejs.org/' target="_blank") Vue.js]. {{ lang.auroraII.prodt3 }}
 
-        p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] Ver menos]
+        p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] {{ lang.auroraII.showLess }}]
 
       div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
         div.col-1#col-1
@@ -29,31 +29,34 @@
             img.img-dr#contentdesk-start(src="../assets/aurora/dr_ai.svg")
 
             div 
-              p.desc-13 Apesar de ter concluído o semestre 2017.1 com a sensação de um trabalho bem feito, eu ainda sentia que sabia pouco, e que precisaria de tempo para me aprofundar na área de programação.  
-              p.desc-14  Então eu tranquei a faculdade e decidi renovar o visual do site, me aprofundar no processo de criação, em planejamento e novas tecnologias. 
-              p.desc-15 Meu objetivo era que ao fim daquele semestre eu tivesse meu primeiro site no ar, feito por mim de ponta a ponta.
-              p.desc-16 Diagrama de Relação #[br] #[a(href='https://drive.google.com/file/d/125BL2tePQQ-aWAnJrWotPrxmFSUxVJa8/view?usp=sharing' target="_blank") https://drive.google.com]
-              p.desc-17 Arquitetura da Informação #[br] #[a(href='https://drive.google.com/file/d/1StEG0OSgiQ7OuuKMAcog_SljEPeXy4hL/view?usp=sharing' target="_blank") https://drive.google.com]
+              p.desc-13 {{ lang.auroraII.trancamento1 }}
+              p.desc-14  {{ lang.auroraII.trancamento2 }}
+              p.desc-15 {{ lang.auroraII.trancamento3 }}
+                
+              p.desc-16 {{ lang.auroraII.linkTitle1 }} #[br] #[a(href='https://drive.google.com/file/d/125BL2tePQQ-aWAnJrWotPrxmFSUxVJa8/view?usp=sharing' target="_blank") https://drive.google.com]
+              p.desc-17 {{ lang.auroraII.linkTitle2 }} #[br] #[a(href='https://drive.google.com/file/d/1StEG0OSgiQ7OuuKMAcog_SljEPeXy4hL/view?usp=sharing' target="_blank") https://drive.google.com]
         
 
           section.sec-bottom
             div
-              p.desc-18 Amostra do site 2.0 #[br] #[a(href='https://youtu.be/eW5_OWG8vN8' target="_blank") https://youtu.be/eW5_OWG8vN8]
-              p.desc-19 Nesse período eu também aprendi muito sobre gerenciamento de tempo, rotina e produtividade. 
+              p.desc-18 {{ lang.auroraII.linkTitle3 }} #[br] #[a(href='https://youtu.be/eW5_OWG8vN8' target="_blank") https://youtu.be/eW5_OWG8vN8]
+              p.desc-19 {{ lang.auroraII.prodt1 }}
           
-              p.desc-20 Atualmente o aurora está sendo migrado para a tecnologia #[a.vue-link(href='https://br.vuejs.org/' target="_blank") Vue.js]. Aguardem notícias pois ele resurgirá em breve!
+              p.desc-20 {{ lang.auroraII.prodt2 }} #[a.vue-link(href='https://br.vuejs.org/' target="_blank") Vue.js]. {{ lang.auroraII.prodt3 }}
 
 
-              p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] Ver menos]
+              p.desc-1.btn-back #[router-link(to="/aurora-i") #[fa-icon.timeline-prev(icon="minus")] {{ lang.auroraII.showLess }}]
 
             img#img-5(src="../assets/aurora/layout2.png")
 
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: "PageAuroraII",
-
+  computed: mapState(["lang"])
 };
 </script>
 

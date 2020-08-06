@@ -1,6 +1,6 @@
 <template lang="pug">
   proj-template(
-    nomeProj="Projeto Exchange" 
+    :nomeProj="lang.exchange.metatitle" 
     date="mar/2018" 
     firstName="exchan" 
     lastName="ge" 
@@ -16,49 +16,52 @@
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500")
         img#contentmob-start(src="../assets/exchange-thumb.png")
 
-        p.desc redesign de um #[a(href='https://play.google.com/store/apps/details?id=com.easy.currency.extra.androary' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
+        p.desc {{ lang.exchange.desc }} #[a(href='https://play.google.com/store/apps/details?id=com.easy.currency.extra.androary' target="_blank") {{ lang.exchange.descLink }}], {{ lang.exchange.desc2 }}
 
-        p.desc-2 o estudo incluiu 3 fases:
+        p.desc-2 {{ lang.exchange.desc3 }}
 
-        p.desc-3 1ª - Análise da Interface #[br] #[a(href='https://drive.google.com/file/d/1rZ0-EFQgJ7wZJXN8uN3ACPPT4w1UQnPj/view?usp=sharing' target="_blank") https://drive.google.com]
-        p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://drive.google.com/file/d/1g48E-fdBdhNX8AUznf5p7R2y1Q0vK2ix/view?usp=sharing' target="_blank") https://drive.google.com]
-        p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://drive.google.com/file/d/1Fzz_Hs1eEAuH7bZRACkS_rgGh_6Y1nBG/view?usp=sharing' target="_blank") https://drive.google.com]
+        p.desc-3 {{ lang.exchange.linkTitle1 }} #[br] #[a(href='https://drive.google.com/file/d/1rZ0-EFQgJ7wZJXN8uN3ACPPT4w1UQnPj/view?usp=sharing' target="_blank") https://drive.google.com]
+        p.desc-4 {{ lang.exchange.linkTitle2 }} #[br] #[a(href='https://drive.google.com/file/d/1g48E-fdBdhNX8AUznf5p7R2y1Q0vK2ix/view?usp=sharing' target="_blank") https://drive.google.com]
+        p.desc-5 {{ lang.exchange.linkTitle3 }} #[br] #[a(href='https://drive.google.com/file/d/1Fzz_Hs1eEAuH7bZRACkS_rgGh_6Y1nBG/view?usp=sharing' target="_blank") https://drive.google.com]
 
         div.result
-          p apresentação final
+          p {{ lang.exchange.linkTitle4 }}
           a(href="https://drive.google.com/file/d/1UxCGUh5IQhRdTlvYxPIRPzo1s4VeYOSy/view?usp=sharing") hhttps://drive.google.com
 
 
-        p.video video mockup #[br] #[a(href='https://youtu.be/zR2lhP5rLbE' target="_blank") https://youtu.be/zR2lhP5rLbE]
+        p.video {{ lang.exchange.linkTitle5 }} #[br] #[a(href='https://youtu.be/zR2lhP5rLbE' target="_blank") https://youtu.be/zR2lhP5rLbE]
 
-        p.video demo da interface #[br] #[a(href='https://youtu.be/zqRHtRby9Xo' target="_blank") https://youtu.be/zqRHtRby9Xo]
+        p.video {{ lang.exchange.linkTitle6 }} #[br] #[a(href='https://youtu.be/zqRHtRby9Xo' target="_blank") https://youtu.be/zqRHtRby9Xo]
 
       div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
         div.col-1#col-1
           img#contentdesk-start(src="../assets/exchange-thumb.png")
-          p.desc#desc redesign de um #[a(href='https://play.google.com/store/apps/details?id=com.easy.currency.extra.androary' target="_blank") aplicativo android], em um conceito alternativo às guidelines mobile.
+          p.desc#desc {{ lang.exchange.desc }} #[a(href='https://play.google.com/store/apps/details?id=com.easy.currency.extra.androary' target="_blank") {{ lang.exchange.descLink }}], {{ lang.exchange.desc2 }}
 
         div.col-2
-          p.desc-2 o estudo incluiu 3 fases:
+          p.desc-2 {{ lang.exchange.desc3 }}
 
-          p.desc-3 1ª - Análise da Interface #[br] #[a(href='https://drive.google.com/file/d/1rZ0-EFQgJ7wZJXN8uN3ACPPT4w1UQnPj/view?usp=sharing' target="_blank") https://drive.google.com]
-          p.desc-4 2ª - Pré Desenvolvimento #[br] #[a(href='https://drive.google.com/file/d/1g48E-fdBdhNX8AUznf5p7R2y1Q0vK2ix/view?usp=sharing' target="_blank") https://drive.google.com]
-          p.desc-5 3ª - Relatório de Testes #[br] #[a(href='https://drive.google.com/file/d/1Fzz_Hs1eEAuH7bZRACkS_rgGh_6Y1nBG/view?usp=sharing' target="_blank") https://drive.google.com]
+          p.desc-3 {{ lang.exchange.linkTitle1 }} #[br] #[a(href='https://drive.google.com/file/d/1rZ0-EFQgJ7wZJXN8uN3ACPPT4w1UQnPj/view?usp=sharing' target="_blank") https://drive.google.com]
+          p.desc-4 {{ lang.exchange.linkTitle2 }} #[br] #[a(href='https://drive.google.com/file/d/1g48E-fdBdhNX8AUznf5p7R2y1Q0vK2ix/view?usp=sharing' target="_blank") https://drive.google.com]
+          p.desc-5 {{ lang.exchange.linkTitle3 }} #[br] #[a(href='https://drive.google.com/file/d/1Fzz_Hs1eEAuH7bZRACkS_rgGh_6Y1nBG/view?usp=sharing' target="_blank") https://drive.google.com]
 
           div.result
-            p apresentação final
+            p {{ lang.exchange.linkTitle4 }}
             a(href="https://drive.google.com/file/d/1UxCGUh5IQhRdTlvYxPIRPzo1s4VeYOSy/view?usp=sharing") https://drive.google.com
 
-          p.video video mockup #[br] #[a(href='https://youtu.be/zR2lhP5rLbE' target="_blank") https://youtu.be/zR2lhP5rLbE]
+          p.video {{ lang.exchange.linkTitle5 }} #[br] #[a(href='https://youtu.be/zR2lhP5rLbE' target="_blank") https://youtu.be/zR2lhP5rLbE]
 
-          p.video demo da interface #[br] #[a(href='https://youtu.be/zqRHtRby9Xo' target="_blank") https://youtu.be/zqRHtRby9Xo]
+          p.video {{ lang.exchange.linkTitle6 }} #[br] #[a(href='https://youtu.be/zqRHtRby9Xo' target="_blank") https://youtu.be/zqRHtRby9Xo]
 
 
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
-  name: "PageAuroraII",
+  name: "PageExchange",
+  computed: mapState(["lang"])
 };
 </script>
 

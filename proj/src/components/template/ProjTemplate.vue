@@ -182,6 +182,8 @@ export default {
     align-items: flex-start;
     position: fixed;
 
+    .result p { color: #fff;}
+
     p {
       font-family: t26-carbon, monospace;
       font-size: 16px;

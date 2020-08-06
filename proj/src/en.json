@@ -96,7 +96,6 @@
 
     "prodt1": "During this period, I also learned a lot about time management, routine and productivity.",
     "prodt2": "Aurora is currently being migrated to technology",
-    "vueLink": "Vue.js.",
     "prodt3": "Wait for news because he will republished soon!",
 
     "linkTitle3": "Sample site 2.0",
@@ -117,6 +116,8 @@
     "descLink": "android aplication",
     "desc2": ", in an alternative concept to the mobile guidelines.",
 
+    "desc3": "The study included 3 steps.",
+
     "linkTitle1": "1ª - Interface Analysis",
     "linkTitle2": "2ª - Pre Development",
     "linkTitle3": "3ª - Test Report",
@@ -130,10 +131,6 @@
     "metatitle": "meindexe | Bubbox Project",
 
     "desc": "Bubbox was another project by college, a prototype of a music streaming app made with",
-
-    "mencao1": "@analuiza",
-    "mencao1": "@alexandre",
-
     "desc2": " and ",
     "desc3": ". Similar to the Spotify's Group Session feature.",
 
