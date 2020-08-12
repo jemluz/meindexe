@@ -63,20 +63,12 @@ export default {
 
 .bubbox {
   .name {
-    position: fixed;
-    z-index: 3;
-
     h2 {
-      font-family: 'Khula', sans-serif;
-      font-weight: 400;
-
       .first {
         background-color: #FFAB2D;
-        box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
-        background-color: transparent;
         color: #FFAB2D;
       }
     }
@@ -122,27 +114,6 @@ export default {
 
       opacity: 1;
     }
-
-    .result {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      background-color: $roxo;
-      p { color: #fff;}
-
-      border-radius: 5px;
-      box-shadow: 0px 0px 20px 0px #00000020;
-
-      a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-        opacity: .4;
-      }
-    }
   }
 
   .content-desk {
@@ -184,27 +155,6 @@ export default {
       position: absolute;
 
       opacity: 1;
-    }
-
-    .result {
-      font-family: t26-carbon, monospace;
-      font-size: 16px;
-      font-style: italic;
-
-      text-align: left;
-
-      background-color: $roxo;
-      color: #fff;
-
-      border-radius: 5px;
-      box-shadow: 0px 0px 20px 0px #00000020;
-
-      a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-        opacity: .4;
-      }
     }
   }
 }

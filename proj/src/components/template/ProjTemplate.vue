@@ -197,6 +197,27 @@ export default {
         font-weight: 700;
       }
     }
+
+    .result {
+      font-family: t26-carbon, monospace;
+      font-size: 16px;
+      font-style: italic;
+
+      text-align: left;
+
+      background-color: $roxo;
+      color: #fff;
+
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px 0px #00000020;
+
+      a {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        font-weight: 700;
+        opacity: .4;
+      }
+    }
   }
 
   .content-mob {

@@ -141,5 +141,12 @@
 
     "linkTitle1": "final presentation"
   },
+  "gt": {
+    "metatitle": "meindexe | GT Project",
+
+    "desc": "This is one of my favorites at the moment (I'm working on it).",
+    "desc2": "It's a social network, with the frontend made in Vue.js, node.js backend and MongoDB.",
+    "desc3": "I'll give more details when I finish it. For now I will show a interface demo ;)"
+  },
   "backBtn": "Back to home (←)"
 }
