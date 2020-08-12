@@ -17,9 +17,8 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
-app.use(express.static(__dirname + '/demos/perguntas'))
-app.get('/demos/perguntas/*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/demos/perguntas/index.html'))
+app.get('/demos/perguntas/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/dist/perguntas.html'))
   })
 
 app.listen(port, () => {
