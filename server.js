@@ -13,17 +13,15 @@ app.use(history({ verbose: true }));
 
 // meindexe
 app.use(express.static(__dirname + '/dist'));
-// app.use(express.static(path.join(__dirname + '/dist', 'build')));
-app.get('/', function (req, res) {
+app.get('/home', function (req, res) {
     res.sendFile(path.join(__dirname + '/dist', 'build', 'index.html'));
 });
 
 // perguntas
-// app.use(express.static(__dirname + '/demo-perguntas/dist'));
-// app.use(express.static(path.join(__dirname + '/demo-perguntas/dist', 'demo-perguntas')));
-// app.get('/demo-perguntas', function (req, res) {
-//     res.sendFile(path.join(__dirname + '/demo-perguntas/dist', 'demo-perguntas', 'index.html'));
-// });
+app.use(express.static(__dirname + '/demo-perguntas/dist'));
+app.get('/demo-perguntas', function (req, res) {
+    res.sendFile(path.join(__dirname + '/demo-perguntas/dist', 'demo', 'index.html'));
+});
 
 app.listen(port, () => {
     console.log('Backend rodando...');
