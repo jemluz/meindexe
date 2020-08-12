@@ -12,8 +12,8 @@ app.use(favicon(__dirname + '/dist/favicon.ico'));
 app.use(history({ verbose: true }));
 
 // meindexe
-// app.use(express.static(__dirname + '/dist'));
-app.use(express.static(path.join(__dirname + '/dist', 'build')));
+app.use(express.static(__dirname + '/dist'));
+// app.use(express.static(path.join(__dirname + '/dist', 'build')));
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/dist', 'build', 'index.html'));
 });
