@@ -17,8 +17,10 @@ app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
-app.use('/demo-perguntas', express.static(path.join(__dirname, '/demos/perguntas')))
-app.get('/demo-perguntas', (req, res) => {
+app.use('/demos', express.static(path.join(__dirname, '/demos')))
+app.use('/demos/perguntas', express.static(path.join(__dirname, '/demos/perguntas')))
+
+app.get('/demos/perguntas', (req, res) => {
     res.sendFile(path.join(__dirname + '/demos/perguntas/index.html'))
   })
 
