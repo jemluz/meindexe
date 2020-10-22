@@ -150,5 +150,21 @@
     "desc2": "É uma rede social, com o frontend em Vue.js, backend em node.js e MongoDB.",
     "desc3": "Vou deixar para dar mais detalhes quando concluir. Por enquanto deixo só o gostinho da interface ;)"
   },
+  "oficinas": {
+    "metatitle": "meindexe | Oficinas",
+    
+    "desc": "Apesar de não focar nisso no momento, eu também curto ensinar, e mais do que isso: espremer muito conhecimento em apresentações que sejam belas, objetivas e completas.",
+
+    "linkTitle1": "Processo criativo da minha marca",
+
+    "desc2": "Na página do aurora eu falei sobre ter trancado a faculdade e que aprendi muito sobre produtividade nesse período. Pois é, transformei isso numa oficina que ministrei algumas vezes na faculdade.",
+
+    "linkTitle2": "Oficina de produtividade",
+    
+    "linkTitle3": "Oficina Adobe XD",
+
+    "desc3": "A oficina de AdobeXD foi a primeira oficina técnica que eu fix, ensinando a usar a ferramenta de criação de interfaces da Adobe."
+
+  },
   "backBtn": "Voltar p/ o início (←)"
 }

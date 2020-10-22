@@ -21,7 +21,7 @@
 
       div.row-3(data-aos="fade-right" data-aos-duration="3000" )
         router-link(to='/gt') g
-        router-link.empty(to='') -
+        router-link(to='/oficinas') o
         router-link.empty(to='') -
 
     div.about(data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom")
@@ -307,10 +307,13 @@ export default {
       }
 
       .row-1 {
-        margin-left: 15vw;
+        margin-left: 10vw;
       }
       .row-2 {
         margin-right: 15vw;
+      }
+      .row-3 {
+        margin-left: 15vw;
       }
 
       a {

@@ -148,5 +148,21 @@
     "desc2": "It's a social network, with the frontend made in Vue.js, node.js backend and MongoDB.",
     "desc3": "I'll give more details when I finish it. For now I will show a interface demo ;)"
   },
+  "oficinas": {
+    "metatitle": "meindexe | Workshops",
+    
+    "desc": "Despite not focusing on that thing at the moment, i also like to teach, and more than that: squeeze a lot of knowledge into beautiful, objective and complete presentations.",
+
+    "linkTitle1": "My brand's creative process",
+
+    "desc2": "On aurora's page I talked about having locked up college and that I learned a lot about productivity in that period. Well... i turned it into a workshop that I gave a few times in college.",
+
+    "linkTitle2": "Productivity workshop",
+    
+    "linkTitle3": "Adobe XD workshop",
+
+    "desc3": "The AdobeXD workshop was the first technical workshop i did, teaching you how to use Adobe’s interface creation tool."
+
+  },
   "backBtn": "Back to home (←)"
 }
