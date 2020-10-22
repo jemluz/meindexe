@@ -323,7 +323,6 @@ export default {
     .about {
       width: 100vw;
       bottom: 100px;
-      right: -80px;
 
       a {
         box-shadow: 0px 0px 10px 0px $roxo-claro;
@@ -337,13 +336,17 @@ export default {
       width: 100vw;
 
       button {
-        box-shadow: 0px 0px 30px 10px #00000030;
+        width: 120px;
+        img { max-width: 20px;}
   
+        &:last-child {
+          width: 100px;
+        }
+
         font-size: 20px;
         padding: 10px 20px;
-
-        margin: 0px 10px;
       }
+
     }
 
     .parallax {
