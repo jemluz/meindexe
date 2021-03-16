@@ -21,7 +21,12 @@
 
       div.row-3(data-aos="fade-right" data-aos-duration="3000" )
         router-link(to='/gt') g
+        router-link(to='/lojista') l
+        router-link(to='/letrun') r
+
+      div.row-1(data-aos="fade-right" data-aos-duration="4000" )
         router-link(to='/oficinas') o
+        router-link.empty(to='') -
         router-link.empty(to='') -
 
     div.about(data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom")
@@ -71,6 +76,10 @@ export default {
         this.$router.push(({ path: '/gt'}))
       } else if (code == 80) {
         this.$router.push(({ path: '/produtividade'}))
+      }  else if (code == 76) {
+        this.$router.push(({ path: '/lojista'}))
+      }  else if (code == 82) {
+        this.$router.push(({ path: '/letrun'}))
       }
     },
     selectPT() {

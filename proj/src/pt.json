@@ -166,5 +166,23 @@
     "desc3": "A oficina de AdobeXD foi a primeira oficina técnica que eu fiz, ensinando a usar a ferramenta de criação de interfaces da Adobe."
 
   },
+  "lojista" : {
+    "metatitle": "meindexe | Logista",
+
+    "desc": "Esse foi um clone da interface de um dashboard do",
+    "descLink": "FixPay",
+    "desc2": "para aprofundar meus estudos em ",
+    "linkVue": "Vue.js",
+
+    "linkPreview": "Live Preview:"
+  },
+  "letRun" : {
+    "metatitle": "meindexe | LetRun",
+    
+    "desc": "Esse aqui foi um projeto para entender um pouco mais sobre layouts de E-commerces.",
+    "desc2": "No desenvolvimento do letRun eu pude aprimorar meus conhecimentos em responsividade e gerenciamento de estado.",
+
+    "linkPreview": "Live Preview:"
+  },
   "backBtn": "Voltar p/ o início (←)"
 }

@@ -15,6 +15,9 @@ import ProjBubbox from './views/ProjBubbox.vue'
 import ProjProdutividade from './views/ProjProdutividade.vue'
 
 import ProjGt from './views/ProjGt.vue'
+import ProjLojista from './views/ProjLojista.vue'
+import ProjLetRun from './views/ProjLetRun.vue'
+
 import ProjOficinas from './views/ProjOficinas.vue'
 
 Vue.use(Router)
@@ -42,6 +45,9 @@ export default new Router({
     { path: '/produtividade', name: 'produtividade', component: ProjProdutividade },
     
     { path: '/gt', name: 'gt', component: ProjGt },
+    { path: '/lojista', name: 'lojista', component: ProjLojista },
+    { path: '/letrun', name: 'letrun', component: ProjLetRun },
+
     { path: '/oficinas', name: 'oficinas', component: ProjOficinas }
   ]
 })
