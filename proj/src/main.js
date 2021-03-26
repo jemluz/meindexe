@@ -34,7 +34,8 @@ import {
 import { 
   faWhatsapp,
   faInstagram,
-  faGithub
+  faGithub,
+  faLinkedin
 } from '@fortawesome/free-brands-svg-icons'
 
 Vue.component('fa-icon', FontAwesomeIcon)
@@ -46,7 +47,8 @@ library.add(
   faWhatsapp,
   faInstagram,
   faEnvelope,
-  faGithub
+  faGithub,
+  faLinkedin
 )
 
 Vue.config.productionTip = false

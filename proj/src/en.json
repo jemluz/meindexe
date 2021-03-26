@@ -3,7 +3,7 @@
     "metatitle": "meindexe | Web & Systems",
 
     "title": "press a",
-    "secondTitle": "key",
+    "secondTitle": " key",
     "sub": "to see a",
     "secondSub": "project",
     "btn": "about"
@@ -11,10 +11,10 @@
   "aboutPage": {
     "metatitle": "meindexe | About",
 
-    "firstTitle": "our te",
+    "firstTitle": "my te",
     "firstTitle2": "am",
 
-    "func1": "Full Stack Developer",
+    "func1": "Software Developer",
     "func2": "Project Coordinator",
     "func3": "Sales Manager",
     "func4": "Designer UI",
@@ -25,7 +25,7 @@
 
     "nextProjs": "check out the current candidates:",
 
-    "secondTitle": "our stu",
+    "secondTitle": "my stu",
     "secondTitle2": "ffs",
 
     "howWeWork": "Organization, study and testing here are law. And the grace of each project is:",
@@ -49,11 +49,13 @@
     "thirdTitle": "need",
     "thirdTitle2": "help?",
 
-    "request": "Do you need a website or web system? Request a quote.",
+    "request": "Do you need a website or app? Request a quote.",
 
-    "mail": "contato@meindexe.com",
-    "insta": "@me.indexe",
-    "whats": "(85) 9 0000-0000"
+    "git": "github.com/jemluz",
+    "linkedin": "linkedin.com/in/jemluz/",
+    "mail": "contatojemima@gmail.com",
+    "insta": "@jemimwah",
+    "whats": "(00) 0 0000-0000"
   },
   "auroraI": {
     "metatitle": "meindexe | Aurora Project",

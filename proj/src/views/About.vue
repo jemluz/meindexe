@@ -36,7 +36,7 @@
 
         div.slide.membro
           div
-            img.photo(src="../assets/sobre/juliana.png")
+            img.photo(src="../assets/sobre/jemima2.png")
 
           div.nome-funcao 
             h4 Jemima Luz
@@ -73,9 +73,9 @@
 
         p.normal.p-1 {{ lang.aboutPage.request }}
 
-        a.normal.mail(href="") #[fa-icon(icon="envelope")] {{ lang.aboutPage.mail }}
-        a.normal.insta(href="https://www.instagram.com/me.indexe/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
-        a.normal.zap(href="") #[fa-icon(:icon="['fab', 'whatsapp']")] {{ lang.aboutPage.whats }}
+        a.normal.mail(href="https://www.linkedin.com/in/jemluz/") #[fa-icon(:icon="['fab', 'linkedin']")] {{ lang.aboutPage.linkedin }}
+        a.normal.insta(href="https://www.instagram.com/jemimwah/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
+        a.normal.zap(href="https://github.com/jemluz") #[fa-icon(:icon="['fab', 'github']")] {{ lang.aboutPage.git }}
 
         a
 
@@ -134,9 +134,9 @@
 
           p.normal.p-1 {{ lang.aboutPage.request }}
 
-          a.normal.mail(href="") #[fa-icon(icon="envelope")] {{ lang.aboutPage.mail }}
-          a.normal.insta(href="https://www.instagram.com/me.indexe/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
-          a.normal.zap(href="") #[fa-icon(:icon="['fab', 'whatsapp']")] {{ lang.aboutPage.whats }}
+          a.normal.mail(href="https://www.linkedin.com/in/jemluz/") #[fa-icon(:icon="['fab', 'linkedin']")] {{ lang.aboutPage.linkedin }}
+          a.normal.insta(href="https://www.instagram.com/jemimwah/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
+          a.normal.zap(href="https://github.com/jemluz") #[fa-icon(:icon="['fab', 'github']")] {{ lang.aboutPage.git }}
 
           a
 
@@ -281,13 +281,13 @@ export default {
       font-weight: 400;
 
       .first {
-        background-color: #8552B3;
+        background-color: #222;
         box-shadow: 0px 0px 20px 0px #00000020;
       }
 
       .second {
         background-color: transparent;
-        color: #8552B3;
+        color: #222;
       }
     }
   }
@@ -328,13 +328,13 @@ export default {
         font-weight: 400;
 
         .first {
-          background-color: #8552B3;
+          background-color: #222;
           box-shadow: 0px 0px 20px 0px #00000020;
         }
 
         .second {
           background-color: transparent;
-          color: #8552B3;
+          color: #222;
         }
       }
     }
@@ -349,7 +349,7 @@ export default {
       button {
         border-radius: 50%;
         background-color: $branco;
-        color: $roxo;
+        color: $preto;
         padding: 8px;
         font-size: 10px;
         box-shadow: 0px 0px 20px 0px #00000020;
@@ -375,7 +375,7 @@ export default {
 
       h4 { 
         font-family: t26-carbon, monospace;
-        color: $roxo; 
+        color: $preto; 
       }
     }
 
@@ -447,6 +447,16 @@ export default {
         }
       }
 
+      .git {
+        color: #555;
+        transition: all .5s ease;
+
+        &:hover {
+          cursor: pointer;
+          color: #9B2A9B;
+        }
+      }
+
       .zap {
         color: #555;
         transition: all .5s ease;
@@ -480,13 +490,13 @@ export default {
         font-weight: 400;
 
         .first {
-          background-color: #8552B3;
+          background-color: #222;
           box-shadow: 0px 0px 20px 0px #00000020;
         }
 
         .second {
           background-color: transparent;
-          color: #8552B3;
+          color: #222;
         }
       }
     }
@@ -634,8 +644,8 @@ export default {
     font-weight: 700;
     z-index: 3;
 
-    box-shadow: 0px 0px 10px 5px #47286520;
-    border: 2px solid $roxo;
+    box-shadow: 0px 0px 10px 5px #03010420;
+    border: 2px solid $preto;
     border-radius: 5px 10px 10px 5px;
 
     transition: all .5s ease;
@@ -646,7 +656,7 @@ export default {
     position: fixed;
 
     bottom: 0px;
-    color: $roxo;
+    color: $preto;
 
     &:hover {
       background-color: $roxo;

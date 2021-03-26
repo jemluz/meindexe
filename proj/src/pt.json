@@ -11,11 +11,11 @@
   "aboutPage": {
     "metatitle": "About",
 
-    "firstTitle": "nosso ti",
+    "firstTitle": "meu ti",
     "firstTitle2": "me",
 
-    "func1": "Coordenadora de projetos",
-    "func2": "Software Developer",
+    "func1": "Software Developer",
+    "func2": "Coordenadora de projetos",
     "func3": "Designer UI",
     "func4": "Gerente de vendas",
 
@@ -25,7 +25,7 @@
 
     "nextProjs": "confira os candidatos atuais:",
 
-    "secondTitle": "nosso ro",
+    "secondTitle": "meu ro",
     "secondTitle2": "lê",
 
     "howWeWork": "Organização, estudo e teste aqui são lei. E a graça de cada projeto está em:",
@@ -49,11 +49,13 @@
     "thirdTitle": "need",
     "thirdTitle2": "help?",
 
-    "request": "Tá precisando de um site ou sistema web? Solicite um orçamento.",
+    "request": "Tá precisando de um site ou app? Solicite um orçamento.",
 
-    "mail": "contato@meindexe.com",
-    "insta": "@me.indexe",
-    "whats": "(85) 9 0000-0000"
+    "git": "github.com/jemluz",
+    "linkedin": "linkedin.com/in/jemluz/",
+    "mail": "contatojemima@gmail.com",
+    "insta": "@jemimwah",
+    "whats": "(00) 0 0000-0000"
   },
   "auroraI": {
     "metatitle": "meindexe | Projeto Aurora",

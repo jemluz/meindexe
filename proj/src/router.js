@@ -4,8 +4,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Sobre from './views/About.vue'
 
-import ProjTemplate from './components/template/ProjTemplate.vue'
-
 import PageAuroraI from './views/PageAuroraI.vue'
 import PageAuroraII from './views/PageAuroraII.vue'
 import ProjMoniq from './views/ProjMoniq.vue'
@@ -20,15 +18,23 @@ import ProjLetRun from './views/ProjLetRun.vue'
 
 import ProjOficinas from './views/ProjOficinas.vue'
 
+import HomeFlutter from './views/mobile/HomeFlutter.vue'
+
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: '/home-web',
+      name: 'home-web',
       component: Home
+    },
+    {
+      path: '/',
+      name: 'home-flutter',
+      component: HomeFlutter
     },
     {
       path: '/sobre',

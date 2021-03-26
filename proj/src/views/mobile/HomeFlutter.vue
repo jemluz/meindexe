@@ -1,54 +1,47 @@
 <template lang="pug">
-  div#home
-    vue-headful(:title="lang.homePage.metatitle")
+#homeFlutter
+  vue-headful(:title="lang.homePage.metatitle")
 
-    h1.logo(data-aos="fade-down" data-aos-duration="500" ) #[p.rect-1] m#[strong indexe] #[p.rect-2] #[router-link(to="/") #[fa-icon.go-flutter-button(:icon="['fa', 'arrow-right']")]]
-    p.sublogo(data-aos="fade-down", data-aos-duration="500") web
+  h1.logo(data-aos="fade-down", data-aos-duration="500") #[router-link(to="/home-web") #[fa-icon.go-web-button(:icon="['fa', 'arrow-left']")]] #[p.rect-1] m#[strong indexe] #[p.rect-2]
+  p.sublogo(data-aos="fade-down", data-aos-duration="500") flutter
 
+  .titulo(data-aos="fade-right", data-aos-duration="1000")
+    h2 #[span.first {{ lang.homePage.title }}]#[span.second {{ lang.homePage.secondTitle }}_]
+    p {{ lang.homePage.sub }} #[span {{ lang.homePage.secondSub }}]
 
-    div.titulo(data-aos="fade-right" data-aos-duration="1000" )
-      h2 #[span.first {{ lang.homePage.title }} ]#[span.second {{ lang.homePage.secondTitle }}_]
-      p {{ lang.homePage.sub }} #[span {{ lang.homePage.secondSub }}] 
+  nav.projs-navgation 
+    .row-1(data-aos="fade-right", data-aos-duration="2000")
+      router-link(to="") h
+      router-link(to="") c
+      router-link(to="") m
 
-    nav.projs-navgation 
-      div.row-1(data-aos="fade-right" data-aos-duration="2000" )
-        router-link(to='/aurora-i') a
-        router-link(to='/monique') m
-        router-link(to='/exchange') e
-      
-      div.row-2(data-aos="fade-left" data-aos-duration="2000" )
-        router-link(to='/bubbox') b
-        router-link(to='/produtividade') p
-        router-link.empty(to='') v
+    .row-2(data-aos="fade-left", data-aos-duration="2000")
+      router-link(to="/loljinha") l
+      router-link.empty(to="") -
+      router-link.empty(to="") -
 
-      div.row-3(data-aos="fade-right" data-aos-duration="3000" )
-        router-link(to='/gt') g
-        router-link(to='/lojista') l
-        router-link(to='/letrun') r
+    .row-1(data-aos="fade-right", data-aos-duration="3000")
+      router-link.empty(to="") -
+      router-link.about(to="/sobre") {{ lang.homePage.btn }}
 
-      div.row-1(data-aos="fade-right" data-aos-duration="4000" )
-        router-link(to='/oficinas') o
-        router-link.about(to='/sobre') {{ lang.homePage.btn }}
+  .btn-language 
+    button(@click="selectPT", :class="[isPtLanguage ? 'active' : 'disabled']") #[img(src="../../assets/brazil.svg")]PT
+    button(@click="selectEN", :class="[!isPtLanguage ? 'active' : 'disabled']") #[img(src="../../assets/usa-today.svg")]EN
 
-    div.btn-language 
-      button(@click="selectPT" :class="[ isPtLanguage ? 'active': 'disabled']") #[img(src="../assets/brazil.svg") ]PT
-      button(@click="selectEN" :class="[ !isPtLanguage ? 'active': 'disabled']") #[img(src="../assets/usa-today.svg") ]EN
-
-    div.parallax
-      div(id="parallax-bg-3" class="parallax-bg")
-        div(id="bg-3-1" data-aos="fade-up" data-aos-duration="500")
-        div(id="bg-3-2" data-aos="fade-up" data-aos-duration="1000")
-        div(id="bg-3-3" data-aos="fade-up" data-aos-duration="2000")
-        div(id="bg-3-4")
-
+  .parallax
+    #parallax-bg-3.parallax-bg
+      #bg-3-1(data-aos="fade-up", data-aos-duration="500")
+      #bg-3-2(data-aos="fade-up", data-aos-duration="1000")
+      #bg-3-3(data-aos="fade-up", data-aos-duration="2000")
+      #bg-3-4
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import { userLanguage } from '@/global'
+import { mapState } from "vuex";
+import { userLanguage } from "@/global";
 
 export default {
-  name: "Home",
+  name: "HomeFlutter",
   computed: mapState(["lang", "isPtLanguage"]),
   methods: {
     parallaxScroll() {
@@ -60,46 +53,46 @@ export default {
     listenKeyboard() {
       let code = event.keyCode ? event.keyCode : event.which;
 
-      console.log(code)
+      console.log(code);
       // 1 - if u press e: view exchange project
       if (code == 69) {
-        this.$router.push(({ path: '/exchange'}) )
+        this.$router.push({ path: "/exchange" });
       } else if (code == 65) {
-        this.$router.push(({ path: '/aurora-i'}) )  
+        this.$router.push({ path: "/aurora-i" });
       } else if (code == 77) {
-        this.$router.push(({ path: '/monique'}))
+        this.$router.push({ path: "/monique" });
       } else if (code == 66) {
-        this.$router.push(({ path: '/bubbox'}))
+        this.$router.push({ path: "/bubbox" });
       } else if (code == 71) {
-        this.$router.push(({ path: '/gt'}))
+        this.$router.push({ path: "/gt" });
       } else if (code == 80) {
-        this.$router.push(({ path: '/produtividade'}))
-      }  else if (code == 76) {
-        this.$router.push(({ path: '/lojista'}))
-      }  else if (code == 82) {
-        this.$router.push(({ path: '/letrun'}))
+        this.$router.push({ path: "/produtividade" });
+      } else if (code == 76) {
+        this.$router.push({ path: "/lojista" });
+      } else if (code == 82) {
+        this.$router.push({ path: "/letrun" });
       }
     },
     selectPT() {
-      this.$store.commit("setLangPT")
-      localStorage.setItem(userLanguage, 'pt')
+      this.$store.commit("setLangPT");
+      localStorage.setItem(userLanguage, "pt");
     },
     selectEN() {
-      this.$store.commit("setLangEN")
-      localStorage.setItem(userLanguage, 'en')
-    }
+      this.$store.commit("setLangEN");
+      localStorage.setItem(userLanguage, "en");
+    },
   },
   created() {
     window.addEventListener("scroll", this.parallaxScroll);
-    document.addEventListener("keyup", this.listenKeyboard)
-  }
+    document.addEventListener("keyup", this.listenKeyboard);
+  },
 };
 </script>
 
 <style lang="scss">
-@import "../styles/helpers/variables";
+@import "../../styles/helpers/variables";
 
-#home {
+#homeFlutter {
   background-attachment: fixed;
 
   color: $branco;
@@ -111,34 +104,34 @@ export default {
     display: flex;
     justify-content: center;
     position: fixed;
-
     width: 100vw;
-    margin-top: 30px;
-    text-align: center;
 
+    text-align: center;
+    margin-top: 30px;
     strong {
-      color: $roxo-claro;
+      color: $azul-claro;
     }
 
-    .go-flutter-button {
+    .go-web-button {
       color: $branco;
       width: 22px;
       margin-top: 4px;
     }
 
     p {
-      background-color: $roxo-claro;
+      background-color: $azul-claro;
       opacity: 0.5;
       border-radius: 2px;
+
       height: 1px;
       margin: 20px 20px;
     }
 
     .rect-1 {
-      width: 80px;
+      width: 40px;
     }
     .rect-2 {
-      width: 40px;
+      width: 80px;
     }
   }
 
@@ -151,11 +144,10 @@ export default {
     width: 100vw;
 
     margin-top: 62px;
-    margin-left: 58px;
+    margin-left: 26px;
 
     opacity: 0.7;
   }
-
 
   .titulo {
     position: fixed;
@@ -164,14 +156,15 @@ export default {
       font-weight: lighter;
 
       .first {
-        background-color: rgba($color: $rosa-claro, $alpha: .1);
-        color: $rosa-claro;
+        background-color: rgba($color: $azul-claro, $alpha: .1);
+        color: $azul-claro;
       }
 
       .second {
         background-color: transparent;
         // font-weight: bold;
         color: $branco;
+        opacity: 0.8;
       }
     }
 
@@ -196,7 +189,7 @@ export default {
       justify-self: center;
 
       .empty {
-        opacity: .2;
+        opacity: 0.2;
       }
     }
 
@@ -234,20 +227,26 @@ export default {
     }
   }
 
-  .btn-language { 
+  .btn-language {
     display: flex;
     justify-content: center;
     position: fixed;
     bottom: 0;
     z-index: 5;
 
-    .disabled { opacity: .3;}
-    .active { opacity: .8;}
-    
+    .disabled {
+      opacity: 0.3;
+    }
+    .active {
+      opacity: 0.8;
+    }
+
     button {
       display: flex;
       align-items: center;
-      img { margin-right: 10px;}
+      img {
+        margin-right: 10px;
+      }
 
       white-space: nowrap;
       font-family: t26-carbon, monospace;
@@ -261,7 +260,7 @@ export default {
       &:last-child {
         border-radius: 0px 10px 0px 0px;
       }
-  
+
       &:hover,
       &:focus {
         cursor: pointer;
@@ -288,23 +287,23 @@ export default {
       overflow: hidden;
     }
     div#bg-3-1 {
-        z-index: 3;
-        opacity: 0.8;
-      }
-      div#bg-3-2 {
-        z-index: 2;
-      }
-      div#bg-3-3 {
-        z-index: 4;
-        opacity: 0.5;
-      }
+      z-index: 3;
+      opacity: 0.8;
+    }
+    div#bg-3-2 {
+      z-index: 2;
+    }
+    div#bg-3-3 {
+      z-index: 4;
+      opacity: 0.5;
+    }
   }
 }
 
 // MOBILE
 @media only screen and (max-width: 900px) {
-  #home {
-    background: linear-gradient(to bottom, $roxo-escuro, $preto);
+  #homeFlutter {
+    background: linear-gradient(to bottom, $azul-escuro, $preto);
 
     .titulo {
       margin-top: 15vh;
@@ -367,14 +366,16 @@ export default {
         width: 100px;
         font-size: 20px;
         padding: 10px 20px;
-        img { max-width: 20px;}
-  
+
+        img {
+          max-width: 20px;
+        }
+
         &:last-child {
           width: 100px;
         }
 
       }
-
     }
 
     .parallax {
@@ -384,19 +385,19 @@ export default {
       }
 
       div#bg-3-1 {
-        background: url("../assets/home-bg/tcm.svg");
+        background: url("../../assets/home-bg/flutter/mobile/tcm.svg");
         width: 529px;
         height: 900px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../assets/home-bg/tem.svg");
+        background-image: url("../../assets/home-bg/flutter/mobile/tem.svg");
         width: 529px;
         height: 900px;
         right: 160px;
       }
       div#bg-3-3 {
-        background: url("../assets/home-bg/em.svg");
+        background: url("../../assets/home-bg/em.svg");
         width: 446px;
         height: 713px;
         right: 180px;
@@ -410,8 +411,8 @@ export default {
 
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
-  #home {
-    background: linear-gradient(to bottom, $preto, $roxo);   
+  #homeFlutter {
+    background: linear-gradient(to bottom, $preto, $roxo);
 
     .titulo {
       margin-left: 40vw;
@@ -436,7 +437,6 @@ export default {
     .projs-navgation {
       width: 100vw;
       margin: 250px auto 0px auto;
-      
 
       div {
         margin: 0px auto;
@@ -467,7 +467,7 @@ export default {
         box-shadow: 0px 0px 30px 10px #00000030;
 
         font-size: 25px;
-        padding: 10px 20px
+        padding: 10px 20px;
       }
     }
 
@@ -477,8 +477,10 @@ export default {
 
       button {
         width: 120px;
-        img { max-width: 20px;}
-  
+        img {
+          max-width: 20px;
+        }
+
         &:last-child {
           width: 100px;
         }
@@ -486,36 +488,35 @@ export default {
         font-size: 20px;
         padding: 10px 20px;
       }
-
     }
 
     .parallax {
       div#bg-3-1 {
-        background: url("../assets/home-bg/d-tcm.svg");
+        background: url("../../assets/home-bg/d-tcm.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../assets/home-bg/d-tem.svg");
+        background-image: url("../../assets/home-bg/d-tem.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-3 {
-        background: url("../assets/home-bg/d-em.svg");
+        background: url("../../assets/home-bg/d-em.svg");
         width: 100vw;
         height: 100vh;
         left: -250px;
       }
       div#bg-3-4 {
         position: fixed !important;
-        background: url("../assets/home-bg/d-b.svg");
+        background: url("../../assets/home-bg/d-b.svg");
         width: 100vw;
         height: 100vh;
         left: 0px;
         z-index: 4;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }
@@ -523,7 +524,7 @@ export default {
 
 // WIDE
 @media only screen and (min-width: 2500px) {
-  #home {
+  #homeFlutter {
     background: linear-gradient(to bottom, $preto, $roxo);
 
     .titulo {
@@ -586,9 +587,10 @@ export default {
       left: 500px;
 
       button {
-        img { max-width: 20px;}
+        img {
+          max-width: 20px;
+        }
         box-shadow: 0px 0px 30px 10px #00000030;
-  
 
         font-size: 20px;
         padding: 10px 20px;
@@ -600,31 +602,31 @@ export default {
     .parallax {
       div#bg-3-1 {
         display: none;
-        background: url("../assets/home-bg/d-tcm.svg");
+        background: url("../../assets/home-bg/d-tcm.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../assets/home-bg/d-tem.svg");
+        background-image: url("../../assets/home-bg/d-tem.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-3 {
-        background: url("../assets/home-bg/d-em.svg");
+        background: url("../../assets/home-bg/d-em.svg");
         width: 100vw;
         height: 100vh;
         left: -250px;
       }
       div#bg-3-4 {
         position: fixed !important;
-        background: url("../assets/home-bg/d-b.svg");
+        background: url("../../assets/home-bg/d-b.svg");
         width: 100vw;
         height: 100vh;
         left: 0px;
         z-index: 4;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }
