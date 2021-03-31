@@ -44,7 +44,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.14.1",
     "postcss": "^7.0.35",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-loader": "^2.4.0",
     "sass-loader": "^8.0.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
