@@ -1,39 +1,113 @@
-<template lang="pug">
-#homeFlutter
-  vue-headful(:title="lang.homePage.metatitle")
+<template>
+  <div id="homeFlutter" class="bg-fixed text-center">
+    <vue-headful :title="lang.homePage.metatitle"></vue-headful>
 
-  h1.logo(data-aos="fade-down", data-aos-duration="500") #[router-link(to="/home-web") #[fa-icon.go-web-button(:icon="['fa', 'arrow-left']")]] #[p.rect-1] m#[strong indexe] #[p.rect-2]
-  p.sublogo(data-aos="fade-down", data-aos-duration="500") flutter
+    <h1 data-aos="fade-down" data-aos-duration="500"
+      class="logo pt-16 flex justify-center items-center w-full text-center text-3xl"
+    >
+      <router-link to="/home-web">
+        <fa-icon
+          class="go-web-button text-lg mt-2"
+          :icon="['fa', 'arrow-left']"
+        ></fa-icon>
+      </router-link>
 
-  .titulo(data-aos="fade-right", data-aos-duration="1000")
-    h2 #[span.first {{ lang.homePage.title }}]#[span.second {{ lang.homePage.secondTitle }}_]
-    p {{ lang.homePage.sub }} #[span {{ lang.homePage.secondSub }}]
+      <p class="w-8 mx-4 opacity-50"></p>
 
-  nav.projs-navgation 
-    .row-1(data-aos="fade-right", data-aos-duration="2000")
-      router-link(to="") h
-      router-link(to="") c
-      router-link(to="") m
+      m<strong>indexe</strong>
 
-    .row-2(data-aos="fade-left", data-aos-duration="2000")
-      router-link(to="/loljinha") l
-      router-link.empty(to="") -
-      router-link.empty(to="") -
+      <p class="w-16 mx-4 opacity-50"></p>
+    </h1>
 
-    .row-1(data-aos="fade-right", data-aos-duration="3000")
-      router-link.empty(to="") -
-      router-link.about(to="/sobre") {{ lang.homePage.btn }}
+    <p data-aos="fade-down" data-aos-duration="500"
+      class="sublogo -mt-1 ml-5 w-full flex justify-center absolute opacity-70"
+    >
+      flutter
+    </p>
 
-  .btn-language 
-    button(@click="selectPT", :class="[isPtLanguage ? 'active' : 'disabled']") #[img(src="../../assets/brazil.svg")]PT
-    button(@click="selectEN", :class="[!isPtLanguage ? 'active' : 'disabled']") #[img(src="../../assets/usa-today.svg")]EN
+    <div data-aos="fade-right" data-aos-duration="1000"
+      class="titulo mt-16 absolute text-right sm:w-6/12 sm:ml-24 md:w-full lg:-ml-6"
+    >
+      <h2 class="flex justify-center items-center md:mx-auto md:w-4/12">
+        <span class="first py-2 pl-32 text-xl sm:pl-32 md:-ml-64 lg:pl-64">{{
+          lang.homePage.title
+        }} </span>
+        <span class="second"> {{ lang.homePage.secondTitle }}_</span>
+      </h2>
 
-  .parallax
-    #parallax-bg-3.parallax-bg
-      #bg-3-1(data-aos="fade-up", data-aos-duration="500")
-      #bg-3-2(data-aos="fade-up", data-aos-duration="1000")
-      #bg-3-3(data-aos="fade-up", data-aos-duration="2000")
-      #bg-3-4
+      <p class="mt-2 pl-32 text-sm flex justify-center opacity-70 sm:w-10/12 md:pl-6 lg:pl-48  xl:pl-64">
+        {{ lang.homePage.sub }} {{ lang.homePage.secondSub }}
+      </p>
+    </div>
+
+    <nav
+      class="projs-navgation mt-48 w-full absolute flex flex-col justify-center text-2xl z-50"
+    >
+      <div class="row-1 flex justify-center" data-aos="fade-right" data-aos-duration="2000">
+        <router-link to="" class="px-4 py-2 rounded-lg opacity-70"
+          >h</router-link
+        >
+        <router-link to="" class="mx-4 px-4 py-2 rounded-lg opacity-70"
+          >c</router-link
+        >
+        <router-link to="" class="px-4 py-2 rounded-lg opacity-70"
+          >m</router-link
+        >
+      </div>
+
+      <div class="row-2 -mr-12 md:-mr-24 my-6 flex justify-center" data-aos="fade-left" data-aos-duration="2000">
+        <router-link to="/loljinha" class="px-4 py-2 rounded-lg opacity-70"
+          >l</router-link
+        >
+        <router-link to="" class="empty mx-4 px-4 py-2 rounded-lg opacity-70"
+          >-</router-link
+        >
+        <router-link to="" class="empty px-4 py-2 rounded-lg opacity-70"
+          >-</router-link
+        >
+      </div>
+
+      <div class="row-3 flex justify-center" data-aos="fade-right" data-aos-duration="3000">
+        <router-link to="" class="empty px-4 py-2 rounded-lg opacity-70"
+          >-</router-link
+        >
+        <router-link
+          to="/sobre"
+          class="about ml-4 px-4 py-2 bg-white rounded-lg"
+          >{{ lang.homePage.btn }}</router-link
+        >
+      </div>
+    </nav>
+
+    <div
+      class="btn-language -ml-8 mt-12 fixed top-3/4 md:top-2/3 xl:top-1/3 flex justify-center w-full whitespace-nowrap z-50"
+    >
+      <button
+        @click="selectPT"
+        :class="[isPtLanguage ? 'active' : 'disabled']"
+        class="px-6 py-4 flex items-center "
+      >
+        <img src="../../assets/brazil.svg" alt="" class="w-6 mr-5" /> PT
+      </button>
+
+      <button
+        @click="selectEN"
+        :class="[!isPtLanguage ? 'active' : 'disabled']"
+        class="px-6 py-4 flex items-center"
+      >
+        <img src="../../assets/usa-today.svg" alt="" class="w-6 mr-5"/> EN
+      </button>
+    </div>
+
+    <div class="parallax">
+      <div id="parallax-bg-3" class="parallax-bg">
+        <div id="bg-3-1" data-aos="fade-up" data-aos-duration="500"></div>
+        <div id="bg-3-2" data-aos="fade-up" data-aos-duration="1000"></div>
+        <div id="bg-3-3" data-aos="fade-up" data-aos-duration="2000"></div>
+        <div id="bg-3-4"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -93,101 +167,53 @@ export default {
 @import "../../styles/helpers/variables";
 
 #homeFlutter {
-  background-attachment: fixed;
+  background: linear-gradient(to bottom, $azul-escuro, $preto);
 
   color: $branco;
-  text-align: center;
 
   .logo {
     font-family: t26-carbon, monospace;
 
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100vw;
-
-    text-align: center;
-    margin-top: 30px;
     strong {
       color: $azul-claro;
     }
 
     .go-web-button {
       color: $branco;
-      width: 22px;
-      margin-top: 4px;
     }
 
     p {
       background-color: $azul-claro;
-      opacity: 0.5;
       border-radius: 2px;
-
       height: 1px;
-      margin: 20px 20px;
-    }
-
-    .rect-1 {
-      width: 40px;
-    }
-    .rect-2 {
-      width: 80px;
     }
   }
 
   .sublogo {
     font-family: t26-carbon, monospace;
-
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100vw;
-
-    margin-top: 62px;
-    margin-left: 26px;
-
-    opacity: 0.7;
   }
 
   .titulo {
-    position: fixed;
-
     h2 {
       font-weight: lighter;
 
       .first {
-        background-color: rgba($color: $azul-claro, $alpha: .1);
+        background-color: rgba($color: $azul-claro, $alpha: 0.1);
         color: $azul-claro;
       }
 
       .second {
         background-color: transparent;
-        // font-weight: bold;
+        font-weight: bold;
         color: $branco;
-        opacity: 0.8;
       }
-    }
-
-    p {
-      text-align: right;
-      color: $branco;
-      opacity: 0.8;
     }
   }
 
   .projs-navgation {
     font-family: t26-carbon, monospace;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    z-index: 5;
 
     div {
-      display: flex;
-      justify-self: center;
-
       .empty {
         opacity: 0.2;
       }
@@ -195,27 +221,7 @@ export default {
 
     a {
       border: 1px solid $branco;
-      border-radius: 10px;
       color: $branco;
-      z-index: 10;
-
-      transition: all 0.5s ease;
-      opacity: 0.5;
-
-      &:hover,
-      &:focus {
-        opacity: 1;
-      }
-    }
-
-    .about {
-      z-index: 5;
-      opacity: 1;
-
-      font-family: t26-carbon, monospace;
-      background-color: $branco;
-      color: $azul-escuro;
-      border-radius: 10px;
 
       transition: all 0.5s ease;
 
@@ -225,41 +231,35 @@ export default {
         opacity: 1;
       }
     }
+
+    .about {
+      font-family: t26-carbon, monospace;
+      background-color: $branco;
+      color: $azul-escuro;
+      border-radius: 10px;
+
+      transition: all 0.5s ease;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
   }
 
   .btn-language {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    z-index: 5;
-
     .disabled {
       opacity: 0.3;
     }
+
     .active {
       opacity: 0.8;
     }
 
     button {
-      display: flex;
-      align-items: center;
-      img {
-        margin-right: 10px;
-      }
-
-      white-space: nowrap;
       font-family: t26-carbon, monospace;
-      border: 1px solid $branco;
-      border-bottom: none;
       color: $branco;
-      border-radius: 10px 0px 0px 0px;
       transition: all 0.5s ease;
-      opacity: 0.8;
-
-      &:last-child {
-        border-radius: 0px 10px 0px 0px;
-      }
 
       &:hover,
       &:focus {
@@ -301,82 +301,92 @@ export default {
 }
 
 // MOBILE
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 700px) {
   #homeFlutter {
-    background: linear-gradient(to bottom, $azul-escuro, $preto);
+    // background: linear-gradient(to bottom, $azul-escuro, $preto);
 
-    .titulo {
-      margin-top: 15vh;
+    // .titulo {
+    //   margin-top: 15vh;
 
-      h2 {
-        font-size: 24px;
-        left: 0px;
+    //   h2 {
+    //     font-size: 24px;
+    //     left: 0px;
 
-        margin-bottom: 10px;
+    //     margin-bottom: 10px;
 
-        .first {
-          padding: 3px 0px 3px 70px;
-        }
-      }
+    //     .first {
+    //       padding: 3px 0px 3px 20vw;
 
-      p {
-        font-size: 14px;
-      }
-    }
+    //       @media only screen and (min-width: 400px) and (max-width: 680px) {
+    //         padding: 3px 0px 3px 30vw;
+    //       }
 
-    .projs-navgation {
-      width: 100vw;
+    //       @media only screen and (min-width: 681px) and (max-width: 1000px) {
+    //         padding: 3px 0px 3px 35vw;
+    //       }
+    //     }
+    //   }
 
-      margin: 30vh auto 0px auto;
+    //   p {
+    //     font-size: 14px;
+    //   }
+    // }
 
-      div {
-        margin: 0px auto;
-      }
+    // .projs-navgation {
+    //   width: 100vw;
 
-      .row-1 {
-        margin-left: 10vw;
-      }
-      .row-2 {
-        margin-right: 15vw;
-      }
-      .row-3 {
-        margin-left: 15vw;
-      }
+    //   margin: 30vh auto 0px auto;
 
-      a {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 30px;
-      }
-    }
+    //   div {
+    //     margin: 0px auto;
+    //   }
 
-    .about {
-      bottom: 100px;
+    //   .row-1 {
+    //     margin: 0px auto;
+    //     padding-left: 10vw;
+    //   }
+    //   .row-2 {
+    //     margin: 0px auto;
+    //     padding-right: 5vw;
+    //   }
+    //   .row-3 {
+    //     margin: 0px auto;
+    //   }
 
-      a {
-        font-size: 40px;
-        padding: 10px 20px;
-      }
-    }
+    //   a {
+    //     padding: 10px 20px;
+    //     margin: 10px;
+    //     font-size: 30px;
+    //   }
+    // }
 
-    .btn-language {
-      width: 100vw;
+    // .about {
+    //   bottom: 100px;
 
-      button {
-        width: 100px;
-        font-size: 20px;
-        padding: 10px 20px;
+    //   a {
+    //     font-size: 40px;
+    //     padding: 10px 20px;
+    //   }
+    // }
 
-        img {
-          max-width: 20px;
-        }
+    // .btn-language {
+    //   width: 100vw;
 
-        &:last-child {
-          width: 100px;
-        }
+    //   button {
+    //     width: 100px;
+    //     font-size: 20px;
+    //     padding: 10px 20px;
 
-      }
-    }
+    //     img {
+    //       max-width: 20px;
+    //     }
+
+    //     &:last-child {
+    //       width: 100px;
+    //     }
+
+    //   }
+    // }
 
     .parallax {
       /* background layer */
@@ -410,95 +420,17 @@ export default {
 }
 
 // DESKTOP
-@media only screen and (min-width: 901px) and (max-width: 2499px) {
+@media only screen and (min-width: 701px) and (max-width: 2499px) {
   #homeFlutter {
-    background: linear-gradient(to bottom, $preto, $roxo);
-
-    .titulo {
-      margin-left: 40vw;
-      margin-top: 145px;
-
-      h2 {
-        font-size: 25px;
-        left: 0px;
-
-        margin-bottom: 10px;
-
-        .first {
-          padding: 3px 0px 3px 70px;
-        }
-      }
-
-      p {
-        font-size: 18px;
-      }
-    }
-
-    .projs-navgation {
-      width: 100vw;
-      margin: 250px auto 0px auto;
-
-      div {
-        margin: 0px auto;
-      }
-
-      .row-1 {
-        margin-left: 40vw;
-      }
-      .row-2 {
-        margin-right: 40vw;
-      }
-      .row-3 {
-        margin-left: 41vw;
-      }
-
-      a {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 30px;
-      }
-    }
-
-    .about {
-      width: 100vw;
-      bottom: 50px;
-
-      a {
-        box-shadow: 0px 0px 30px 10px #00000030;
-
-        font-size: 25px;
-        padding: 10px 20px;
-      }
-    }
-
-    .btn-language {
-      width: 100vw;
-      left: 300px;
-
-      button {
-        width: 120px;
-        img {
-          max-width: 20px;
-        }
-
-        &:last-child {
-          width: 100px;
-        }
-
-        font-size: 20px;
-        padding: 10px 20px;
-      }
-    }
-
     .parallax {
       div#bg-3-1 {
-        background: url("../../assets/home-bg/d-tcm.svg");
+        background: url("../../assets/home-bg/flutter/d-tcm.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../../assets/home-bg/d-tem.svg");
+        background-image: url("../../assets/home-bg/flutter/d-tem.svg");
         width: 529px;
         height: 800px;
         right: 160px;
@@ -511,7 +443,7 @@ export default {
       }
       div#bg-3-4 {
         position: fixed !important;
-        background: url("../../assets/home-bg/d-b.svg");
+        background: url("../../assets/home-bg/flutter/d-b.svg");
         width: 100vw;
         height: 100vh;
         left: 0px;
@@ -525,90 +457,16 @@ export default {
 // WIDE
 @media only screen and (min-width: 2500px) {
   #homeFlutter {
-    background: linear-gradient(to bottom, $preto, $roxo);
-
-    .titulo {
-      margin-left: 45vw;
-      margin-top: 145px;
-
-      h2 {
-        font-size: 25px;
-        left: 0px;
-
-        margin-bottom: 10px;
-
-        .first {
-          padding: 3px 0px 3px 70px;
-        }
-      }
-
-      p {
-        font-size: 18px;
-      }
-    }
-
-    .projs-navgation {
-      width: 100vw;
-
-      margin: 270px auto 0px auto;
-
-      div {
-        margin: 0px auto;
-      }
-
-      .row-1 {
-        margin-left: 44vw;
-      }
-      .row-2 {
-        margin-right: 44vw;
-      }
-
-      a {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 30px;
-      }
-    }
-
-    .about {
-      width: 100vw;
-      top: 680px;
-
-      a {
-        box-shadow: 0px 0px 30px 10px #00000030;
-
-        font-size: 30px;
-        padding: 10px 20px;
-      }
-    }
-
-    .btn-language {
-      width: 100vw;
-      left: 500px;
-
-      button {
-        img {
-          max-width: 20px;
-        }
-        box-shadow: 0px 0px 30px 10px #00000030;
-
-        font-size: 20px;
-        padding: 10px 20px;
-
-        margin: 0px;
-      }
-    }
-
     .parallax {
       div#bg-3-1 {
         display: none;
-        background: url("../../assets/home-bg/d-tcm.svg");
+        background: url("../../assets/home-bg/flutter/d-tcm.svg");
         width: 529px;
         height: 800px;
         right: 160px;
       }
       div#bg-3-2 {
-        background-image: url("../../assets/home-bg/d-tem.svg");
+        background-image: url("../../assets/home-bg/flutter/d-tem.svg");
         width: 529px;
         height: 800px;
         right: 160px;
@@ -621,7 +479,7 @@ export default {
       }
       div#bg-3-4 {
         position: fixed !important;
-        background: url("../../assets/home-bg/d-b.svg");
+        background: url("../../assets/home-bg/flutter/d-b.svg");
         width: 100vw;
         height: 100vh;
         left: 0px;

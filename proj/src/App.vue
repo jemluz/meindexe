@@ -37,37 +37,60 @@ export default {
 @import "./styles/helpers/classes";
 @import "./styles/helpers/variables";
 
-#app { 
-  overflow: hidden;
-  /* width */
+// scroll horizontal
+/*  width */
+::-webkit-scrollbar:horizontal  {
+  height: 0px;
+}
+/* Track */
+::-webkit-scrollbar-track:horizontal  {
+  box-shadow: inset 0 0 5px #000;
+}
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal  {
+  background: #fff;
+  border-radius: 20px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #fff;
+}
+
+/* width */
   ::-webkit-scrollbar {
     width: 5px;
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px  #99999920; 
+    box-shadow: inset 0 0 5px  #999999; 
     border-radius: 5px;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #b177e840; 
+    background: #b177e8; 
     border-radius: 5px;
 
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #b177e860; 
+    background: #000; 
     border-radius: 5px;
 
   }
-}
 
-@media only screen and (max-width: 900px) {
-  // .lock-scroll {
-  //   display: none;
-  // }
-} /* mobile */
+#app { 
+  overflow-x: hidden;
+
+  .container {
+    min-width: 100vw !important;
+  }
+
+  * {
+    outline: none;
+  }
+
+}
 
 #colorBlindSVG { display: none; } // remove o espaço abaixo do footer
 </style>

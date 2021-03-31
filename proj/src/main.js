@@ -3,6 +3,8 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import "./tailwind.css"
+
 import ProjTemplate from './components/template/ProjTemplate'
 Vue.component('proj-template', ProjTemplate)
 

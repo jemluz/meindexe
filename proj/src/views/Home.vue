@@ -1,45 +1,126 @@
-<template lang="pug">
-  div#home
-    vue-headful(:title="lang.homePage.metatitle")
+<template>
+  <div id="home" class="bg-fixed text-center">
+    <vue-headful :title="lang.homePage.metatitle"></vue-headful>
 
-    h1.logo(data-aos="fade-down" data-aos-duration="500" ) #[p.rect-1] m#[strong indexe] #[p.rect-2] #[router-link(to="/") #[fa-icon.go-flutter-button(:icon="['fa', 'arrow-right']")]]
-    p.sublogo(data-aos="fade-down", data-aos-duration="500") web
+    <h1 data-aos="fade-down" data-aos-duration="500"
+      class="logo pt-16 flex justify-center items-center w-full text-center text-3xl"
+    >
 
+      <p class="w-16 mx-4 opacity-50"></p>
 
-    div.titulo(data-aos="fade-right" data-aos-duration="1000" )
-      h2 #[span.first {{ lang.homePage.title }} ]#[span.second {{ lang.homePage.secondTitle }}_]
-      p {{ lang.homePage.sub }} #[span {{ lang.homePage.secondSub }}] 
+      m<strong>indexe</strong>
 
-    nav.projs-navgation 
-      div.row-1(data-aos="fade-right" data-aos-duration="2000" )
-        router-link(to='/aurora-i') a
-        router-link(to='/monique') m
-        router-link(to='/exchange') e
+      <p class="w-8 mx-4 opacity-50"></p>
       
-      div.row-2(data-aos="fade-left" data-aos-duration="2000" )
-        router-link(to='/bubbox') b
-        router-link(to='/produtividade') p
-        router-link.empty(to='') v
+      <router-link to="/">
+        <fa-icon
+          class="go-flutter-button text-lg mt-2"
+          :icon="['fa', 'arrow-right']"
+        ></fa-icon>
+      </router-link>
+    </h1>
 
-      div.row-3(data-aos="fade-right" data-aos-duration="3000" )
-        router-link(to='/gt') g
-        router-link(to='/lojista') l
-        router-link(to='/letrun') r
+    <p data-aos="fade-down" data-aos-duration="500"
+      class="sublogo -mt-1 ml-5 w-full flex justify-center absolute opacity-70"
+    >
+      web
+    </p>
 
-      div.row-1(data-aos="fade-right" data-aos-duration="4000" )
-        router-link(to='/oficinas') o
-        router-link.about(to='/sobre') {{ lang.homePage.btn }}
+    <div data-aos="fade-right" data-aos-duration="1000"
+      class="titulo mt-16 absolute text-right sm:w-6/12 sm:ml-24 md:w-full lg:-ml-6"
+    >
+      <h2 class="flex justify-center items-center md:mx-auto md:w-4/12">
+        <span class="first py-2 pl-32 text-xl sm:pl-32 md:-ml-64 lg:pl-64">{{
+          lang.homePage.title
+        }} </span>
+        <span class="second"> {{ lang.homePage.secondTitle }}_</span>
+      </h2>
 
-    div.btn-language 
-      button(@click="selectPT" :class="[ isPtLanguage ? 'active': 'disabled']") #[img(src="../assets/brazil.svg") ]PT
-      button(@click="selectEN" :class="[ !isPtLanguage ? 'active': 'disabled']") #[img(src="../assets/usa-today.svg") ]EN
+      <p class="mt-2 pl-32 text-sm flex justify-center opacity-70 sm:w-10/12 md:pl-6 lg:pl-48  xl:pl-64">
+        {{ lang.homePage.sub }} {{ lang.homePage.secondSub }}
+      </p>
+    </div>
 
-    div.parallax
-      div(id="parallax-bg-3" class="parallax-bg")
-        div(id="bg-3-1" data-aos="fade-up" data-aos-duration="500")
-        div(id="bg-3-2" data-aos="fade-up" data-aos-duration="1000")
-        div(id="bg-3-3" data-aos="fade-up" data-aos-duration="2000")
-        div(id="bg-3-4")
+    <nav
+      class="projs-navgation mt-48 w-full absolute flex flex-col justify-center text-2xl z-50"
+    >
+      <div class="row-1 flex justify-center" data-aos="fade-right" data-aos-duration="2000">
+        <router-link to="/aurora-i" class="px-4 py-2 rounded-lg opacity-70"
+          >a</router-link
+        >
+        <router-link to="/monique" class="mx-4 px-4 py-2 rounded-lg opacity-70"
+          >m</router-link
+        >
+        <router-link to="/exchange" class="px-4 py-2 rounded-lg opacity-70"
+          >e</router-link
+        >
+      </div>
+
+      <div class="row-2 -mr-12 md:-mr-24 my-6 flex justify-center" data-aos="fade-left" data-aos-duration="2000">
+        <router-link to="/bubbox" class="px-4 py-2 rounded-lg opacity-70"
+          >b</router-link
+        >
+        <router-link to="/produtividade" class="mx-4 px-4 py-2 rounded-lg opacity-70"
+          >p</router-link
+        >
+        <router-link to="" class="empty px-4 py-2 rounded-lg opacity-70"
+          >v</router-link
+        >
+      </div>
+
+      <div class="row-3 -ml-12 flex justify-center" data-aos="fade-right" data-aos-duration="3000">
+        <router-link to="/gt" class="px-4 py-2 rounded-lg opacity-70"
+          >g</router-link
+        >
+        <router-link to="/lojista" class="mx-4 px-4 py-2 rounded-lg opacity-70"
+          >l</router-link
+        >
+        <router-link to="/letrun" class="px-4 py-2 rounded-lg opacity-70"
+          >r</router-link
+        >
+      </div>
+
+      <div class="row-3 mt-6 flex justify-center" data-aos="fade-right" data-aos-duration="3000">
+        <router-link to="/oficinas" class="px-4 py-2 rounded-lg opacity-70"
+          >o</router-link
+        >
+        <router-link
+          to="/sobre"
+          class="about ml-4 px-4 py-2 bg-white rounded-lg"
+          >{{ lang.homePage.btn }}</router-link
+        >
+      </div>
+    </nav>
+
+    <div
+      class="btn-language -ml-8 mt-12 fixed top-3/4 md:top-2/3 xl:top-1/3 flex justify-center w-full whitespace-nowrap z-50"
+    >
+      <button
+        @click="selectPT"
+        :class="[isPtLanguage ? 'active' : 'disabled']"
+        class="px-6 py-4 flex items-center "
+      >
+        <img src="../assets/brazil.svg" alt="" class="w-6 mr-5" /> PT
+      </button>
+
+      <button
+        @click="selectEN"
+        :class="[!isPtLanguage ? 'active' : 'disabled']"
+        class="px-6 py-4 flex items-center"
+      >
+        <img src="../assets/usa-today.svg" alt="" class="w-6 mr-5"/> EN
+      </button>
+    </div>
+
+    <div class="parallax">
+      <div id="parallax-bg-3" class="parallax-bg">
+        <div id="bg-3-1" data-aos="fade-up" data-aos-duration="500"></div>
+        <div id="bg-3-2" data-aos="fade-up" data-aos-duration="1000"></div>
+        <div id="bg-3-3" data-aos="fade-up" data-aos-duration="2000"></div>
+        <div id="bg-3-4"></div>
+      </div>
+    </div>
+  </div>
 
 </template>
 
@@ -100,21 +181,12 @@ export default {
 @import "../styles/helpers/variables";
 
 #home {
-  background-attachment: fixed;
+  background: linear-gradient(to bottom, $preto, $roxo);   
 
   color: $branco;
-  text-align: center;
 
   .logo {
     font-family: t26-carbon, monospace;
-
-    display: flex;
-    justify-content: center;
-    position: fixed;
-
-    width: 100vw;
-    margin-top: 30px;
-    text-align: center;
 
     strong {
       color: $roxo-claro;
@@ -122,44 +194,21 @@ export default {
 
     .go-flutter-button {
       color: $branco;
-      width: 22px;
-      margin-top: 4px;
     }
 
     p {
       background-color: $roxo-claro;
-      opacity: 0.5;
       border-radius: 2px;
       height: 1px;
-      margin: 20px 20px;
-    }
-
-    .rect-1 {
-      width: 80px;
-    }
-    .rect-2 {
-      width: 40px;
     }
   }
 
   .sublogo {
     font-family: t26-carbon, monospace;
-
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100vw;
-
-    margin-top: 62px;
-    margin-left: 58px;
-
-    opacity: 0.7;
   }
 
 
   .titulo {
-    position: fixed;
-
     h2 {
       font-weight: lighter;
 
@@ -170,31 +219,15 @@ export default {
 
       .second {
         background-color: transparent;
-        // font-weight: bold;
         color: $branco;
       }
-    }
-
-    p {
-      text-align: right;
-      color: $branco;
-      opacity: 0.8;
     }
   }
 
   .projs-navgation {
     font-family: t26-carbon, monospace;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    z-index: 5;
 
     div {
-      display: flex;
-      justify-self: center;
-
       .empty {
         opacity: .2;
       }
@@ -202,12 +235,9 @@ export default {
 
     a {
       border: 1px solid $branco;
-      border-radius: 10px;
       color: $branco;
-      z-index: 10;
 
       transition: all 0.5s ease;
-      opacity: 0.5;
 
       &:hover,
       &:focus {
@@ -216,47 +246,28 @@ export default {
     }
 
     .about {
-      z-index: 5;
-      opacity: 1;
-
       font-family: t26-carbon, monospace;
       background-color: $branco;
-      color: $azul-escuro;
+      color: $roxo-escuro;
       border-radius: 10px;
 
       transition: all 0.5s ease;
 
       &:hover,
       &:focus {
-        cursor: pointer;
         opacity: 1;
       }
     }
   }
 
   .btn-language { 
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    z-index: 5;
-
     .disabled { opacity: .3;}
     .active { opacity: .8;}
     
     button {
-      display: flex;
-      align-items: center;
-      img { margin-right: 10px;}
-
-      white-space: nowrap;
       font-family: t26-carbon, monospace;
-      border: 1px solid $branco;
-      border-bottom: none;
       color: $branco;
-      border-radius: 10px 0px 0px 0px;
       transition: all 0.5s ease;
-      opacity: 0.8;
 
       &:last-child {
         border-radius: 0px 10px 0px 0px;
@@ -304,79 +315,6 @@ export default {
 // MOBILE
 @media only screen and (max-width: 900px) {
   #home {
-    background: linear-gradient(to bottom, $roxo-escuro, $preto);
-
-    .titulo {
-      margin-top: 15vh;
-
-      h2 {
-        font-size: 24px;
-        left: 0px;
-
-        margin-bottom: 10px;
-
-        .first {
-          padding: 3px 0px 3px 70px;
-        }
-      }
-
-      p {
-        font-size: 14px;
-      }
-    }
-
-    .projs-navgation {
-      width: 100vw;
-
-      margin: 30vh auto 0px auto;
-
-      div {
-        margin: 0px auto;
-      }
-
-      .row-1 {
-        margin-left: 10vw;
-      }
-      .row-2 {
-        margin-right: 15vw;
-      }
-      .row-3 {
-        margin-left: 15vw;
-      }
-
-      a {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 30px;
-      }
-    }
-
-    .about {
-      bottom: 100px;
-
-      a {
-        font-size: 40px;
-        padding: 10px 20px;
-      }
-    }
-
-    .btn-language {
-      width: 100vw;
-
-      button {
-        width: 100px;
-        font-size: 20px;
-        padding: 10px 20px;
-        img { max-width: 20px;}
-  
-        &:last-child {
-          width: 100px;
-        }
-
-      }
-
-    }
-
     .parallax {
       /* background layer */
       div#parallax-bg-3 {
@@ -411,84 +349,6 @@ export default {
 // DESKTOP
 @media only screen and (min-width: 901px) and (max-width: 2499px) {
   #home {
-    background: linear-gradient(to bottom, $preto, $roxo);   
-
-    .titulo {
-      margin-left: 40vw;
-      margin-top: 145px;
-
-      h2 {
-        font-size: 25px;
-        left: 0px;
-
-        margin-bottom: 10px;
-
-        .first {
-          padding: 3px 0px 3px 70px;
-        }
-      }
-
-      p {
-        font-size: 18px;
-      }
-    }
-
-    .projs-navgation {
-      width: 100vw;
-      margin: 250px auto 0px auto;
-      
-
-      div {
-        margin: 0px auto;
-      }
-
-      .row-1 {
-        margin-left: 40vw;
-      }
-      .row-2 {
-        margin-right: 40vw;
-      }
-      .row-3 {
-        margin-left: 41vw;
-      }
-
-      a {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 30px;
-      }
-    }
-
-    .about {
-      width: 100vw;
-      bottom: 50px;
-
-      a {
-        box-shadow: 0px 0px 30px 10px #00000030;
-
-        font-size: 25px;
-        padding: 10px 20px
-      }
-    }
-
-    .btn-language {
-      width: 100vw;
-      left: 300px;
-
-      button {
-        width: 120px;
-        img { max-width: 20px;}
-  
-        &:last-child {
-          width: 100px;
-        }
-
-        font-size: 20px;
-        padding: 10px 20px;
-      }
-
-    }
-
     .parallax {
       div#bg-3-1 {
         background: url("../assets/home-bg/d-tcm.svg");
@@ -524,79 +384,6 @@ export default {
 // WIDE
 @media only screen and (min-width: 2500px) {
   #home {
-    background: linear-gradient(to bottom, $preto, $roxo);
-
-    .titulo {
-      margin-left: 45vw;
-      margin-top: 145px;
-
-      h2 {
-        font-size: 25px;
-        left: 0px;
-
-        margin-bottom: 10px;
-
-        .first {
-          padding: 3px 0px 3px 70px;
-        }
-      }
-
-      p {
-        font-size: 18px;
-      }
-    }
-
-    .projs-navgation {
-      width: 100vw;
-
-      margin: 270px auto 0px auto;
-
-      div {
-        margin: 0px auto;
-      }
-
-      .row-1 {
-        margin-left: 44vw;
-      }
-      .row-2 {
-        margin-right: 44vw;
-      }
-
-      a {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 30px;
-      }
-    }
-
-    .about {
-      width: 100vw;
-      top: 680px;
-
-      a {
-        box-shadow: 0px 0px 30px 10px #00000030;
-
-        font-size: 30px;
-        padding: 10px 20px;
-      }
-    }
-
-    .btn-language {
-      width: 100vw;
-      left: 500px;
-
-      button {
-        img { max-width: 20px;}
-        box-shadow: 0px 0px 30px 10px #00000030;
-  
-
-        font-size: 20px;
-        padding: 10px 20px;
-
-        margin: 0px;
-      }
-    }
-
     .parallax {
       div#bg-3-1 {
         display: none;
