@@ -3,7 +3,7 @@
     <vue-headful :title="lang.homePage.metatitle"></vue-headful>
 
     <h1 data-aos="fade-down" data-aos-duration="500"
-      class="logo pt-16 flex justify-center items-center w-full text-center text-3xl"
+      class="logo mx-auto pt-16 flex justify-center items-center text-center text-3xl"
     >
       <router-link to="/home-web">
         <fa-icon
@@ -14,19 +14,26 @@
 
       <p class="w-8 mx-4 opacity-50"></p>
 
-      m<strong>indexe</strong>
+      <div class="-mb-4 flex flex-col justify-end items-end">
+        <span>
+          m<strong>indexe</strong>
+        </span> 
+
+        <span data-aos="fade-down" data-aos-duration="500"
+          class="sublogo mr-2 text-sm opacity-70"
+        >
+          flutter
+        </span>
+      </div>
+
 
       <p class="w-16 mx-4 opacity-50"></p>
     </h1>
 
-    <p data-aos="fade-down" data-aos-duration="500"
-      class="sublogo -mt-1 ml-5 w-full flex justify-center absolute opacity-70"
-    >
-      flutter
-    </p>
+    
 
     <div data-aos="fade-right" data-aos-duration="1000"
-      class="titulo mt-16 absolute text-right sm:w-6/12 sm:ml-24 md:w-full lg:-ml-6"
+      class="titulo mt-16 absolute text-right sm:w-6/12 sm:ml-24 md:w-10/12 lg:-ml-6"
     >
       <h2 class="flex justify-center items-center md:mx-auto md:w-4/12">
         <span class="first py-2 pl-32 text-xl sm:pl-32 md:-ml-64 lg:pl-64">{{
@@ -41,9 +48,9 @@
     </div>
 
     <nav
-      class="projs-navgation mt-48 w-full absolute flex flex-col justify-center text-2xl z-50"
+      class="projs-navgation mt-48 pl-24 w-10/12 absolute flex flex-col justify-center text-2xl z-50"
     >
-      <div class="row-1 flex justify-center" data-aos="fade-right" data-aos-duration="2000">
+      <div class="row-1 -pl-6 flex justify-center" data-aos="fade-right" data-aos-duration="2000">
         <router-link to="" class="px-4 py-2 rounded-lg opacity-70"
           >h</router-link
         >
@@ -55,7 +62,7 @@
         >
       </div>
 
-      <div class="row-2 -mr-12 md:-mr-24 my-6 flex justify-center" data-aos="fade-left" data-aos-duration="2000">
+      <div class="row-2 -ml-16 md:-mr-24 my-6 flex justify-center" data-aos="fade-left" data-aos-duration="2000">
         <router-link to="/loljinha" class="px-4 py-2 rounded-lg opacity-70"
           >l</router-link
         >
@@ -67,7 +74,7 @@
         >
       </div>
 
-      <div class="row-3 flex justify-center" data-aos="fade-right" data-aos-duration="3000">
+      <div class="row-3 -pl-6 flex justify-center" data-aos="fade-right" data-aos-duration="3000">
         <router-link to="" class="empty px-4 py-2 rounded-lg opacity-70"
           >-</router-link
         >
@@ -80,7 +87,7 @@
     </nav>
 
     <div
-      class="btn-language -ml-8 mt-12 fixed top-3/4 md:top-2/3 xl:top-1/3 flex justify-center w-full whitespace-nowrap z-50"
+      class="btn-language ml-24 mt-32 fixed top-3/4 md:top-2/3 xl:top-1/3 flex justify-center  whitespace-nowrap z-50"
     >
       <button
         @click="selectPT"

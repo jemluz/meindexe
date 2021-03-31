@@ -80,10 +80,10 @@ export default {
   }
 
 #app { 
-  overflow-x: hidden;
+  // overflow: hidden;
 
   .container {
-    min-width: 100vw !important;
+    max-width: 100vw !important;
   }
 
   * {
