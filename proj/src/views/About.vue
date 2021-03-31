@@ -1,167 +1,307 @@
-<template lang="pug">
-  div#sobre
-    vue-headful(:title="lang.aboutPage.metatitle")
+<template>
+  <div id="sobre">
+    <vue-headful :title="lang.aboutPage.metatitle"></vue-headful>
 
-    //- nao pode tirar
-    div.data#data(data-aos="fade-down" data-aos-duration="1000")
+    <div id="data" class="data" data-aos="fade-down" data-aos-duration="1000"></div>
 
-    div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500")
-      div.name#contentmob-start
-        h2 #[span.first {{ lang.aboutPage.firstTitle }}]#[span.second {{ lang.aboutPage.firstTitle2 }}_]
+    <div class="content-mob" id="content-mob" data-aos="fade-up" data-aos-duration="500">
+      <div id="contentmob-start" class="name">
+        <h2>
+          <span class="first">{{ lang.aboutPage.firstTitle }}</span>
+          <span class="second">{{ lang.aboutPage.firstTitle2 }}_</span>
+        </h2>
+      </div>
+
+      <agile ref="carouselmob" :fade="true" :navButtons="false" :autoplay="true" :speed="1000">
+        <div class="slide membro">
+          <div>
+            <img class="photo" src="../assets/sobre/jeyse.png" alt="">
+          </div>
+
+          <div class="nome-funcao">
+            <h4>Jemima Luz</h4>
+            <p>{{ lang.aboutPage.func1 }}</p>
+          </div>
+        </div>
+
+        <div class="slide membro">
+          <div>
+            <img class="photo" src="../assets/sobre/jemima2.png" alt="">
+          </div>
+
+          <div class="nome-funcao">
+            <h4>Jemima Luz</h4>
+            <p>{{ lang.aboutPage.func2 }}</p>
+          </div>
+        </div>
+
+        <div class="slide membro">
+          <div>
+            <img class="photo" src="../assets/sobre/jemine.png" alt="">
+          </div>
+
+          <div class="nome-funcao">
+            <h4>Jemima Luz</h4>
+            <p>{{ lang.aboutPage.func3 }}</p>
+          </div>
+        </div>
+
+        <div class="slide membro">
+          <div>
+            <img class="photo" src="../assets/sobre/juliana.png" alt="">
+          </div>
+
+          <div class="nome-funcao">
+            <h4>Jemima Luz</h4>
+            <p>{{ lang.aboutPage.func4 }}</p>
+          </div>
+        </div>
+      
+      </agile>
+
+      <div class="slide-btn">
+        <button class="btn-prev-photo" @click="$refs.carouselmob.goToNext()">
+          <fa-icon class="photo-icon" icon="arrow-left"></fa-icon>
+        </button>
+
+        <button class="btn-next-photo" @click="$refs.carouselmob.goToPrev()">
+          <fa-icon class="photo-icon" icon="arrow-right"></fa-icon>
+        </button>
+      </div>
+
+      <p class="normal p-1">
+        {{ lang.aboutPage.who }}
+        <strike>{{ lang.aboutPage.whoDash }}</strike>
+        {{ lang.aboutPage.who2 }}
+      </p>
+
+      <p class="normal">{{ lang.aboutPage.nextProjs }}</p>
+
+      <nav class="projs-navgation normal">
+        <div class="row-1">
+          <router-link to="/gt" style="color: #39DF81;border-color: #39DF81;">g</router-link>
+          <router-link to='/produtividade'>p</router-link>
+          <router-link to="" class="empty">v</router-link>
+        </div>
+      </nav>
+
+      <div id="name-2" class="name-2">
+        <h2>
+          <span class="first">{{ lang.aboutPage.secondTitle }}</span>
+          <span class="second">{{ lang.aboutPage.secondTitle2 }}_</span>
+        </h2>
+      </div>
+
+      <!-- aqui -->
+      <p class="normal">{{ lang.aboutPage.howWeWork }}</p>
+      <p class="normal">{{ lang.aboutPage.list1 }}</p>
+      <p class="normal no-margin">{{ lang.aboutPage.list2 }}</p>
+      <p class="normal no-margin">{{ lang.aboutPage.list3 }}</p>
+
+      <p class="normal poema">
+        "{{ lang.aboutPage.poemLine1 }} <br>
+        {{ lang.aboutPage.poemLine2 }} <br>
+        {{ lang.aboutPage.poemLine3 }} <br>
+        {{ lang.aboutPage.poemLine4 }} <br>
+      </p>
+
+      <p class="normal poema">
+        {{ lang.aboutPage.poemLine5 }} <br>
+        {{ lang.aboutPage.poemLine6 }} <br>
+        {{ lang.aboutPage.poemLine7 }} <br>
+        {{ lang.aboutPage.poemLine8 }} <br>
+        {{ lang.aboutPage.poemLine9 }}"
+      </p>
+
+      <p class="normal poema autor">{{ lang.aboutPage.poemLine10 }}</p>
+
+      <div class="contato">
+        <div id="name-2" class="name-2">
+          <h2>
+            <span class="first">{{ lang.aboutPage.thirdTitle }}</span>
+            <span class="second">{{ lang.aboutPage.thirdTitle }}_</span>
+          </h2>
+        </div>
+
+        <p class="normal p-1">{{ lang.aboutPage.request }}</p>
+
+        <a class="normal mail" href="https://www.linkedin.com/in/jemluz/">
+          <fa-icon :icon="['fab', 'linkedin']"></fa-icon>
+          {{ lang.aboutPage.linkedin }}
+        </a>
+
+        <a class="normal insta" href="https://www.instagram.com/jemimwah/">
+          <fa-icon :icon="['fab', 'instagram']"></fa-icon>
+          {{ lang.aboutPage.insta }}
+        </a>
+
+        <a class="normal zap" href="https://github.com/jemluz">
+          <fa-icon :icon="['fab', 'github']"></fa-icon>
+          {{ lang.aboutPage.git }}
+        </a>
+
+        <a href=""></a>
+
+      </div>
+
+    </div>
+
+    <div class="content-desk" id="content-desk" data-aos="fade-up" data-aos-duration="500">
+      <div class="col-1" id="col-1">
+        <agile id="#contentdesk-start" ref="carouseldesk" :fade="true" :navButtons="false" :autoplay="true" :speed="1000">
+          <div class="slide membro">
+            <div>
+              <img class="photo" src="../assets/sobre/jeyse.png" alt="">
+            </div>
+
+            <div class="nome-funcao">
+              <h4>Jemima Luz</h4>
+              <p>{{ lang.aboutPage.func1 }}</p>
+            </div>
+          </div>
+
+          <div class="slide membro">
+            <div>
+              <img class="photo" src="../assets/sobre/jemima.png" alt="">
+            </div>
+
+            <div class="nome-funcao">
+              <h4>Jemima Luz</h4>
+              <p>{{ lang.aboutPage.func2 }}</p>
+            </div>
+          </div>
+
+          <div class="slide membro">
+            <div>
+              <img class="photo" src="../assets/sobre/jemine.png" alt="">
+            </div>
+
+            <div class="nome-funcao">
+              <h4>Jemima Luz</h4>
+              <p>{{ lang.aboutPage.func3 }}</p>
+            </div>
+          </div>
+
+          <div class="slide membro">
+            <div>
+              <img class="photo" src="../assets/sobre/juliana.png" alt="">
+            </div>
+
+            <div class="nome-funcao">
+              <h4>Jemima Luz</h4>
+              <p>{{ lang.aboutPage.func4 }}</p>
+            </div>
+          </div>
         
-      agile(ref="carouselmob" fade="true" navButtons="false" autoplay="true" speed="1000")
-        div.slide.membro
-          div
-            img.photo(src="../assets/sobre/jeyse.png")
+        </agile>
 
-          div.nome-funcao
-            h4 Jemima Luz
-            p {{ lang.aboutPage.func1 }}
+        <div class="slide-btn">
+          <button class="btn-prev-photo" @click="$refs.carouseldesk.goToNext()">
+            <fa-icon class="photo-icon" icon="arrow-left"></fa-icon>
+          </button>
 
-        div.slide.membro
-          div
-            img.photo(src="../assets/sobre/jemima.png")
+          <button class="btn-next-photo" @click="$refs.carouseldesk.goToPrev()" style="color: ;border-color: ;">
+            <fa-icon class="photo-icon" icon="arrow-right"></fa-icon>
+          </button>
+        </div>
 
-          div.nome-funcao
-            h4 Jemima Luz
-            p {{ lang.aboutPage.func2 }}
+        <p class="normal p-1">
+          {{ lang.aboutPage.who }}
+          <strike>{{ lang.aboutPage.whoDash }}</strike>
+          {{ lang.aboutPage.who2 }}
+        </p>
 
-        div.slide.membro
-          div
-            img.photo(src="../assets/sobre/jemine.png")
+        <p class="normal">{{ lang.aboutPage.nextProjs }}</p>
 
-          div.nome-funcao 
-            h4 Jemima Luz
-            p {{ lang.aboutPage.func3 }}
+        <nav class="projs-navgation normal">
+          <div class="row-1">
+            <router-link to="/gt" style="color: #39DF81;border-color: #39DF81;">g</router-link>
+            <router-link to='/produtividade'>p</router-link>
+            <router-link to="" class="empty">v</router-link>
+          </div>
+        </nav>
 
-        div.slide.membro
-          div
-            img.photo(src="../assets/sobre/jemima2.png")
+        <div class="contato">
 
-          div.nome-funcao 
-            h4 Jemima Luz
-            p {{ lang.aboutPage.func4 }}
+          <div id="name-2" class="name-2">
+            <h2>
+              <span class="first">{{ lang.aboutPage.thirdTitle }}</span>
+              <span class="second">{{ lang.aboutPage.thirdTitle }}_</span>
+            </h2>
+          </div>
 
-      div.slide-btn
-        button.btn-prev-photo(@click="$refs.carouselmob.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
-        button.btn-next-photo(@click="$refs.carouselmob.goToPrev()") #[fa-icon(class="photo-icon" icon="arrow-right")]
+          <p class="normal p-1">{{ lang.aboutPage.request }}</p>
 
-      p.normal.p-1 {{ lang.aboutPage.who }} #[strike {{ lang.aboutPage.whoDash }}] {{ lang.aboutPage.who2 }}
-      p.normal {{ lang.aboutPage.nextProjs }}
+          <a class="normal mail" href="https://www.linkedin.com/in/jemluz/">
+            <fa-icon :icon="['fab', 'linkedin']"></fa-icon>
+            {{ lang.aboutPage.linkedin }}
+          </a>
 
-      nav.projs-navgation.normal
-        div.row-1
-          router-link(to='/gt' style="color: #39DF81;border-color: #39DF81;") g
-          router-link(to='/produtividade') p
-          router-link.empty(to='') v
+          <a class="normal insta" href="https://www.instagram.com/jemimwah/">
+            <fa-icon :icon="['fab', 'instagram']"></fa-icon>
+            {{ lang.aboutPage.insta }}
+          </a>
 
-      div.name-2#name-2.name-2
-        h2 #[span.first {{ lang.aboutPage.secondTitle }}]#[span.second {{ lang.aboutPage.secondTitle2 }}_]  
+          <a class="normal zap" href="https://github.com/jemluz">
+            <fa-icon :icon="['fab', 'github']"></fa-icon>
+            {{ lang.aboutPage.git }}
+          </a>
 
-      p.normal {{ lang.aboutPage.howWeWork }}
-      p.normal {{ lang.aboutPage.list1 }}
-      p.normal.no-margin {{ lang.aboutPage.list2 }}
-      p.normal.no-margin {{ lang.aboutPage.list3 }}
+          <a href=""></a>
 
-      p.normal.poema "{{ lang.aboutPage.poemLine1 }} #[br]{{ lang.aboutPage.poemLine2 }} #[br]{{ lang.aboutPage.poemLine3 }} #[br] {{ lang.aboutPage.poemLine4 }}
-      p.normal.poema {{ lang.aboutPage.poemLine5 }} #[br]{{ lang.aboutPage.poemLine6 }} #[br]{{ lang.aboutPage.poemLine7 }} #[br]{{ lang.aboutPage.poemLine8 }} #[br]{{ lang.aboutPage.poemLine9 }}"
-      p.normal.poema.autor {{ lang.aboutPage.poemLine10 }}
+        </div>
 
-      div.contato
-        div.name-2#name-2.name-2
-          h2 #[span.first {{ lang.aboutPage.thirdTitle }} ]#[span.second {{ lang.aboutPage.thirdTitle2 }}_] 
+      </div>
 
-        p.normal.p-1 {{ lang.aboutPage.request }}
+      <div id="col-2" class="col-2">
+        <div id="name-2" class="name-2">
+          <h2>
+            <span class="first">{{ lang.aboutPage.secondTitle }}</span>
+            <span class="second">{{ lang.aboutPage.secondTitle2 }}_</span>
+          </h2>
+        </div>
 
-        a.normal.mail(href="https://www.linkedin.com/in/jemluz/") #[fa-icon(:icon="['fab', 'linkedin']")] {{ lang.aboutPage.linkedin }}
-        a.normal.insta(href="https://www.instagram.com/jemimwah/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
-        a.normal.zap(href="https://github.com/jemluz") #[fa-icon(:icon="['fab', 'github']")] {{ lang.aboutPage.git }}
+        <p>{{ lang.aboutPage.howWeWork }}</p>
 
-        a
+        <p class="no-margin">{{ lang.aboutPage.list1 }}</p>
+        <p class="no-margin">{{ lang.aboutPage.list2 }}</p>
+        <p class="no-margin">{{ lang.aboutPage.list3 }}</p>
 
-    div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
-      div.col-1#col-1
-        agile#contentdesk-start(ref="carouseldesk" fade="true" navButtons="false" autoplay="true" speed="1000")
-          div.slide.membro
-            div
-              img.photo(src="../assets/sobre/jeyse.png")
+        <p class="poema">
+          "{{ lang.aboutPage.poemLine1 }} <br>
+          {{ lang.aboutPage.poemLine2 }} <br>
+          {{ lang.aboutPage.poemLine3 }} <br>
+          {{ lang.aboutPage.poemLine4 }} <br>
+        </p>
 
-            div.nome-funcao
-              h4 Jemima Luz
-              p {{ lang.aboutPage.func1 }}
+        <p class="poema">
+          {{ lang.aboutPage.poemLine5 }} <br>
+          {{ lang.aboutPage.poemLine6 }} <br>
+          {{ lang.aboutPage.poemLine7 }} <br>
+          {{ lang.aboutPage.poemLine8 }} <br>
+          {{ lang.aboutPage.poemLine9 }}"
+        </p>
 
-          div.slide.membro
-            div
-              img.photo(src="../assets/sobre/jemima.png")
-
-            div.nome-funcao
-              h4 Jemima Luz
-              p {{ lang.aboutPage.func2 }}
-
-          div.slide.membro
-            div
-              img.photo(src="../assets/sobre/jemine.png")
-
-            div.nome-funcao 
-              h4 Jemima Luz
-              p {{ lang.aboutPage.func3 }}
-
-          div.slide.membro
-            div
-              img.photo(src="../assets/sobre/juliana.png")
-
-            div.nome-funcao 
-              h4 Jemima Luz
-              p {{ lang.aboutPage.func4 }}
-
-        div.slide-btn
-          button.btn-prev-photo(@click="$refs.carouseldesk.goToNext()") #[fa-icon(class="photo-icon" icon="arrow-left")]
-          button.btn-next-photo(@click="$refs.carouseldesk.goToPrev()" style="color: ;border-color: ;") #[fa-icon(class="photo-icon" icon="arrow-right")]
+        <p class="poema autor">{{ lang.aboutPage.poemLine10 }}</p>
         
-        p.normal.p-1 {{ lang.aboutPage.who }} #[strike {{ lang.aboutPage.whoDash }}] {{ lang.aboutPage.who2 }}
-        p.normal {{ lang.aboutPage.nextProjs }}
+      </div>
 
-        nav.projs-navgation.normal
-          div.row-1
-            router-link(to='/gt' style="color: #39DF81;border-color: #39DF81;") g
-            router-link(to='/produtividade') p
-            router-link.empty(to='') v
+    </div>
 
+    <div id="line" class="line" data-aos="slide-down" data-aos-duration="2000"></div>
 
-        div.contato
-          div.name-2#name-2.name-2
-            h2 #[span.first {{ lang.aboutPage.thirdTitle }} ]#[span.second {{ lang.aboutPage.thirdTitle2 }}_] 
+    <router-link id="back-btn" class="back-btn" to="/" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+      <fa-icon class="back-icon" icon="arrow-left"></fa-icon>
+      {{ lang.backBtn }}
+    </router-link>
 
-          p.normal.p-1 {{ lang.aboutPage.request }}
+    <div class="parallax" data-aos="fade-down" data-aos-duration="500">
+      <div id="parallax-bg-3" class="parallax-bg">
+        <div id="bg-3-1"></div>
+      </div>
+    </div>
 
-          a.normal.mail(href="https://www.linkedin.com/in/jemluz/") #[fa-icon(:icon="['fab', 'linkedin']")] {{ lang.aboutPage.linkedin }}
-          a.normal.insta(href="https://www.instagram.com/jemimwah/") #[fa-icon(:icon="['fab', 'instagram']")] {{ lang.aboutPage.insta }}
-          a.normal.zap(href="https://github.com/jemluz") #[fa-icon(:icon="['fab', 'github']")] {{ lang.aboutPage.git }}
-
-          a
-
-      div.col-2#col-2
-        div.name-2#name-2.name-2
-          h2 #[span.first {{ lang.aboutPage.secondTitle }}]#[span.second {{ lang.aboutPage.secondTitle2 }}_]  
-
-        p {{ lang.aboutPage.howWeWork }}
-        p.no-margin {{ lang.aboutPage.list1 }}
-        p.no-margin {{ lang.aboutPage.list2 }}
-        p.no-margin {{ lang.aboutPage.list3 }}
-
-        p.poema "{{ lang.aboutPage.poemLine1 }} #[br]{{ lang.aboutPage.poemLine2 }} #[br]{{ lang.aboutPage.poemLine3 }} #[br] {{ lang.aboutPage.poemLine4 }}
-        p.poema {{ lang.aboutPage.poemLine5 }} #[br]{{ lang.aboutPage.poemLine6 }} #[br]{{ lang.aboutPage.poemLine7 }} #[br]{{ lang.aboutPage.poemLine8 }} #[br]{{ lang.aboutPage.poemLine9 }}"
-        p.poema.autor {{ lang.aboutPage.poemLine10 }}
-        
-
-
-    div.line#line(data-aos="slide-down" data-aos-duration="2000" )
-
-    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] {{ lang.backBtn }}
-
-    div.parallax(data-aos="fade-down" data-aos-duration="500" )
-      div(id="parallax-bg-3" class="parallax-bg")
-        div(id="bg-3-1")
+  </div>
 
 </template>
 
@@ -169,7 +309,7 @@
 import { mapState } from 'vuex';
 
 export default {
-  name: "ProjBubbox",
+  name: "About",
   computed: mapState(["lang"]),
   methods: {
     getMobileOperatingSystem() {
@@ -219,7 +359,7 @@ export default {
         auroraI.style.marginTop = (contentMob.offsetTop - dataTop - dataheight + 1000) + "px";
       } else if (this.getMobileOperatingSystem() == 'Android') {
         // android
-        auroraI.style.marginTop = (contentMob.offsetTop + 700) + "px";
+        auroraI.style.marginTop = (contentMob.offsetTop + 1000) + "px";
       }
 
       // console.log(auroraStart.style.marginTop)
@@ -757,7 +897,7 @@ export default {
       .slide-btn {
         min-width: 120px;
         transform: rotate(90deg);
-        margin-top: -75px;
+        margin-top: -65px;
         margin-left: -10px;
         margin-bottom: 90px;
       }

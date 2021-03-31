@@ -1,6 +1,6 @@
 <template lang='pug'>
   div(id="app")
-    Content(:class="{'lock-scroll': isMenuVisible}") 
+    Content() 
 
 </template>
 
