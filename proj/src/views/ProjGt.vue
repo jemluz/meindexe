@@ -6,7 +6,8 @@
     lastName="Text" 
     class="gt" 
     :ios="600" 
-    :and="400")
+    :and="400"
+    backTo='/home-web')
 
     template(v-slot:content) 
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )

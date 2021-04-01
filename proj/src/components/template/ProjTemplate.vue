@@ -15,7 +15,7 @@
 
     div.line#line(data-aos="slide-down" data-aos-duration="2000" )
 
-    router-link.back-btn#back-btn(to='/' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] {{ lang.backBtn }}
+    router-link.back-btn#back-btn(:to='backTo' data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom") #[fa-icon(class="back-icon" icon="arrow-left")] {{ lang.backBtn }}
 
     div.parallax(data-aos="fade-down" data-aos-duration="500" )
       div(id="parallax-bg-3" class="parallax-bg")
@@ -37,7 +37,8 @@ export default {
     'lastName',
     'titleColor',
     'ios',
-    'and'
+    'and',
+    'backTo'
   ],
   methods: {
     getMobileOperatingSystem() {
@@ -136,6 +137,8 @@ export default {
 #projTemplate {
   background: linear-gradient(to bottom right, #eee, #fff);
   background-attachment: fixed;
+  overflow: hidden;
+
 
   color: $branco;
   text-align: center;

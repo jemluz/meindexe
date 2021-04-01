@@ -6,7 +6,8 @@
     lastName="ge" 
     class="exchange" 
     :ios="300" 
-    :and="150")
+    :and="150"
+    backTo='/home-web')
 
     template(v-slot:haveMore) 
       router-link(to="/aurora-i") 

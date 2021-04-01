@@ -1,5 +1,5 @@
 <template lang="pug">
-  proj-template(:nomeProj="lang.auroraII.metatitle" date="ago/2017" firstName="auro" lastName="ra" titleColor="" class="aurora-ii" :ios="1000" :and="800")
+  proj-template(:nomeProj="lang.auroraII.metatitle" date="ago/2017" firstName="auro" lastName="ra" titleColor="" class="aurora-ii" :ios="1000" :and="1200" backTo='/home-web')
     template(v-slot:haveMore) 
       router-link(to="/aurora-i") 
         fa-icon.timeline-prev(style="margin-left: 20px;" class="back-icon" icon="minus")

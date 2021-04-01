@@ -6,7 +6,8 @@
     lastName="jista" 
     class="lojista" 
     :ios="400" 
-    :and="100")
+    :and="100"
+    backTo='/home-web')
 
     template(v-slot:content) 
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )

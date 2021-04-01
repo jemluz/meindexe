@@ -1,5 +1,5 @@
 <template lang="pug">
-  proj-template(:nomeProj="lang.monique.metatitle" date="dez/2017" firstName="monique" lastName="luz" class="moniq" :ios="400" :and="200")
+  proj-template(:nomeProj="lang.monique.metatitle" date="dez/2017" firstName="monique" lastName="luz" class="moniq" :ios="400" :and="200" backTo='/home-web')
 
     template(v-slot:content) 
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )

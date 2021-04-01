@@ -6,7 +6,8 @@
     lastName="cinas" 
     class="oficinas" 
     :ios="1000" 
-    :and="900")
+    :and="900"
+    backTo='/home-web')
 
     template(v-slot:content) 
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )

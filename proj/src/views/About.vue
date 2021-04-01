@@ -1,5 +1,5 @@
 <template>
-  <div id="sobre">
+  <div id="sobre" class="bg-fixed">
     <vue-headful :title="lang.aboutPage.metatitle"></vue-headful>
 
     <div id="data" class="data" data-aos="fade-down" data-aos-duration="1000"></div>
@@ -408,6 +408,7 @@ export default {
 #sobre {
   background: linear-gradient(to bottom right, #eee, #fff);
   background-attachment: fixed;
+  overflow: hidden;
 
   color: $branco;
   text-align: center;
