@@ -3,7 +3,9 @@
 
     template(v-slot:content) 
       div.content-mob#content-mob(data-aos="fade-up" data-aos-duration="500" )
-        img#contentmob-start(src="../assets/despesas/despesas.png")
+        div#contentmob-start.flex
+          img(class="mr-4 w-16 border-2 border-white" src="../assets/animacoes/1.gif")
+          img(class="w-16 border-2 border-white" src="../assets/animacoes/2.gif")
 
         p {{ lang.animacoes.desc }} #[a(href="") {{ lang.animacoes.flutterLink }} ] {{ lang.animacoes.desc2 }} 
         
@@ -11,8 +13,9 @@
 
       div.content-desk#content-desk(data-aos="fade-up" data-aos-duration="500")
         div.col-1#col-1
-          div#contentdesk-col1-start
-            img#contentmob-start(src="../assets/despesas/despesas.png")
+          div#contentdesk-col1-start.flex
+            img#contentmob-start(class="mr-4 w-16 md:w-32 lg:w-48 border-2 border-white" src="../assets/animacoes/1.gif")
+            img(class="w-16 md:w-32 lg:w-48 border-2 border-white" src="../assets/animacoes/2.gif")
 
           p {{ lang.animacoes.desc }} #[a(href="") {{ lang.animacoes.flutterLink }} ] {{ lang.animacoes.desc2 }} 
 
