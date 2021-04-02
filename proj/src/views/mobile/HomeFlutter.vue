@@ -48,23 +48,23 @@
       class="projs-navgation mt-48 pl-24 2xl:pl-48 w-10/12 xl:w-11/12 absolute flex flex-col justify-center text-2xl z-50"
     >
       <div class="row-1 -pl-6 flex justify-center" data-aos="fade-right" data-aos-duration="2000">
-        <router-link to="" class="px-4 py-2 rounded-lg opacity-70"
-          >h</router-link
+        <router-link to="/despesas" class="px-4 py-2 rounded-lg opacity-70"
+          >d</router-link
         >
-        <router-link to="" class="mx-4 px-4 py-2 rounded-lg opacity-70"
-          >c</router-link
+        <router-link to="/animacoes" class="mx-4 px-4 py-2 rounded-lg opacity-70"
+          >a</router-link
         >
-        <router-link to="" class="px-4 py-2 rounded-lg opacity-70"
-          >m</router-link
+        <router-link to="/outros" class="px-4 py-2 rounded-lg opacity-70"
+          >o</router-link
         >
       </div>
 
       <div class="row-2 -ml-16 md:-mr-24 my-6 flex justify-center" data-aos="fade-left" data-aos-duration="2000">
-        <router-link to="/loljinha" class="px-4 py-2 rounded-lg opacity-70"
-          >l</router-link
+        <router-link to="/chatzim" class="px-4 py-2 rounded-lg opacity-70"
+          >c</router-link
         >
-        <router-link to="" class="empty mx-4 px-4 py-2 rounded-lg opacity-70"
-          >-</router-link
+        <router-link to="/loljinha" class="mx-4 px-4 py-2 rounded-lg opacity-70"
+          >l</router-link
         >
         <router-link to="" class="empty px-4 py-2 rounded-lg opacity-70"
           >-</router-link
@@ -133,27 +133,23 @@ export default {
 
       console.log(code);
       // 1 - if u press e: view exchange project
-      if (code == 69) {
-        this.$router.push({ path: "/exchange" });
-      } else if (code == 65) {
-        this.$router.push({ path: "/aurora-i" });
-      } else if (code == 77) {
-        this.$router.push({ path: "/monique" });
-      } else if (code == 66) {
-        this.$router.push({ path: "/bubbox" });
-      } else if (code == 71) {
-        this.$router.push({ path: "/gt" });
-      } else if (code == 80) {
-        this.$router.push({ path: "/produtividade" });
-      } else if (code == 76) {
-        this.$router.push({ path: "/lojista" });
-      } else if (code == 82) {
-        this.$router.push({ path: "/letrun" });
-      } else if (code == 37) {
+      if (code == 68) {
+        this.$router.push({ path: "/despesas" });
+      } 
+      
+      // else if (code == 65) {
+      //   this.$router.push({ path: "/animacoes" });
+      // } else if (code == 79) {
+      //   this.$router.push({ path: "/outros" });
+      // } else if (code == 67) {
+      //   this.$router.push({ path: "/chatzim" });
+      // } else if (code == 76) {
+      //   this.$router.push({ path: "/loljinha" });
+      // } 
+      
+      else if (code == 37) {
         this.$router.push({ path: "/home-web" });
-      } else if (code == 39) {
-        this.$router.push({ path: "/" });
-      }
+      } 
     },
     selectPT() {
       this.$store.commit("setLangPT");

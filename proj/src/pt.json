@@ -186,5 +186,48 @@
 
     "linkPreview": "Live Preview:"
   },
+  "despesas": {
+    "metatitle": "meindexe | Aplicativo de Despesas",
+
+    "desc": "Um dos meus primeiros estudos em ",
+    "flutterLink": "Flutter",
+    "desc2": "foi um app de despesas pessoais. Aqui pude aprender os conceitos básicos dessa tecnologia.",
+
+    "linkTitle1": "Link do Repositório"
+  },
+  "animacoes": {
+    "metatitle": "meindexe | Estudo de Animações",
+
+    "desc": "O Crednosso foi um app em que eu pude participar da concepção e desenvolvimento da interface. E ao começar a aprender animações em",
+    "flutterLink": "Flutter",
+    "desc2": "usei este projeto para um estudo de redesign com o dito framework.",
+
+    "linkTitle1": "Download"
+  },
+  "outros": {
+    "metatitle": "meindexe | Outros estudos",
+
+    "desc": "Esses foram meus primeiros estudos funcionais em",
+    "flutterLink": "Flutter,",
+    "desc2": "onde pude trazer os conceitos aprendidos para uma prática mais realista.",
+
+    "linkTitle1": "Link dos Repositórios"
+  },
+  "chat": {
+    "metatitle": "meindexe | Aplicativo Chat",
+
+    "desc": "Nesse app de mensagens deu pra aplicar conceitos de renderização de listas, condicionais e entender melhor componentes baseados em Stack().",
+    "desc2": "Um diferencial desse projeto é possuir um tema claro e um escuro.",
+
+    "linkTitle1": "Link do Repositório"
+  },
+  "loljinha": {
+    "metatitle": "meindexe | Aplicativo Chat",
+
+    "desc": "Outro app de estudos, dessa vez um e-commerce. O que eu mais curtir aqui foi ver como funcionam os formulários e o processo de validação, bem como o exibição dinâmica de dados.",
+    "desc2": "Nesse estudo eu também traduzi a aplicação do e-commerce para português.",
+
+    "linkTitle1": "Link do Repositório"
+  },
   "backBtn": "Voltar p/ o início (←)"
 }

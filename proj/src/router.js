@@ -20,6 +20,13 @@ import ProjOficinas from './views/ProjOficinas.vue'
 
 import HomeFlutter from './views/mobile/HomeFlutter.vue'
 
+import ProjDespesas from './views/ProjDespesas.vue'
+import ProjAnimacoes from './views/ProjAnimacoes.vue'
+import ProjOutros from './views/ProjOutros.vue'
+
+import ProjChat from './views/ProjChat.vue'
+import ProjLoljinha from './views/ProjLoljinha.vue'
+
 
 Vue.use(Router)
 
@@ -54,6 +61,13 @@ export default new Router({
     { path: '/lojista', name: 'lojista', component: ProjLojista },
     { path: '/letrun', name: 'letrun', component: ProjLetRun },
 
-    { path: '/oficinas', name: 'oficinas', component: ProjOficinas }
+    { path: '/oficinas', name: 'oficinas', component: ProjOficinas },
+
+    { path: '/despesas', name: 'despesas', component: ProjDespesas },
+    { path: '/animacoes', name: 'animacoes', component: ProjAnimacoes },
+    { path: '/outros', name: 'outros', component: ProjOutros },
+
+    { path: '/chatzim', name: 'chatzim', component: ProjChat },
+    { path: '/loljinha', name: 'loljinha', component: ProjLoljinha },
   ]
 })

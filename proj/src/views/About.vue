@@ -1038,7 +1038,7 @@ export default {
         .slide-btn {
           max-width: 140px;
           transform: rotate(90deg);
-          margin-top: -85px;
+          margin-top: -70px;
           margin-left: -10px;
           margin-bottom: 90px;
         }

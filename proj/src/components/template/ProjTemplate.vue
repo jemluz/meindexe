@@ -185,7 +185,7 @@ export default {
     align-items: flex-start;
     position: fixed;
 
-    .result p { color: #fff;}
+    // .result p { color: #fff;}
 
     p {
       font-family: t26-carbon, monospace;
@@ -208,17 +208,17 @@ export default {
 
       text-align: left;
 
-      background-color: $roxo;
-      color: #fff;
+      // background-color: $roxo;
+      // color: #fff;
 
       border-radius: 5px;
       box-shadow: 0px 0px 20px 0px #00000020;
 
       a {
-        border-bottom: 1px solid #fff;
-        color: #fff;
+        // border-bottom: 1px solid #fff;
+        // color: #fff;
         font-weight: 700;
-        opacity: .4;
+        // opacity: .4;
       }
     }
   }
