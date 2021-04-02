@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="433" height="800" viewBox="0 0 433 800">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_1943" data-name="Retângulo 1943" width="433" height="800"/>
+    </clipPath>
+    <filter id="Polígono_6" x="304.33" y="132.979" width="51.354" height="54.905" filterUnits="userSpaceOnUse">
+      <feOffset dy="3.013" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.013" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Web_1280_24" data-name="Web 1280 – 24" clip-path="url(#clip-path)">
+    <g id="triangulos_escuros" data-name="triangulos escuros" clip-path="url(#clip-path)">
+      <g id="Grupo_47" data-name="Grupo 47" transform="translate(612.515 777.708) rotate(180)">
+        <path id="Polígono_1" data-name="Polígono 1" d="M40.5,0,81,77H0Z" transform="translate(438.433 281.668) rotate(158)" fill="#0a4171" opacity="0.5"/>
+        <path id="Polígono_7" data-name="Polígono 7" d="M16,0,32,27H0Z" transform="translate(544.116 517.129) rotate(-14)" fill="#0a4171" opacity="0.5"/>
+        <g transform="matrix(-1, 0, 0, -1, 612.52, 777.71)" filter="url(#Polígono_6)">
+          <path id="Polígono_6-2" data-name="Polígono 6" d="M15.566,0,31.131,26.11H0Z" transform="matrix(-0.26, -0.97, 0.97, -0.26, 321.43, 175.83)" fill="#164a78" opacity="0.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

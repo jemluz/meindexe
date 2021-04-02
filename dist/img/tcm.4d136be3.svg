@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="433" height="800" viewBox="0 0 433 800">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_1941" data-name="Retângulo 1941" width="433" height="800"/>
+    </clipPath>
+    <filter id="Polígono_6" x="298.067" y="123.304" width="62.56" height="62.447" filterUnits="userSpaceOnUse">
+      <feOffset dy="3.013" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.013" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Web_1280_24" data-name="Web 1280 – 24" clip-path="url(#clip-path)">
+    <g id="barras" clip-path="url(#clip-path)">
+      <g id="Repetição_de_grade_1" data-name="Repetição de grade 1" transform="translate(-8.703 57.151)" opacity="0.22">
+        <g id="Retângulo_1458" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+          <rect width="64" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+        </g>
+        <g id="Grupo_84" data-name="Grupo 84" transform="translate(0 64)">
+          <g id="Retângulo_1458-2" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_85" data-name="Grupo 85" transform="translate(0 128)">
+          <g id="Retângulo_1458-3" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_86" data-name="Grupo 86" transform="translate(0 192)">
+          <g id="Retângulo_1458-4" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_87" data-name="Grupo 87" transform="translate(0 256)">
+          <g id="Retângulo_1458-5" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_88" data-name="Grupo 88" transform="translate(0 320)">
+          <g id="Retângulo_1458-6" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_89" data-name="Grupo 89" transform="translate(0 384)">
+          <g id="Retângulo_1458-7" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_90" data-name="Grupo 90" transform="translate(0 448)">
+          <g id="Retângulo_1458-8" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_91" data-name="Grupo 91" transform="translate(0 512)">
+          <g id="Retângulo_1458-9" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_92" data-name="Grupo 92" transform="translate(0 576)">
+          <g id="Retângulo_1458-10" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_93" data-name="Grupo 93" transform="translate(0 640)">
+          <g id="Retângulo_1458-11" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_94" data-name="Grupo 94" transform="translate(0 704)">
+          <g id="Retângulo_1458-12" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 768)">
+          <g id="Retângulo_1458-13" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+        <g id="Grupo_96" data-name="Grupo 96" transform="translate(0 832)">
+          <g id="Retângulo_1458-14" data-name="Retângulo 1458" fill="none" stroke="#4fd3f5" stroke-width="1">
+            <rect width="64" height="64" stroke="none"/>
+            <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="triangulos_claros" data-name="triangulos claros" clip-path="url(#clip-path)">
+      <g id="Grupo_46" data-name="Grupo 46" transform="translate(627.515 766.708) rotate(180)">
+        <path id="Polígono_1" data-name="Polígono 1" d="M40.5,0,81,77H0Z" transform="translate(456.497 279.636) rotate(172)" fill="#4fd3f5" opacity="0.7"/>
+        <path id="Polígono_7" data-name="Polígono 7" d="M16,0,32,27H0Z" transform="translate(549.987 512.57) rotate(-38)" fill="#4fd3f5" opacity="0.7"/>
+        <g transform="matrix(-1, 0, 0, -1, 627.52, 766.71)" filter="url(#Polígono_6)">
+          <path id="Polígono_6-2" data-name="Polígono 6" d="M15.459,0,30.917,32.065H0Z" transform="translate(327.39 173.7) rotate(-131)" fill="#4fd3f5" opacity="0.7"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
