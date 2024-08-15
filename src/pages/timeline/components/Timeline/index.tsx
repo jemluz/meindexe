@@ -1,6 +1,6 @@
 import { Item } from "../Item";
 import { Year } from "../Year";
-import { Wrapper } from "./styles";
+import { Container, MomentContainer, Wrapper, YearList, YearNav } from "./styles";
 import useTimelineScroll from "./utils";
 
 export default function Timeline() {
@@ -14,20 +14,20 @@ export default function Timeline() {
 
   return (
     <Wrapper className="timeline">
-      <nav className="timeline__nav">
-        <ul>
+      <YearNav className="timeline__nav">
+        <YearList>
           {years.map((year) => (
             <Year key={year} value={year} />
           ))}
-        </ul>
-      </nav>
-      <section className="timeline__section">
-        <div className="wrapper">
+        </YearList>
+      </YearNav>
+      <Container className="timeline__section">
+        <MomentContainer className="wrapper">
           {years.map((year) => (
             <Item key={year} year={year} />
           ))}
-        </div>
-      </section>
+        </MomentContainer>
+      </Container>
     </Wrapper>
   );
 }
