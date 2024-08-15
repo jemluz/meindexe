@@ -5,13 +5,12 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
   theme: {
     colors: {
       white: '#fff',
-      black: '#000',
+      black: '#333',
       // Adicione mais cores conforme necessário
     },
     fonts: {
-      body: 'system-ui, sans-serif',
-      heading: 'Georgia, serif',
-      monospace: 'Menlo, monospace',
+      changa: 'Changa, sans-serif',
+      novaSquare: 'Nova Square, sans-serif',
       // Adicione mais fontes conforme necessário
     },
     space: {

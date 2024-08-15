@@ -1,8 +1,11 @@
-import { Item } from "./components/Item";
-import { Year } from "./components/Year";
-import { Container } from "./styles";
+import { Item } from "../Item";
+import { Year } from "../Year";
+import { Wrapper } from "./styles";
+import useTimelineScroll from "./utils";
 
 export default function Timeline() {
+  useTimelineScroll()
+
   const years = [
     '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002',
     '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012',
@@ -10,7 +13,7 @@ export default function Timeline() {
   ];
 
   return (
-    <article className="timeline">
+    <Wrapper className="timeline">
       <nav className="timeline__nav">
         <ul>
           {years.map((year) => (
@@ -25,6 +28,6 @@ export default function Timeline() {
           ))}
         </div>
       </section>
-    </article>
+    </Wrapper>
   );
 }
