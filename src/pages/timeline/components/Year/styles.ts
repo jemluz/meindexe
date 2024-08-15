@@ -1,4 +1,4 @@
-import { styled } from "../../../../styles/stitches.config";
+import { styled } from '../../../../styles/stitches.config'
 
 export const YearItem = styled('li', {
   margin: '15px 0',
@@ -17,5 +17,5 @@ export const YearItem = styled('li', {
 
   '&:hover': {
     color: '#000',
-  }
+  },
 })

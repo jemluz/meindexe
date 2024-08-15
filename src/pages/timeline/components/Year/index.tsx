@@ -1,8 +1,8 @@
-import React from 'react';
-import { YearItem } from './styles';
+import React from 'react'
+import { YearItem } from './styles'
 
 interface YearProps {
-  value: string;
+  value: string
 }
 
 export function Year({ value }: YearProps) {
@@ -10,5 +10,5 @@ export function Year({ value }: YearProps) {
     <YearItem>
       <span>{value}</span>
     </YearItem>
-  );
+  )
 }

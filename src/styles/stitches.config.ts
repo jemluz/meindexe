@@ -1,7 +1,19 @@
 // stitches.config.ts
-import { createStitches } from '@stitches/react';
+import { createStitches } from '@stitches/react'
+import { Changa } from 'next/font/google'
 
-export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme } = createStitches({
+const changa = Changa({ subsets: ['latin'], weight: ['200', '800'] })
+const square = Changa({ subsets: ['latin'], weight: ['400'] })
+
+export const {
+  styled,
+  css,
+  globalCss,
+  keyframes,
+  getCssText,
+  theme,
+  createTheme,
+} = createStitches({
   theme: {
     colors: {
       white: '#fff',
@@ -9,8 +21,8 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
       // Adicione mais cores conforme necessário
     },
     fonts: {
-      changa: 'Changa, sans-serif',
-      square: 'Nova Square, sans-serif',
+      changa: changa.style.fontFamily,
+      square: square.style.fontFamily,
       // Adicione mais fontes conforme necessário
     },
     space: {
@@ -29,4 +41,4 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
     },
     // Adicione mais temas conforme necessário
   },
-});
+})
