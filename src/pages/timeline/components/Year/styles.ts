@@ -9,7 +9,7 @@ export const YearItem = styled('li', {
   transition: 'all .3s ease-out',
 
   '&.active': {
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     color: '#f94125',
     borderBottom: '1px dotted transparent',
     transform: 'scale(1.2)',

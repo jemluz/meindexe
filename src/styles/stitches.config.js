@@ -10,7 +10,7 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
     },
     fonts: {
       changa: 'Changa, sans-serif',
-      novaSquare: 'Nova Square, sans-serif',
+      square: 'Nova Square, sans-serif',
       // Adicione mais fontes conforme necessário
     },
     space: {

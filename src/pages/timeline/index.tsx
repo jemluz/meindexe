@@ -1,5 +1,6 @@
-import { Item } from "../Item";
-import { Year } from "../Year";
+import { useEffect } from "react";
+import { Item } from "./components/Item";
+import { Year } from "./components/Year";
 import { Container, MomentContainer, Wrapper, YearList, YearNav } from "./styles";
 import useTimelineScroll from "./utils";
 
