@@ -9,8 +9,9 @@ export const YearItem = styled('li', {
   transition: 'all .3s ease-out',
 
   '&.active': {
-    // fontWeight: 'bold',
-    color: '#f94125',
+    background: '$orangeBg',
+    padding: '.1rem 1.2rem',
+    color: '$orange',
     borderBottom: '1px dotted transparent',
     transform: 'scale(1.2)',
   },

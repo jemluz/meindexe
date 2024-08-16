@@ -5,6 +5,7 @@ export const Wrapper = styled('div', {
   position: 'relative',
   maxWidth: '980px',
   margin: '0 auto',
+  fontFamily: '$changa',
 })
 
 export const YearNav = styled('nav', {
@@ -17,12 +18,12 @@ export const YearNav = styled('nav', {
 export const YearList = styled('ul', {
   listStyle: 'none',
   listStylePosition: 'inside',
-  margin: '15px 0',
+  margin: '15px 0px 15px 0px',
 })
 
 export const Container = styled('section', {
-  marginLeft: '100px',
-  marginTop: '100px',
+  marginLeft: '140px',
+  marginTop: '200px',
 })
 
 // wrapper

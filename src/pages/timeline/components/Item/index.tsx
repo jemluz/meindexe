@@ -1,3 +1,5 @@
+import { YearHeading } from './styles'
+
 interface ItemProps {
   year: string
 }
@@ -5,7 +7,7 @@ interface ItemProps {
 export function Item({ year }: ItemProps) {
   return (
     <div>
-      <h2 className="milestone">{year}</h2>
+      <YearHeading className="milestone">{year}</YearHeading>
       <p>
         Esse foi o projeto da faculdade que me ensinou a pensar como uma
         programadora.

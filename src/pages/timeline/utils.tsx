@@ -13,7 +13,7 @@ const useTimelineScroll = () => {
     const offsetTop = parseInt(window.getComputedStyle(timeline).top || '0', 10)
 
     const TIMELINE_VALUES = {
-      start: 290,
+      start: 390,
       step: 30,
     }
 
