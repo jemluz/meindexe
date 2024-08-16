@@ -1,9 +1,10 @@
 // stitches.config.ts
 import { createStitches } from '@stitches/react'
-import { Changa } from 'next/font/google'
+// eslint-disable-next-line camelcase
+import { Changa, Nova_Square } from 'next/font/google'
 
 const changa = Changa({ subsets: ['latin'], weight: ['200', '800'] })
-const square = Changa({ subsets: ['latin'], weight: ['400'] })
+const square = Nova_Square({ subsets: ['latin'], weight: ['400'] })
 
 export const {
   styled,
@@ -18,6 +19,12 @@ export const {
     colors: {
       white: '#fff',
       black: '#333',
+      orange: '#F58D13',
+      orangeBg: '#F58D1320',
+      red: '#EF5330',
+      pink: '#DF69DB',
+      green: '#73A66E',
+      blue: '#3880D6',
       // Adicione mais cores conforme necessário
     },
     fonts: {
