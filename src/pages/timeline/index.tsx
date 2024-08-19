@@ -1,3 +1,4 @@
+import { previewProjects } from '../../utils/projectsData'
 import { Item } from './components/Item'
 import { Year } from './components/Year'
 import {
@@ -25,9 +26,9 @@ export default function Timeline() {
       </YearNav>
       <Container className="timeline__section">
         <MomentContainer className="wrapper">
-          {years.map((year) => (
-            <Item key={year} year={year} />
-          ))}
+          {previewProjects.map((project) => {
+            return <Item key={String(project.id)} {...project} />
+          })}
         </MomentContainer>
       </Container>
     </Wrapper>

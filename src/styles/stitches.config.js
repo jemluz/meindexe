@@ -18,7 +18,10 @@ export const {
   theme: {
     colors: {
       white: '#fff',
-      black: '#333',
+      black: '#0A0A0A',
+      gray100: '#F2F2F2',
+      gray300: '#898989',
+
       orange: '#F58D13',
       orangeBg: '#F58D1320',
       red: '#EF5330',

@@ -1,26 +1,50 @@
-import { Dot, Header, LilleDot, YearHeading } from './styles'
+import Image from 'next/image'
+import { PreviewProjectProps } from '../../../../utils/projectsData'
+import {
+  Dot,
+  Header,
+  LilleDot,
+  MomentTag,
+  Month,
+  PreviewContainer,
+  Project,
+  ResumeColumn,
+  Year,
+} from './styles'
+import { randomUUID } from 'crypto'
 
-interface ItemProps {
-  year: string
-}
-
-export function Item({ year }: ItemProps) {
+export function Item({
+  year,
+  month,
+  previewImage,
+  content,
+}: PreviewProjectProps) {
   return (
-    <div className="project">
+    <Project className="project">
       <Header>
-        <Dot>
-          <LilleDot />
-        </Dot>
-        <YearHeading>{year}</YearHeading>
+        <MomentTag>
+          <Dot>
+            <LilleDot />
+          </Dot>
+          <Year>{year}</Year>
+        </MomentTag>
+        <Month>{month}</Month>
       </Header>
-      <p>
-        Esse foi o projeto da faculdade que me ensinou a pensar como uma
-        programadora.
-      </p>
-      <p>
-        “Como eu vou imitar uma aplicação mobile em uma linguagem que foi
-        projetada para desenhos?”
-      </p>
-    </div>
+      <PreviewContainer>
+        <Image
+          src={previewImage}
+          height={240}
+          quality={100}
+          priority
+          alt="Imagens do projeto aurora"
+        />
+        <ResumeColumn>
+          {content.map((phrase) => {
+            const id = String(randomUUID)
+            return <p key={id}>{phrase}</p>
+          })}
+        </ResumeColumn>
+      </PreviewContainer>
+    </Project>
   )
 }
