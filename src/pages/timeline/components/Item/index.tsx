@@ -1,4 +1,4 @@
-import { YearHeading } from './styles'
+import { Dot, Header, LilleDot, YearHeading } from './styles'
 
 interface ItemProps {
   year: string
@@ -6,8 +6,13 @@ interface ItemProps {
 
 export function Item({ year }: ItemProps) {
   return (
-    <div>
-      <YearHeading className="milestone">{year}</YearHeading>
+    <div className="project">
+      <Header>
+        <Dot>
+          <LilleDot />
+        </Dot>
+        <YearHeading>{year}</YearHeading>
+      </Header>
       <p>
         Esse foi o projeto da faculdade que me ensinou a pensar como uma
         programadora.

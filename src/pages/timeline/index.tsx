@@ -7,7 +7,7 @@ import {
   YearList,
   YearNav,
 } from './styles'
-import useTimelineScroll from './utils'
+import useTimelineScroll from './useTimelineScroll'
 
 export default function Timeline() {
   useTimelineScroll()

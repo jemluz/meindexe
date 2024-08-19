@@ -8,8 +8,9 @@ const useTimelineScroll = () => {
     const timeline = document.querySelector('.timeline__nav') as HTMLElement
     const moments = Array.from(timeline.querySelectorAll('li'))
     const milestones = Array.from(
-      document.querySelectorAll('.timeline__section .milestone'),
+      document.querySelectorAll('.timeline__section .project'),
     ) as HTMLElement[]
+
     const offsetTop = parseInt(window.getComputedStyle(timeline).top || '0', 10)
 
     const TIMELINE_VALUES = {
@@ -17,6 +18,8 @@ const useTimelineScroll = () => {
       step: 30,
     }
 
+    // Ajusta a posição da linha do tempo quando a janela é redimensionada.
+    // necessário remover o fixed para a posição ser recalculada sem interferencia
     const handleResize = () => {
       timeline.classList.remove('fixed')
       stickyTop =
@@ -24,6 +27,7 @@ const useTimelineScroll = () => {
       handleScroll()
     }
 
+    // Adiciona ou remove a classe fixed à linha do tempo dependendo da posição de rolagem do usuário.
     const handleScroll = () => {
       if (window.scrollY > stickyTop) {
         timeline.classList.add('fixed')
@@ -32,6 +36,7 @@ const useTimelineScroll = () => {
       }
     }
 
+    // Rola suavemente para o marco correspondente quando um item de momento é clicado.
     const handleItemClick = (index: number) => {
       const currentMoment = moments[index]
       const milestone = milestones[index]
@@ -56,8 +61,16 @@ const useTimelineScroll = () => {
       }
     }
 
+    // Atualiza a posição da linha do tempo e destaca o item ativo com base na posição de rolagem.
     const handleWindowScroll = () => {
       const viewLine = window.scrollY + window.innerHeight / 3
+
+      console.log({
+        scrollY: window.scrollY,
+        innerHeight: window.innerHeight,
+        viewLine,
+      })
+
       let active = -1
 
       if (scrollTarget === false) {

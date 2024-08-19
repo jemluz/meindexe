@@ -19,10 +19,11 @@ export const YearList = styled('ul', {
   listStyle: 'none',
   listStylePosition: 'inside',
   margin: '15px 0px 15px 0px',
+  width: 'fit-content',
 })
 
 export const Container = styled('section', {
-  marginLeft: '140px',
+  marginLeft: '180px',
   marginTop: '200px',
 })
 

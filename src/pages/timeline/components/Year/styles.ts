@@ -7,6 +7,7 @@ export const YearItem = styled('li', {
   color: '#bfc1c3',
   cursor: 'pointer',
   transition: 'all .3s ease-out',
+  fontSize: '1.2rem',
 
   '&.active': {
     background: '$orangeBg',
@@ -14,6 +15,7 @@ export const YearItem = styled('li', {
     color: '$orange',
     borderBottom: '1px dotted transparent',
     transform: 'scale(1.2)',
+    fontSize: '1.4rem',
   },
 
   '&:hover': {
